@@ -2,8 +2,7 @@
 
 Anu Karthika (Independent Researcher, Chennai, India), iamanukarthika@gmail.com. Submitted to L4DC 2027.
 **Supplementary material:** [`submission/supplement.pdf`](submission/supplement.pdf) (all proofs, Experiments 0-9, reproducibility record).
-The submitted paper is [`submission/main.pdf`](submission/main.pdf); both are in `submission/` (`main_with_supplement.pdf` is the single file uploaded to
-OpenReview); the tag `v1.0-l4dc-submission` marks the submitted state of the repository.
+The submitted paper is [`submission/main.pdf`](submission/main.pdf); both are in `submission/`; the tag `v1.0-l4dc-submission` marks the submitted state of the repository.
 
 Implementation built from the theory sources in `paper/theory/` (the statements and proofs that appear in the
 supplement). It builds a class-(H) reaction-diffusion-advection lattice benchmark with an active advective
