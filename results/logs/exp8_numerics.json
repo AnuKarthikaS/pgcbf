@@ -1,0 +1,86 @@
+{
+ "experiment": "exp8_numerics",
+ "wall_clock_s": 8.367297037009848,
+ "peak_rss_MB": 219.83984375,
+ "assertions": [
+  {
+   "assertion": "stiffness: at the convergence-test step explicit Euler is unstable (max|1 + h lambda| > 1) while the exponential integrator is used",
+   "passed": true,
+   "spectral_radius": 72.00490632892843,
+   "stiffness_ratio": 43.83302975154718,
+   "step": 0.05,
+   "explicit_euler_amplification": 3.7298480315683635,
+   "rad_times_Ts": 0.021601471898678528
+  },
+  {
+   "assertion": "ETD2RK convergence: observed order in [1.8, 2.2] on step halving (error ratio ~ 4)",
+   "passed": true,
+   "ratios": [
+    4.001621104675649,
+    4.0030382500278385,
+    4.011373274259221,
+    4.04489987825009
+   ],
+   "orders": [
+    2.0005845714706365,
+    2.001095401101877,
+    2.0040962209183495,
+    2.0161039926577837
+   ]
+  },
+  {
+   "assertion": "ETD1 (exponential Euler) for reference: observed order ~ 1",
+   "passed": true,
+   "orders1": [
+    0.9943134342649561,
+    0.9973444634394454,
+    0.9987161176520468,
+    0.9993586759859384
+   ]
+  },
+  {
+   "assertion": "exact latch timing: simulator == closed-form augmented exponential (kappa=0) to round-off",
+   "passed": true,
+   "rel_err": 2.8082651064207132e-14,
+   "periods": 20
+  },
+  {
+   "assertion": "step-resolution latching would be O(step) wrong (discriminating test)",
+   "passed": true,
+   "rel_err_grid": 0.016753982807441507,
+   "grid_step": 4.2857142857142856e-05,
+   "tau_A": 1.5e-05,
+   "tau_B": 3e-05
+  },
+  {
+   "assertion": "modal sparse propagation == dense nodal ETD2RK (closed loop)",
+   "passed": true,
+   "rel_err": 1.9281503881693866e-14
+  },
+  {
+   "assertion": "bit-for-bit determinism: two runs give identical SHA-256",
+   "passed": true,
+   "sha256": "2bde49483745ec98a76b5fd814b08aad147b258c2ac39f417ca1133b03e93614"
+  }
+ ],
+ "data": {
+  "errs": [
+   1.2384572002505876e-09,
+   3.0948887159844455e-10,
+   7.731349346869025e-11,
+   1.927357246078469e-11,
+   4.76490717716426e-12
+  ],
+  "errs1": [
+   4.080636542312963e-08,
+   2.0483763152248452e-08,
+   1.0260750939821477e-08,
+   5.134943122842932e-09,
+   2.5686131382303354e-09
+  ],
+  "err_exact": 2.8082651064207132e-14,
+  "err_grid": 0.016753982807441507,
+  "err_modal": 1.9281503881693866e-14,
+  "sha": "2bde49483745ec98a76b5fd814b08aad147b258c2ac39f417ca1133b03e93614"
+ }
+}

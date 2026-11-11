@@ -1,0 +1,35 @@
+=== exp5_deadzone ===
+[PASS] full method (deadzone, b_A=9): prop3_valid ((H-dz) r_ss < r_min and mu_R > L_sec) r_ss=0.0116185 r_min=0.15605
+[PASS] Prop3(b): ||z(t_k)||_P <= max(||z(0)||_P, r_ss) for all k, all seeds max_ratio=1
+[PASS] Prop3: trajectories enter B_ss(r_ss) subset B_int final_max=1.53133e-05 r_ss=0.0116185
+[PASS] deadzone: Path-A control exactly zero in the final window (no limit cycle) nonzero_frac=0
+[PASS] (d) b_A=3: deadzone -> u_A exactly 0 late, no switching, zero late effort nonzero=0 switches=0
+[PASS] (d) b_A=3: mid-rise (no deadzone) -> u_A never zero, persistent sign switching (chattering), effort > 0 nonzero=1 switches_per_time=953.08 effort=0.00194068
+[PASS] (d) b_A=3: deadzone -> once u = 0, ||z||_P contracts at least at rate mu_R - L_sec (Prop3(a)) factor=0.0832433 predicted=0.149905
+[PASS] (d) b_A=3: mid-rise lag error |u_A - T(z)| persists at the LSB scale lag=0.0196963
+[PASS] (d) b_A=5: deadzone -> u_A exactly 0 late, no switching, zero late effort nonzero=0 switches=0
+[PASS] (d) b_A=5: mid-rise (no deadzone) -> u_A never zero, persistent sign switching (chattering), effort > 0 nonzero=1 switches_per_time=859.92 effort=0.000120644
+[PASS] (d) b_A=5: deadzone -> once u = 0, ||z||_P contracts at least at rate mu_R - L_sec (Prop3(a)) factor=0.0835407 predicted=0.149905
+[PASS] (d) b_A=5: mid-rise lag error |u_A - T(z)| persists at the LSB scale lag=0.00485134
+[PASS] (d) b_A=7: deadzone -> u_A exactly 0 late, no switching, zero late effort nonzero=0 switches=0
+[PASS] (d) b_A=7: mid-rise (no deadzone) -> u_A never zero, persistent sign switching (chattering), effort > 0 nonzero=1 switches_per_time=469.4 effort=8.74673e-06
+[PASS] (d) b_A=7: deadzone -> once u = 0, ||z||_P contracts at least at rate mu_R - L_sec (Prop3(a)) factor=0.0837973 predicted=0.149905
+[PASS] (d) b_A=7: mid-rise lag error |u_A - T(z)| persists at the LSB scale lag=0.00128578
+[PASS] (d) b_A=9 (deployed b_A): deadzone -> u_A exactly 0 late, no switching, zero late effort nonzero=0 switches=0
+[PASS] (d) b_A=9 (deployed b_A): mid-rise (no deadzone) -> u_A never zero, persistent sign switching (chattering), effort > 0 nonzero=1 switches_per_time=121.64 effort=6.14888e-07
+[PASS] (d) b_A=9: deadzone -> once u = 0, ||z||_P contracts at least at rate mu_R - L_sec (Prop3(a)) factor=0.0841322 predicted=0.149905
+[PASS] (d) b_A=9: mid-rise lag error |u_A - T(z)| persists at the LSB scale lag=0.000350666
+[PASS] d2: b_A = 1 violates (H-dz): r_ss >= r_min, certificate refuses Prop. 3 (prop3_valid false) r_ss=0.399159 r_min=0.156044
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp5_deadzone: 21/21 assertions passed, wall 53.6 s, peak RSS 209 MB

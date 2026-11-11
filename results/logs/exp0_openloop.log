@@ -1,0 +1,9 @@
+=== exp0_openloop ===
+[PASS] open-loop linearisation is exponentially unstable (max Re eig > 0) max_re_eig=0.292483 Pe=20
+[PASS] initial states lie in C (h(x0) >= 0) min_h0=2.05989e-06
+[PASS] open loop exits C for every seed within the horizon n_exit=16 n_seeds=16 worst_min_h=-0.897921 latest_exit_time=3.8559
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp0_openloop: 3/3 assertions passed, wall 17.7 s, peak RSS 214 MB

@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\caption{Ablations at the deployed $w^\star$: every removed component yields a certificate refusal and a full-order safety violation under the worst-case adversary. Row (e): the largest certifiable adversary level is $\epsilon_{\rm adv}^\star=0.004223$.}
+\label{tab:exp6_ablations}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+ablation & refused & failing & $\delta_{\mathrm{total}}$ & $\delta_{\mathrm{cert}}$ & naive $\delta_{\rm total}$ & naive $\delta_{\rm cert}$ & exits (of $16$) & $\min_t h$ \\
+\midrule
+(a) $K_m=1$, no tail bookkeeping & \checkmark & (H3), (H4), (H6), (H7) & $7.593$ & $-60.63$ & $0.007956$ & $0.0335$ & $4$ & $-0.02545$ \\
+(b) $b_B=2$, no CROWN margin & \checkmark & (H6) & $2.149$ & $0.01456$ & $0.01135$ & $0.01456$ & $9$ & $-0.04155$ \\
+(c) single rate $\tau_A=\tau_B=T_s$ & \checkmark & (H6) & $0.01702$ & $0.01456$ & -- & -- & $10$ & $-0.1591$ \\
+(e) $\epsilon_{\rm adv}=1$ & \checkmark & (H6) & $0.4617$ & $0.01409$ & -- & -- & $16$ & $-0.02605$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

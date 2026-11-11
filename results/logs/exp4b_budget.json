@@ -1,0 +1,1359 @@
+{
+ "experiment": "exp4b_budget",
+ "wall_clock_s": 203.22956478601554,
+ "peak_rss_MB": 1009.95703125,
+ "assertions": [
+  {
+   "assertion": "R2 boundary: node set = every integrator step of every period and seed",
+   "passed": true,
+   "nodes": 800016,
+   "active_nodes": 52002,
+   "interior_nodes": 748014
+  },
+  {
+   "assertion": "R2 boundary: decomposition zdot = f_r + g_r u + d_r w + Delta_perp closes to roundoff (every node)",
+   "passed": true,
+   "max_rel_residual": 9.283686044842486e-14
+  },
+  {
+   "assertion": "R2 boundary: identity r = Theta(z_k) + H + Q + A + C closes to roundoff (every node)",
+   "passed": true,
+   "max_rel_residual": 1.1192970630114483e-14
+  },
+  {
+   "assertion": "R2 boundary: (i) tail coupling realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.31605432619576146,
+   "median_ratio": 0.0007286697826873317
+  },
+  {
+   "assertion": "R2 boundary: (ii) adversary realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.8771726204624709,
+   "median_ratio": 0.019032373846153403
+  },
+  {
+   "assertion": "R2 boundary: (iii) quantization/lag realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.37291880308939346,
+   "median_ratio": 0.0018499675904323667
+  },
+  {
+   "assertion": "R2 boundary: (iv) hold shift realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.07438723629227799,
+   "median_ratio": 5.530621555110819e-06
+  },
+  {
+   "assertion": "R2 boundary: factor bounds ||2Pz|| <= L_h, ||Delta_perp|| <= L_perp ||x_perp||, e_u <= ebar_u, ||L_gr h~_r(z_k)|| <= g_h, ||w|| <= eps_adv at every node",
+   "passed": true,
+   "f_grad": 0.8623046116080727,
+   "f_lip": 0.945444261080071,
+   "f_eu": 0.5871695826112976,
+   "f_gk": 0.8836919965820492,
+   "f_w": 1.0000000000000002
+  },
+  {
+   "assertion": "R2 boundary: ||z - z_k|| <= M_z s at every node",
+   "passed": true,
+   "max_ratio": 0.3205001870768865
+  },
+  {
+   "assertion": "R2 boundary: (v) soundness: realised rate - RHS(s) of eq:ode_diff_ineq >= 0 at every active-shell node",
+   "passed": true,
+   "min_slack": 0.00894505276649703,
+   "tol": 4.179518654706636e-14,
+   "nodes": 52002
+  },
+  {
+   "assertion": "R2 boundary: Teacher condition Theta(z_k) >= delta_cert at every active-shell sample",
+   "passed": true,
+   "min_margin": 0.003539106669623782
+  },
+  {
+   "assertion": "R2 boundary: interior branch h~_r(z(t)) >= h~_r(z_k) - L_h M_z s at every B_int node",
+   "passed": true,
+   "min_slack": 0.0,
+   "nodes": 748014
+  },
+  {
+   "assertion": "R2 interior: node set = every integrator step of every period and seed",
+   "passed": true,
+   "nodes": 800016,
+   "active_nodes": 50634,
+   "interior_nodes": 749382
+  },
+  {
+   "assertion": "R2 interior: decomposition zdot = f_r + g_r u + d_r w + Delta_perp closes to roundoff (every node)",
+   "passed": true,
+   "max_rel_residual": 1.49741591075558e-14
+  },
+  {
+   "assertion": "R2 interior: identity r = Theta(z_k) + H + Q + A + C closes to roundoff (every node)",
+   "passed": true,
+   "max_rel_residual": 1.076260729366496e-14
+  },
+  {
+   "assertion": "R2 interior: (i) tail coupling realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.006628091477802011,
+   "median_ratio": 5.579423753493648e-05
+  },
+  {
+   "assertion": "R2 interior: (ii) adversary realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.8698462769741905,
+   "median_ratio": 0.018896701931081734
+  },
+  {
+   "assertion": "R2 interior: (iii) quantization/lag realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.3459185102944277,
+   "median_ratio": 0.0018325007567893995
+  },
+  {
+   "assertion": "R2 interior: (iv) hold shift realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.0732627771222822,
+   "median_ratio": 5.3729849055817454e-06
+  },
+  {
+   "assertion": "R2 interior: factor bounds ||2Pz|| <= L_h, ||Delta_perp|| <= L_perp ||x_perp||, e_u <= ebar_u, ||L_gr h~_r(z_k)|| <= g_h, ||w|| <= eps_adv at every node",
+   "passed": true,
+   "f_grad": 0.8551024490817982,
+   "f_lip": 0.9813727330886467,
+   "f_eu": 0.5828609198537907,
+   "f_gk": 0.8763112017945978,
+   "f_w": 1.0000000000000002
+  },
+  {
+   "assertion": "R2 interior: ||z - z_k|| <= M_z s at every node",
+   "passed": true,
+   "max_ratio": 0.3178866653262787
+  },
+  {
+   "assertion": "R2 interior: (v) soundness: realised rate - RHS(s) of eq:ode_diff_ineq >= 0 at every active-shell node",
+   "passed": true,
+   "min_slack": 0.00904255223655254,
+   "tol": 4.179518654706636e-14,
+   "nodes": 50634
+  },
+  {
+   "assertion": "R2 interior: Teacher condition Theta(z_k) >= delta_cert at every active-shell sample",
+   "passed": true,
+   "min_margin": 0.003491612234543787
+  },
+  {
+   "assertion": "R2 interior: interior branch h~_r(z(t)) >= h~_r(z_k) - L_h M_z s at every B_int node",
+   "passed": true,
+   "min_slack": 0.0,
+   "nodes": 749382
+  },
+  {
+   "assertion": "R1 boundary: node set = every integrator step of every period and seed",
+   "passed": true,
+   "nodes": 120000,
+   "active_nodes": 12717,
+   "interior_nodes": 107283
+  },
+  {
+   "assertion": "R1 boundary: decomposition zdot = f_r + g_r u + d_r w + Delta_perp closes to roundoff (every node)",
+   "passed": true,
+   "max_rel_residual": 1.6137848196802394e-14
+  },
+  {
+   "assertion": "R1 boundary: identity r = Theta(z_k) + H + Q + A + C closes to roundoff (every node)",
+   "passed": true,
+   "max_rel_residual": 1.3392070767576558e-14
+  },
+  {
+   "assertion": "R1 boundary: (i) tail coupling realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.2606460388434495,
+   "median_ratio": 0.001582837747733901
+  },
+  {
+   "assertion": "R1 boundary: (ii) adversary realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.9761068515378877,
+   "median_ratio": 0.044731410105030484
+  },
+  {
+   "assertion": "R1 boundary: (iii) quantization/lag realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.3588047664070792,
+   "median_ratio": 0.005679452071003184
+  },
+  {
+   "assertion": "R1 boundary: (iv) hold shift realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.09728083032867822,
+   "median_ratio": 0.0009958471716087608
+  },
+  {
+   "assertion": "R1 boundary: factor bounds ||2Pz|| <= L_h, ||Delta_perp|| <= L_perp ||x_perp||, e_u <= ebar_u, ||L_gr h~_r(z_k)|| <= g_h, ||w|| <= eps_adv at every node",
+   "passed": true,
+   "f_grad": 0.9595619150305762,
+   "f_lip": 0.7007035204078732,
+   "f_eu": 0.5600998368146525,
+   "f_gk": 0.9833615327142309,
+   "f_w": 1.0000000000000002
+  },
+  {
+   "assertion": "R1 boundary: ||z - z_k|| <= M_z s at every node",
+   "passed": true,
+   "max_ratio": 0.5852916057686454
+  },
+  {
+   "assertion": "R1 boundary: (v) soundness: realised rate - RHS(s) of eq:ode_diff_ineq >= 0 at every active-shell node",
+   "passed": true,
+   "min_slack": 0.03030259102934634,
+   "tol": 3.650728804048269e-14,
+   "nodes": 12717
+  },
+  {
+   "assertion": "R1 boundary: Teacher condition Theta(z_k) >= delta_cert at every active-shell sample",
+   "passed": true,
+   "min_margin": 0.0003890040589952168
+  },
+  {
+   "assertion": "R1 boundary: interior branch h~_r(z(t)) >= h~_r(z_k) - L_h M_z s at every B_int node",
+   "passed": true,
+   "min_slack": 0.0,
+   "nodes": 107283
+  },
+  {
+   "assertion": "R1 interior: node set = every integrator step of every period and seed",
+   "passed": true,
+   "nodes": 120000,
+   "active_nodes": 7521,
+   "interior_nodes": 112479
+  },
+  {
+   "assertion": "R1 interior: decomposition zdot = f_r + g_r u + d_r w + Delta_perp closes to roundoff (every node)",
+   "passed": true,
+   "max_rel_residual": 1.776560862611368e-14
+  },
+  {
+   "assertion": "R1 interior: identity r = Theta(z_k) + H + Q + A + C closes to roundoff (every node)",
+   "passed": true,
+   "max_rel_residual": 1.1143387501934179e-14
+  },
+  {
+   "assertion": "R1 interior: (i) tail coupling realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.00691114677249507,
+   "median_ratio": 0.00013972360698400035
+  },
+  {
+   "assertion": "R1 interior: (ii) adversary realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.8424629015171402,
+   "median_ratio": 0.039238124124395646
+  },
+  {
+   "assertion": "R1 interior: (iii) quantization/lag realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.36720950192892693,
+   "median_ratio": 0.00473461879365716
+  },
+  {
+   "assertion": "R1 interior: (iv) hold shift realised/bound <= 1 at every node",
+   "passed": true,
+   "max_ratio": 0.07240519449176845,
+   "median_ratio": 0.0007435458510468723
+  },
+  {
+   "assertion": "R1 interior: factor bounds ||2Pz|| <= L_h, ||Delta_perp|| <= L_perp ||x_perp||, e_u <= ebar_u, ||L_gr h~_r(z_k)|| <= g_h, ||w|| <= eps_adv at every node",
+   "passed": true,
+   "f_grad": 0.8281832197452049,
+   "f_lip": 0.7273895816348547,
+   "f_eu": 0.5705188680275449,
+   "f_gk": 0.848724305935903,
+   "f_w": 1.0000000000000002
+  },
+  {
+   "assertion": "R1 interior: ||z - z_k|| <= M_z s at every node",
+   "passed": true,
+   "max_ratio": 0.5050832889739145
+  },
+  {
+   "assertion": "R1 interior: (v) soundness: realised rate - RHS(s) of eq:ode_diff_ineq >= 0 at every active-shell node",
+   "passed": true,
+   "min_slack": 0.03346181492693364,
+   "tol": 3.650728804048269e-14,
+   "nodes": 7521
+  },
+  {
+   "assertion": "R1 interior: Teacher condition Theta(z_k) >= delta_cert at every active-shell sample",
+   "passed": true,
+   "min_margin": 0.003442603635579085
+  },
+  {
+   "assertion": "R1 interior: interior branch h~_r(z(t)) >= h~_r(z_k) - L_h M_z s at every B_int node",
+   "passed": true,
+   "min_slack": 0.0,
+   "nodes": 112479
+  }
+ ],
+ "data": {
+  "R2 boundary": {
+   "nodes": 800016,
+   "active_nodes": 52002,
+   "interior_nodes": 748014,
+   "stats": {
+    "tail": {
+     "max": 0.31605432619576146,
+     "median": 0.0007286697826873317,
+     "n": 800016
+    },
+    "adv": {
+     "max": 0.8771726204624709,
+     "median": 0.019032373846153403,
+     "n": 800016
+    },
+    "quant": {
+     "max": 0.37291880308939346,
+     "median": 0.0018499675904323667,
+     "n": 800016
+    },
+    "hold": {
+     "max": 0.07438723629227799,
+     "median": 5.530621555110819e-06,
+     "n": 533344
+    },
+    "f_grad": {
+     "max": 0.8623046116080727,
+     "median": 0.05927287311051912,
+     "n": 800016
+    },
+    "f_lip": {
+     "max": 0.945444261080071,
+     "median": 0.2520701353289051,
+     "n": 800016
+    },
+    "f_env": {
+     "max": 1.0000000000000018,
+     "median": 0.2851432960711885,
+     "n": 800016
+    },
+    "f_cos": {
+     "max": 0.773574095645921,
+     "median": 0.2258212050365451,
+     "n": 800016
+    },
+    "f_eu": {
+     "max": 0.5871695826112976,
+     "median": 0.10575471009815565,
+     "n": 800016
+    },
+    "f_gk": {
+     "max": 0.8836919965820492,
+     "median": 0.0344436779730225,
+     "n": 800016
+    },
+    "f_mz": {
+     "max": 0.3205001870768865,
+     "median": 0.004322561343430292,
+     "n": 533344
+    },
+    "f_lipH": {
+     "max": 0.23226141624501026,
+     "median": 0.0013333205905275295,
+     "n": 533344
+    },
+    "f_w": {
+     "max": 1.0000000000000002,
+     "median": 1.0,
+     "n": 800016
+    }
+   },
+   "stats_active": {
+    "tail": {
+     "max": 0.31605432619576146,
+     "median": 0.03948221678340576,
+     "n": 52002
+    },
+    "adv": {
+     "max": 0.8771726204624709,
+     "median": 0.14618085548605908,
+     "n": 52002
+    },
+    "quant": {
+     "max": 0.37291880308939346,
+     "median": 0.01721214401106037,
+     "n": 52002
+    },
+    "hold": {
+     "max": 0.07438723629227799,
+     "median": 0.0014128052259874332,
+     "n": 34668
+    },
+    "f_grad": {
+     "max": 0.8623046116080727,
+     "median": 0.5488584770758064,
+     "n": 52002
+    },
+    "f_lip": {
+     "max": 0.945444261080071,
+     "median": 0.3391962136641021,
+     "n": 52002
+    },
+    "f_env": {
+     "max": 1.0000000000000018,
+     "median": 0.9092454890635223,
+     "n": 52002
+    },
+    "f_cos": {
+     "max": 0.7673101254779352,
+     "median": 0.22047531761992123,
+     "n": 52002
+    },
+    "f_eu": {
+     "max": 0.5609366452140566,
+     "median": 0.11558453705818035,
+     "n": 52002
+    },
+    "f_gk": {
+     "max": 0.8836919965820492,
+     "median": 0.2607510806271449,
+     "n": 52002
+    },
+    "f_mz": {
+     "max": 0.3205001870768865,
+     "median": 0.05391371844920259,
+     "n": 34668
+    },
+    "f_lipH": {
+     "max": 0.23226141624501026,
+     "median": 0.028227268740948656,
+     "n": 34668
+    },
+    "f_w": {
+     "max": 1.0000000000000002,
+     "median": 1.0,
+     "n": 52002
+    }
+   },
+   "quant_phase": {
+    "0": {
+     "max": 0.20372361933309296,
+     "median": 0.0007461205690645254,
+     "n": 266672
+    },
+    "1": {
+     "max": 0.37291880308939346,
+     "median": 0.0037749742547310344,
+     "n": 266672
+    },
+    "2": {
+     "max": 0.25510097197773757,
+     "median": 0.0020188875786666003,
+     "n": 266672
+    }
+   },
+   "min_slack": 0.00894505276649703,
+   "median_slack": 0.03816118996142057,
+   "min_slackbar": 0.012289680680625852,
+   "min_slack_decomposition": {
+    "teacher": 0.004547782293323442,
+    "tail": 0.003533161720408944,
+    "adv": 0.0008417240456312432,
+    "hold": 0.0,
+    "quant": 2.2384707133351543e-05
+   },
+   "min_slack_where": {
+    "k": 875,
+    "phase": 0,
+    "s": 0.0,
+    "seed": 7
+   },
+   "min_teacher_margin": 0.003539106669623782,
+   "min_slack_int": 0.0,
+   "max_rho_int": 2.5217447533236196e-07
+  },
+  "R2 interior": {
+   "nodes": 800016,
+   "active_nodes": 50634,
+   "interior_nodes": 749382,
+   "stats": {
+    "tail": {
+     "max": 0.006628091477802011,
+     "median": 5.579423753493648e-05,
+     "n": 800016
+    },
+    "adv": {
+     "max": 0.8698462769741905,
+     "median": 0.018896701931081734,
+     "n": 800016
+    },
+    "quant": {
+     "max": 0.3459185102944277,
+     "median": 0.0018325007567893995,
+     "n": 800016
+    },
+    "hold": {
+     "max": 0.0732627771222822,
+     "median": 5.3729849055817454e-06,
+     "n": 533344
+    },
+    "f_grad": {
+     "max": 0.8551024490817982,
+     "median": 0.05872576620774734,
+     "n": 800016
+    },
+    "f_lip": {
+     "max": 0.9813727330886467,
+     "median": 0.6310988042281771,
+     "n": 800016
+    },
+    "f_env": {
+     "max": 0.058298591508425104,
+     "median": 0.011535911338474713,
+     "n": 800016
+    },
+    "f_cos": {
+     "max": 0.9219666584360521,
+     "median": 0.2222913837381384,
+     "n": 800016
+    },
+    "f_eu": {
+     "max": 0.5828609198537907,
+     "median": 0.10459395776005118,
+     "n": 800016
+    },
+    "f_gk": {
+     "max": 0.8763112017945978,
+     "median": 0.03404078196494316,
+     "n": 800016
+    },
+    "f_mz": {
+     "max": 0.3178866653262787,
+     "median": 0.004295630424707812,
+     "n": 533344
+    },
+    "f_lipH": {
+     "max": 0.23051328784736666,
+     "median": 0.001320507109828043,
+     "n": 533344
+    },
+    "f_w": {
+     "max": 1.0000000000000002,
+     "median": 1.0,
+     "n": 800016
+    }
+   },
+   "stats_active": {
+    "tail": {
+     "max": 0.004773000998335214,
+     "median": 0.00017145687299299772,
+     "n": 50634
+    },
+    "adv": {
+     "max": 0.8698462769741905,
+     "median": 0.14505543154436665,
+     "n": 50634
+    },
+    "quant": {
+     "max": 0.3459185102944277,
+     "median": 0.01702027930360478,
+     "n": 50634
+    },
+    "hold": {
+     "max": 0.0732627771222822,
+     "median": 0.0014615955320633673,
+     "n": 33756
+    },
+    "f_grad": {
+     "max": 0.8551024490817982,
+     "median": 0.5464670456075409,
+     "n": 50634
+    },
+    "f_lip": {
+     "max": 0.6159220278480682,
+     "median": 0.15910353855671386,
+     "n": 50634
+    },
+    "f_env": {
+     "max": 0.04919311644762305,
+     "median": 0.011425996959176402,
+     "n": 50634
+    },
+    "f_cos": {
+     "max": 0.9219666584360521,
+     "median": 0.2044620071333609,
+     "n": 50634
+    },
+    "f_eu": {
+     "max": 0.5828609198537907,
+     "median": 0.11721303327295543,
+     "n": 50634
+    },
+    "f_gk": {
+     "max": 0.8763112017945978,
+     "median": 0.25949345334962165,
+     "n": 50634
+    },
+    "f_mz": {
+     "max": 0.3178866653262787,
+     "median": 0.054381073826318016,
+     "n": 33756
+    },
+    "f_lipH": {
+     "max": 0.23051328784736666,
+     "median": 0.028889473858306446,
+     "n": 33756
+    },
+    "f_w": {
+     "max": 1.0000000000000002,
+     "median": 1.0,
+     "n": 50634
+    }
+   },
+   "quant_phase": {
+    "0": {
+     "max": 0.2057255906649284,
+     "median": 0.0007320917913617797,
+     "n": 266672
+    },
+    "1": {
+     "max": 0.3459185102944277,
+     "median": 0.003756903527420255,
+     "n": 266672
+    },
+    "2": {
+     "max": 0.2244267960316961,
+     "median": 0.0019860826936857305,
+     "n": 266672
+    }
+   },
+   "min_slack": 0.00904255223655254,
+   "median_slack": 0.037983137939451767,
+   "min_slackbar": 0.012368579023190551,
+   "min_slack_decomposition": {
+    "teacher": 0.004491793490233358,
+    "tail": 0.0036655267401772317,
+    "adv": 0.0008426139561187687,
+    "hold": 0.0,
+    "quant": 4.261805002316992e-05
+   },
+   "min_slack_where": {
+    "k": 869,
+    "phase": 0,
+    "s": 0.0,
+    "seed": 7
+   },
+   "min_teacher_margin": 0.003491612234543787,
+   "min_slack_int": 0.0,
+   "max_rho_int": 1.9268057044805928e-07
+  },
+  "R2": {
+   "stats": {
+    "tail": {
+     "max": 0.31605432619576146,
+     "median": 0.00020627883329517338,
+     "n": 1600032
+    },
+    "adv": {
+     "max": 0.8771726204624709,
+     "median": 0.01896370807533452,
+     "n": 1600032
+    },
+    "quant": {
+     "max": 0.37291880308939346,
+     "median": 0.0018414707342372346,
+     "n": 1600032
+    },
+    "hold": {
+     "max": 0.07438723629227799,
+     "median": 5.4547173917542826e-06,
+     "n": 1066688
+    },
+    "f_grad": {
+     "max": 0.8623046116080727,
+     "median": 0.05899992989045696,
+     "n": 1600032
+    },
+    "f_lip": {
+     "max": 0.9813727330886467,
+     "median": 0.39035945416341883,
+     "n": 1600032
+    },
+    "f_env": {
+     "max": 1.0000000000000018,
+     "median": 0.06812175078559139,
+     "n": 1600032
+    },
+    "f_cos": {
+     "max": 0.9219666584360521,
+     "median": 0.2240173466052383,
+     "n": 1600032
+    },
+    "f_eu": {
+     "max": 0.5871695826112976,
+     "median": 0.10516934774982228,
+     "n": 1600032
+    },
+    "f_gk": {
+     "max": 0.8836919965820492,
+     "median": 0.03424042813723962,
+     "n": 1600032
+    },
+    "f_mz": {
+     "max": 0.3205001870768865,
+     "median": 0.0043081561106197465,
+     "n": 1066688
+    },
+    "f_lipH": {
+     "max": 0.23226141624501026,
+     "median": 0.0013265835512191535,
+     "n": 1066688
+    },
+    "f_w": {
+     "max": 1.0000000000000002,
+     "median": 1.0,
+     "n": 1600032
+    }
+   },
+   "stats_active": {
+    "tail": {
+     "max": 0.31605432619576146,
+     "median": 0.00344379130281816,
+     "n": 102636
+    },
+    "adv": {
+     "max": 0.8771726204624709,
+     "median": 0.1454128143737521,
+     "n": 102636
+    },
+    "quant": {
+     "max": 0.37291880308939346,
+     "median": 0.01711840628259985,
+     "n": 102636
+    },
+    "hold": {
+     "max": 0.07438723629227799,
+     "median": 0.001438123238588093,
+     "n": 68424
+    },
+    "f_grad": {
+     "max": 0.8623046116080727,
+     "median": 0.5476818244025838,
+     "n": 102636
+    },
+    "f_lip": {
+     "max": 0.945444261080071,
+     "median": 0.25542470446935284,
+     "n": 102636
+    },
+    "f_env": {
+     "max": 1.0000000000000018,
+     "median": 0.6808208724892181,
+     "n": 102636
+    },
+    "f_cos": {
+     "max": 0.9219666584360521,
+     "median": 0.21130365313758448,
+     "n": 102636
+    },
+    "f_eu": {
+     "max": 0.5828609198537907,
+     "median": 0.11634116445241591,
+     "n": 102636
+    },
+    "f_gk": {
+     "max": 0.8836919965820492,
+     "median": 0.2600554082777384,
+     "n": 102636
+    },
+    "f_mz": {
+     "max": 0.3205001870768865,
+     "median": 0.05414427901099149,
+     "n": 68424
+    },
+    "f_lipH": {
+     "max": 0.23226141624501026,
+     "median": 0.02856768407655861,
+     "n": 68424
+    },
+    "f_w": {
+     "max": 1.0000000000000002,
+     "median": 1.0,
+     "n": 102636
+    }
+   },
+   "quant_phase_active": {
+    "0": {
+     "max": 0.2057255906649284,
+     "median": 0.008388176516372824,
+     "n": 34212
+    },
+    "1": {
+     "max": 0.37291880308939346,
+     "median": 0.03479946901280092,
+     "n": 34212
+    },
+    "2": {
+     "max": 0.25510097197773757,
+     "median": 0.018086169037085396,
+     "n": 34212
+    }
+   },
+   "quant_phase": {
+    "0": {
+     "max": 0.2057255906649284,
+     "median": 0.0007390144604035229,
+     "n": 533344
+    },
+    "1": {
+     "max": 0.37291880308939346,
+     "median": 0.003765523425520555,
+     "n": 533344
+    },
+    "2": {
+     "max": 0.25510097197773757,
+     "median": 0.0020020569952213362,
+     "n": 533344
+    }
+   },
+   "min_slack": 0.00894505276649703,
+   "median_slack": 0.03806709996177634,
+   "min_slackbar": 0.012289680680625852,
+   "delta_total": 0.013559796519887677,
+   "delta_cert": 0.014559178152768358,
+   "H6_margin": 0.0009993816328806807,
+   "nodes": 1600032,
+   "active_nodes": 102636,
+   "interior_nodes": 1497396
+  },
+  "R1 boundary": {
+   "nodes": 120000,
+   "active_nodes": 12717,
+   "interior_nodes": 107283,
+   "stats": {
+    "tail": {
+     "max": 0.2606460388434495,
+     "median": 0.001582837747733901,
+     "n": 120000
+    },
+    "adv": {
+     "max": 0.9761068515378877,
+     "median": 0.044731410105030484,
+     "n": 120000
+    },
+    "quant": {
+     "max": 0.3588047664070792,
+     "median": 0.005679452071003184,
+     "n": 120000
+    },
+    "hold": {
+     "max": 0.09728083032867822,
+     "median": 0.0009958471716087608,
+     "n": 80000
+    },
+    "f_grad": {
+     "max": 0.9595619150305762,
+     "median": 0.115979326250475,
+     "n": 120000
+    },
+    "f_lip": {
+     "max": 0.7007035204078732,
+     "median": 0.18922732345319365,
+     "n": 120000
+    },
+    "f_env": {
+     "max": 1.0000000000000098,
+     "median": 0.28344807874890143,
+     "n": 120000
+    },
+    "f_cos": {
+     "max": 0.9758087919831586,
+     "median": 0.35831715665714303,
+     "n": 120000
+    },
+    "f_eu": {
+     "max": 0.5600998368146525,
+     "median": 0.11667021126787594,
+     "n": 120000
+    },
+    "f_gk": {
+     "max": 0.9833615327142309,
+     "median": 0.09580375347502545,
+     "n": 120000
+    },
+    "f_mz": {
+     "max": 0.5852916057686454,
+     "median": 0.06279711900810134,
+     "n": 80000
+    },
+    "f_lipH": {
+     "max": 0.17943930780407177,
+     "median": 0.016575961076353042,
+     "n": 80000
+    },
+    "f_w": {
+     "max": 1.0000000000000002,
+     "median": 1.0,
+     "n": 120000
+    }
+   },
+   "stats_active": {
+    "tail": {
+     "max": 0.2606460388434495,
+     "median": 0.04003776628701444,
+     "n": 12717
+    },
+    "adv": {
+     "max": 0.9761068515378877,
+     "median": 0.2884614546743883,
+     "n": 12717
+    },
+    "quant": {
+     "max": 0.3588047664070792,
+     "median": 0.034984141407846246,
+     "n": 12717
+    },
+    "hold": {
+     "max": 0.09728083032867822,
+     "median": 0.022723461469475258,
+     "n": 8478
+    },
+    "f_grad": {
+     "max": 0.9595619150305762,
+     "median": 0.6054848290292397,
+     "n": 12717
+    },
+    "f_lip": {
+     "max": 0.7007035204078732,
+     "median": 0.2329747401920298,
+     "n": 12717
+    },
+    "f_env": {
+     "max": 1.0000000000000098,
+     "median": 0.8762559687338143,
+     "n": 12717
+    },
+    "f_cos": {
+     "max": 0.8383077477529107,
+     "median": 0.29773827231503963,
+     "n": 12717
+    },
+    "f_eu": {
+     "max": 0.5494608055946707,
+     "median": 0.16561087171479258,
+     "n": 12717
+    },
+    "f_gk": {
+     "max": 0.9833615327142309,
+     "median": 0.4397197217444899,
+     "n": 12717
+    },
+    "f_mz": {
+     "max": 0.5852916057686454,
+     "median": 0.32316654542645273,
+     "n": 8478
+    },
+    "f_lipH": {
+     "max": 0.17943930780407177,
+     "median": 0.07877414695221613,
+     "n": 8478
+    },
+    "f_w": {
+     "max": 1.0000000000000002,
+     "median": 1.0,
+     "n": 12717
+    }
+   },
+   "quant_phase": {
+    "0": {
+     "max": 0.25588486254708454,
+     "median": 0.0024577668665019922,
+     "n": 40000
+    },
+    "1": {
+     "max": 0.3588047664070792,
+     "median": 0.01020459895982069,
+     "n": 40000
+    },
+    "2": {
+     "max": 0.2855864872936719,
+     "median": 0.005526700496322786,
+     "n": 40000
+    }
+   },
+   "min_slack": 0.03030259102934634,
+   "median_slack": 0.04883877248112042,
+   "min_slackbar": 0.030707032220317104,
+   "min_slack_decomposition": {
+    "teacher": 0.02936774736591709,
+    "tail": 1.833648762613573e-05,
+    "adv": 0.0008125223988038012,
+    "hold": 0.0,
+    "quant": 0.00010398477699935787
+   },
+   "min_slack_where": {
+    "k": 292,
+    "phase": 0,
+    "s": 0.0,
+    "seed": 3
+   },
+   "min_teacher_margin": 0.0003890040589952168,
+   "min_slack_int": 0.0,
+   "max_rho_int": 0.0
+  },
+  "R1 interior": {
+   "nodes": 120000,
+   "active_nodes": 7521,
+   "interior_nodes": 112479,
+   "stats": {
+    "tail": {
+     "max": 0.00691114677249507,
+     "median": 0.00013972360698400035,
+     "n": 120000
+    },
+    "adv": {
+     "max": 0.8424629015171402,
+     "median": 0.039238124124395646,
+     "n": 120000
+    },
+    "quant": {
+     "max": 0.36720950192892693,
+     "median": 0.00473461879365716,
+     "n": 120000
+    },
+    "hold": {
+     "max": 0.07240519449176845,
+     "median": 0.0007435458510468723,
+     "n": 80000
+    },
+    "f_grad": {
+     "max": 0.8281832197452049,
+     "median": 0.10042481362061022,
+     "n": 120000
+    },
+    "f_lip": {
+     "max": 0.7273895816348547,
+     "median": 0.49964074239588574,
+     "n": 120000
+    },
+    "f_env": {
+     "max": 0.047491836814190905,
+     "median": 0.014920808085468168,
+     "n": 120000
+    },
+    "f_cos": {
+     "max": 0.9711595801679065,
+     "median": 0.3269779703524507,
+     "n": 120000
+    },
+    "f_eu": {
+     "max": 0.5705188680275449,
+     "median": 0.11346649157480014,
+     "n": 120000
+    },
+    "f_gk": {
+     "max": 0.848724305935903,
+     "median": 0.08308324700823139,
+     "n": 120000
+    },
+    "f_mz": {
+     "max": 0.5050832889739145,
+     "median": 0.054259340854180535,
+     "n": 80000
+    },
+    "f_lipH": {
+     "max": 0.15482593845756004,
+     "median": 0.014321211802167583,
+     "n": 80000
+    },
+    "f_w": {
+     "max": 1.0000000000000002,
+     "median": 1.0,
+     "n": 120000
+    }
+   },
+   "stats_active": {
+    "tail": {
+     "max": 0.0017143739593548511,
+     "median": 9.768591396716964e-05,
+     "n": 7521
+    },
+    "adv": {
+     "max": 0.8424629015171402,
+     "median": 0.2745610208888369,
+     "n": 7521
+    },
+    "quant": {
+     "max": 0.36720950192892693,
+     "median": 0.03274000109299204,
+     "n": 7521
+    },
+    "hold": {
+     "max": 0.07240519449176845,
+     "median": 0.021567815553947454,
+     "n": 5014
+    },
+    "f_grad": {
+     "max": 0.8281832197452049,
+     "median": 0.5808143352845787,
+     "n": 7521
+    },
+    "f_lip": {
+     "max": 0.33452220346941347,
+     "median": 0.11151060351835687,
+     "n": 7521
+    },
+    "f_env": {
+     "max": 0.03225266388642143,
+     "median": 0.006337445568922863,
+     "n": 7521
+    },
+    "f_cos": {
+     "max": 0.9405906560434677,
+     "median": 0.25793104789370697,
+     "n": 7521
+    },
+    "f_eu": {
+     "max": 0.5289247897022369,
+     "median": 0.1611603560451298,
+     "n": 7521
+    },
+    "f_gk": {
+     "max": 0.848724305935903,
+     "median": 0.41208516753248714,
+     "n": 7521
+    },
+    "f_mz": {
+     "max": 0.5050832889739145,
+     "median": 0.3196102749675709,
+     "n": 5014
+    },
+    "f_lipH": {
+     "max": 0.15482593845756004,
+     "median": 0.07198848745738715,
+     "n": 5014
+    },
+    "f_w": {
+     "max": 1.0000000000000002,
+     "median": 1.0,
+     "n": 7521
+    }
+   },
+   "quant_phase": {
+    "0": {
+     "max": 0.19977122679164702,
+     "median": 0.0020419773606695224,
+     "n": 40000
+    },
+    "1": {
+     "max": 0.36720950192892693,
+     "median": 0.00879428571506594,
+     "n": 40000
+    },
+    "2": {
+     "max": 0.21651250859576873,
+     "median": 0.004795909736512326,
+     "n": 40000
+    }
+   },
+   "min_slack": 0.03346181492693364,
+   "median_slack": 0.043995822670617815,
+   "min_slackbar": 0.033833278453636914,
+   "min_slack_decomposition": {
+    "teacher": 0.032421346942500956,
+    "tail": 1.8358576955789808e-05,
+    "adv": 0.0008904523437580303,
+    "hold": 0.0,
+    "quant": 0.0001316570637185474
+   },
+   "min_slack_where": {
+    "k": 160,
+    "phase": 0,
+    "s": 0.0,
+    "seed": 11
+   },
+   "min_teacher_margin": 0.003442603635579085,
+   "min_slack_int": 0.0,
+   "max_rho_int": 0.0
+  },
+  "R1": {
+   "stats": {
+    "tail": {
+     "max": 0.2606460388434495,
+     "median": 0.00045822908622161345,
+     "n": 240000
+    },
+    "adv": {
+     "max": 0.9761068515378877,
+     "median": 0.04194314752164562,
+     "n": 240000
+    },
+    "quant": {
+     "max": 0.36720950192892693,
+     "median": 0.005189113421533666,
+     "n": 240000
+    },
+    "hold": {
+     "max": 0.09728083032867822,
+     "median": 0.0008841910462242121,
+     "n": 160000
+    },
+    "f_grad": {
+     "max": 0.9595619150305762,
+     "median": 0.10620645222224248,
+     "n": 240000
+    },
+    "f_lip": {
+     "max": 0.7273895816348547,
+     "median": 0.3030831857910909,
+     "n": 240000
+    },
+    "f_env": {
+     "max": 1.0000000000000098,
+     "median": 0.06129051803730133,
+     "n": 240000
+    },
+    "f_cos": {
+     "max": 0.9758087919831586,
+     "median": 0.3431731409920341,
+     "n": 240000
+    },
+    "f_eu": {
+     "max": 0.5705188680275449,
+     "median": 0.11504344224166546,
+     "n": 240000
+    },
+    "f_gk": {
+     "max": 0.9833615327142309,
+     "median": 0.08859520430128767,
+     "n": 240000
+    },
+    "f_mz": {
+     "max": 0.5852916057686454,
+     "median": 0.05873427513995805,
+     "n": 160000
+    },
+    "f_lipH": {
+     "max": 0.17943930780407177,
+     "median": 0.015241870531209652,
+     "n": 160000
+    },
+    "f_w": {
+     "max": 1.0000000000000002,
+     "median": 1.0,
+     "n": 240000
+    }
+   },
+   "stats_active": {
+    "tail": {
+     "max": 0.2606460388434495,
+     "median": 0.01454719758713463,
+     "n": 20238
+    },
+    "adv": {
+     "max": 0.9761068515378877,
+     "median": 0.2814470813006025,
+     "n": 20238
+    },
+    "quant": {
+     "max": 0.36720950192892693,
+     "median": 0.0341642912354057,
+     "n": 20238
+    },
+    "hold": {
+     "max": 0.09728083032867822,
+     "median": 0.022601573230149913,
+     "n": 13492
+    },
+    "f_grad": {
+     "max": 0.9595619150305762,
+     "median": 0.5956108417507915,
+     "n": 20238
+    },
+    "f_lip": {
+     "max": 0.7007035204078732,
+     "median": 0.18422315891646174,
+     "n": 20238
+    },
+    "f_env": {
+     "max": 1.0000000000000098,
+     "median": 0.8042249815664719,
+     "n": 20238
+    },
+    "f_cos": {
+     "max": 0.9405906560434677,
+     "median": 0.28166822112681134,
+     "n": 20238
+    },
+    "f_eu": {
+     "max": 0.5494608055946707,
+     "median": 0.1637694141130392,
+     "n": 20238
+    },
+    "f_gk": {
+     "max": 0.9833615327142309,
+     "median": 0.43080964434467195,
+     "n": 20238
+    },
+    "f_mz": {
+     "max": 0.5852916057686454,
+     "median": 0.3212553534422754,
+     "n": 13492
+    },
+    "f_lipH": {
+     "max": 0.17943930780407177,
+     "median": 0.07521882702783397,
+     "n": 13492
+    },
+    "f_w": {
+     "max": 1.0000000000000002,
+     "median": 1.0,
+     "n": 20238
+    }
+   },
+   "quant_phase_active": {
+    "0": {
+     "max": 0.25588486254708454,
+     "median": 0.029875458067126933,
+     "n": 6746
+    },
+    "1": {
+     "max": 0.36720950192892693,
+     "median": 0.050984231446255385,
+     "n": 6746
+    },
+    "2": {
+     "max": 0.2855864872936719,
+     "median": 0.02682884263424698,
+     "n": 6746
+    }
+   },
+   "quant_phase": {
+    "0": {
+     "max": 0.25588486254708454,
+     "median": 0.0022488705086377682,
+     "n": 80000
+    },
+    "1": {
+     "max": 0.36720950192892693,
+     "median": 0.009477221332747313,
+     "n": 80000
+    },
+    "2": {
+     "max": 0.2855864872936719,
+     "median": 0.005165596878790962,
+     "n": 80000
+    }
+   },
+   "min_slack": 0.03030259102934634,
+   "median_slack": 0.04624654966271031,
+   "min_slackbar": 0.030707032220317104,
+   "delta_total": 0.0026338826178779235,
+   "delta_cert": 0.0316126259247998,
+   "H6_margin": 0.028978743306921875,
+   "nodes": 240000,
+   "active_nodes": 20238,
+   "interior_nodes": 219762
+  }
+ }
+}

@@ -1,0 +1,273 @@
+{
+ "experiment": "exp4_theorem1",
+ "wall_clock_s": 51.862011496996274,
+ "peak_rss_MB": 342.80078125,
+ "assertions": [
+  {
+   "assertion": "R2: interior level h_r = 0.5 h_act lies strictly inside C~_r",
+   "passed": true,
+   "h_r0": 0.010338251138581426,
+   "eps_b2_plus_dh": 0.009667329619998197
+  },
+  {
+   "assertion": "R2 boundary: (a) tail ||x_perp(t)||_Pfe <= eps_basis_P (all seeds, all nodes)",
+   "passed": true,
+   "max_tail_over_eps_b": 1.0000000000000064
+  },
+  {
+   "assertion": "R2 boundary: (b) h~_r(z(t_k)) >= 0 at every sampling instant",
+   "passed": true,
+   "min_htil_tk": -7.293843060454143e-17
+  },
+  {
+   "assertion": "R2 boundary: (b) h~_r(z(t)) >= -Delta h_dip at every node",
+   "passed": true,
+   "min_htil": -7.293843060454143e-17,
+   "Delta_h_dip": 2.059889567494835e-06
+  },
+  {
+   "assertion": "R2 boundary: (c) h(x(t)) >= h~_r(z(t)) + Delta h_dip",
+   "passed": true,
+   "min_gap": -1.7034984534092246e-15
+  },
+  {
+   "assertion": "R2 boundary: (c) h(x(t)) >= 0 for all t, all seeds (full-order safety)",
+   "passed": true,
+   "min_h": 2.0598895658086036e-06,
+   "delta_total": 0.013559796519887677,
+   "seeds": 16
+  },
+  {
+   "assertion": "R2 boundary: z(t_k) stays in Z_ODD",
+   "passed": true
+  },
+  {
+   "assertion": "R2 boundary: min_t h = Delta h_dip at t = 0 (initial state on the certified floor)",
+   "passed": true,
+   "min_h": 2.0598895658086036e-06,
+   "Delta_h_dip": 2.059889567494835e-06
+  },
+  {
+   "assertion": "R2 interior: (a) tail ||x_perp(t)||_Pfe <= eps_basis_P (all seeds, all nodes)",
+   "passed": true,
+   "max_tail_over_eps_b": 0.05829859150842516
+  },
+  {
+   "assertion": "R2 interior: (b) h~_r(z(t_k)) >= 0 at every sampling instant",
+   "passed": true,
+   "min_htil_tk": 0.0006709215185831569
+  },
+  {
+   "assertion": "R2 interior: (b) h~_r(z(t)) >= -Delta h_dip at every node",
+   "passed": true,
+   "min_htil": 0.0006709215185831569,
+   "Delta_h_dip": 2.059889567494835e-06
+  },
+  {
+   "assertion": "R2 interior: (c) h(x(t)) >= h~_r(z(t)) + Delta h_dip",
+   "passed": true,
+   "min_gap": 0.00963242012910602
+  },
+  {
+   "assertion": "R2 interior: (c) h(x(t)) >= 0 for all t, all seeds (full-order safety)",
+   "passed": true,
+   "min_h": 0.010338251138579793,
+   "delta_total": 0.013559796519887677,
+   "seeds": 16
+  },
+  {
+   "assertion": "R2 interior: z(t_k) stays in Z_ODD",
+   "passed": true
+  },
+  {
+   "assertion": "R2 interior: min_t h(x_t) = min_j h(x_j(0)) (attained at t = 0; h rises along every closed-loop trajectory)",
+   "passed": true,
+   "t_min": 0.0,
+   "min_h": 0.010338251138579793
+  },
+  {
+   "assertion": "R1: interior level h_r = 0.5 h_act lies strictly inside C~_r",
+   "passed": true,
+   "h_r0": 0.012796104722203624,
+   "eps_b2_plus_dh": 5.6202082083860205e-05
+  },
+  {
+   "assertion": "R1 boundary: (a) tail ||x_perp(t)||_Pfe <= eps_basis_P (all seeds, all nodes)",
+   "passed": true,
+   "max_tail_over_eps_b": 1.0000000000000053
+  },
+  {
+   "assertion": "R1 boundary: (b) h~_r(z(t_k)) >= 0 at every sampling instant",
+   "passed": true,
+   "min_htil_tk": -7.773644873426341e-17
+  },
+  {
+   "assertion": "R1 boundary: (b) h~_r(z(t)) >= -Delta h_dip at every node",
+   "passed": true,
+   "min_htil": -7.773644873426341e-17,
+   "Delta_h_dip": 3.007550534344789e-06
+  },
+  {
+   "assertion": "R1 boundary: (c) h(x(t)) >= h~_r(z(t)) + Delta h_dip",
+   "passed": true,
+   "min_gap": -1.981311707581479e-15
+  },
+  {
+   "assertion": "R1 boundary: (c) h(x(t)) >= 0 for all t, all seeds (full-order safety)",
+   "passed": true,
+   "min_h": 3.007550532285741e-06,
+   "delta_total": 0.0026338826178779235,
+   "seeds": 16
+  },
+  {
+   "assertion": "R1 boundary: z(t_k) stays in Z_ODD",
+   "passed": true
+  },
+  {
+   "assertion": "R1 boundary: min_t h = Delta h_dip at t = 0 (initial state on the certified floor)",
+   "passed": true,
+   "min_h": 3.007550532285741e-06,
+   "Delta_h_dip": 3.007550534344789e-06
+  },
+  {
+   "assertion": "R1 interior: (a) tail ||x_perp(t)||_Pfe <= eps_basis_P (all seeds, all nodes)",
+   "passed": true,
+   "max_tail_over_eps_b": 0.04749183681419089
+  },
+  {
+   "assertion": "R1 interior: (b) h~_r(z(t_k)) >= 0 at every sampling instant",
+   "passed": true,
+   "min_htil_tk": 0.012739902640119682
+  },
+  {
+   "assertion": "R1 interior: (b) h~_r(z(t)) >= -Delta h_dip at every node",
+   "passed": true,
+   "min_htil": 0.012739902640119682,
+   "Delta_h_dip": 3.007550534344789e-06
+  },
+  {
+   "assertion": "R1 interior: (c) h(x(t)) >= h~_r(z(t)) + Delta h_dip",
+   "passed": true,
+   "min_gap": 5.307455263701452e-05
+  },
+  {
+   "assertion": "R1 interior: (c) h(x(t)) >= 0 for all t, all seeds (full-order safety)",
+   "passed": true,
+   "min_h": 0.01279610472220212,
+   "delta_total": 0.0026338826178779235,
+   "seeds": 16
+  },
+  {
+   "assertion": "R1 interior: z(t_k) stays in Z_ODD",
+   "passed": true
+  },
+  {
+   "assertion": "R1 interior: min_t h(x_t) = min_j h(x_j(0)) (attained at t = 0; h rises along every closed-loop trajectory)",
+   "passed": true,
+   "t_min": 0.0,
+   "min_h": 0.01279610472220212
+  }
+ ],
+ "data": {
+  "R2 boundary": {
+   "min_h": 2.0598895658086036e-06,
+   "t_min": 0.0,
+   "h0_min": 2.0598895658086036e-06,
+   "min_h_per_seed": [
+    2.0598895671061768e-06,
+    2.0598895670090323e-06,
+    2.059889568473139e-06,
+    2.0598895682372165e-06,
+    2.059889568716e-06,
+    2.05988956865355e-06,
+    2.05988956689801e-06,
+    2.0598895678555773e-06,
+    2.0598895658086036e-06,
+    2.0598895685702834e-06,
+    2.0598895663567762e-06,
+    2.0598895668078043e-06,
+    2.0598895676474105e-06,
+    2.0598895672449546e-06,
+    2.059889568084561e-06,
+    2.0598895672033213e-06
+   ],
+   "min_htil": -7.293843060454143e-17,
+   "max_tail": 0.09831210368225687
+  },
+  "R2 interior": {
+   "min_h": 0.010338251138579793,
+   "t_min": 0.0,
+   "h0_min": 0.010338251138579793,
+   "min_h_per_seed": [
+    0.010338251138580952,
+    0.010338251138580987,
+    0.010338251138582423,
+    0.010338251138582215,
+    0.01033825113858259,
+    0.010338251138582423,
+    0.010338251138580792,
+    0.010338251138581875,
+    0.010338251138579793,
+    0.010338251138582583,
+    0.010338251138580314,
+    0.01033825113858055,
+    0.010338251138581507,
+    0.010338251138581236,
+    0.010338251138581965,
+    0.010338251138580973
+   ],
+   "min_htil": 0.0006709215185831569,
+   "max_tail": 0.005731457172905798
+  },
+  "R1 boundary": {
+   "min_h": 3.007550532285741e-06,
+   "t_min": 0.0,
+   "h0_min": 3.007550532285741e-06,
+   "min_h_per_seed": [
+    3.0075505337082142e-06,
+    3.0075505338122976e-06,
+    3.007550535630288e-06,
+    3.0075505353804877e-06,
+    3.0075505357760046e-06,
+    3.007550535547021e-06,
+    3.0075505335555586e-06,
+    3.007550534832315e-06,
+    3.007550532285741e-06,
+    3.0075505357690657e-06,
+    3.007550532937997e-06,
+    3.0075505332849417e-06,
+    3.0075505344645537e-06,
+    3.0075505340898534e-06,
+    3.0075505350127263e-06,
+    3.0075505338122976e-06
+   ],
+   "min_htil": -7.773644873426341e-17,
+   "max_tail": 0.00729345813380155
+  },
+  "R1 interior": {
+   "min_h": 0.01279610472220212,
+   "t_min": 0.0,
+   "h0_min": 0.01279610472220212,
+   "min_h_per_seed": [
+    0.012796104722203189,
+    0.012796104722203216,
+    0.01279610472220457,
+    0.012796104722204368,
+    0.012796104722204708,
+    0.012796104722204528,
+    0.012796104722203036,
+    0.012796104722203959,
+    0.01279610472220212,
+    0.012796104722204701,
+    0.012796104722202585,
+    0.01279610472220287,
+    0.012796104722203702,
+    0.012796104722203445,
+    0.012796104722204146,
+    0.012796104722203216
+   ],
+   "min_htil": 0.012739902640119682,
+   "max_tail": 0.0003463797235016346
+  }
+ }
+}

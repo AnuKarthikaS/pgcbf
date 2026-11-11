@@ -1,0 +1,3 @@
+noise,sigma,$h(x_0)$,Corollary,crude,T_TTL,$T_{\mathrm{TTL}}/T$,exits,CP $95\%$ interval
+"profile, $\sigma^\star$",0.007,0.00505058187387545,True,True,2022.2977375949642,1011.1488687974821,$0/2000$,"$[0,\,0.001843]$"
+tail-white (f),0.02,0.00505058187387545,False,True,0,0.0,$2000/2000$,"$[0.9982,\,1]$"

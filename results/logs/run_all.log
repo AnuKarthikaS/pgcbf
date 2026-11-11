@@ -1,0 +1,330 @@
+date: 2026-11-09T20:34:23Z
+cpu: Intel(R) Xeon(R) Processor @ 2.90GHz
+cores on machine: 4; used: 2 (BLAS threads=2, taskset -c 0,1)
+memory: 7957 MB
+python 3.14.8 numpy 2.5.4 scipy 1.18.1 matplotlib 3.11.2
+=== exp0_openloop ===
+[PASS] open-loop linearisation is exponentially unstable (max Re eig > 0) max_re_eig=0.292483 Pe=20
+[PASS] initial states lie in C (h(x0) >= 0) min_h0=2.05989e-06
+[PASS] open loop exits C for every seed within the horizon n_exit=16 n_seeds=16 worst_min_h=-0.897921 latest_exit_time=3.8559
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp0_openloop: 3/3 assertions passed, wall 15.6 s, peak RSS 214 MB
+### exp0_openloop: exit 0, wall 16.22 s, peak RSS 213.8 MB
+=== exp1_constants ===
+[PASS] R2: Prop2 mu_2P(A_r0) = -gamma/2 mu_2P=-0.5 minus_gamma_half=-0.5
+[PASS] R2: Prop2 Q = gamma P identity rel_err=7.03914e-15
+[PASS] R2: Prop2 full-order mu_2,Pfe(A_full) = -gamma/2 mu_full=-0.5
+[PASS] R2: tail rate lambda_K+1 equals modal pencil rate lambda_K1=0.5 pencil=0.5
+[PASS] R2: tail energy decays exactly as exp(-gamma t/2) (Q = gamma P) max_dev=4.33653e-13
+[PASS] R2: Lemma quad_split h(Phi z + x_perp) = h(Phi z) - ||x_perp||^2 (rel 1e-12) max_abs_err=1.9836e-15 scale=0.0498747
+[PASS] R2: (H2a) Phi^T P_eps P_perp = 0 residual=6.34829e-13
+[PASS] R2: Q = gamma P relative error < 1e-12 with K_f = 4 > K_m = 2 (A_full advection-free) rel_err=7.03914e-15
+[PASS] R2: A_r,perp (A_full-based) vanishes by eigenmode invariance norm=1.26968e-12
+[PASS] R2: S3 D_v closed form = attained sup (round-off) >= sampled sup (within 1%) D_v=0.44721 D_v_attained=0.44721 D_v_sampled=0.447169
+[PASS] R2: hypothesis H0 
+[PASS] R2: hypothesis H1 
+[PASS] R2: hypothesis H2 
+[PASS] R2: hypothesis H3 
+[PASS] R2: hypothesis H4 
+[PASS] R2: hypothesis H5 
+[PASS] R2: hypothesis H6 
+[PASS] R2: hypothesis H7 
+[PASS] R2: hypothesis H_sat 
+[PASS] R2: hypothesis timing_ok 
+[PASS] R2: hypothesis codesign_window 
+[PASS] R2: theorem_valid (all of (H0)-(H7)) and the certificate does not refuse 
+[PASS] R1: Prop2 mu_2P(A_r0) = -gamma/2 mu_2P=-0.5 minus_gamma_half=-0.5
+[PASS] R1: Prop2 Q = gamma P identity rel_err=7.03914e-15
+[PASS] R1: Prop2 full-order mu_2,Pfe(A_full) = -gamma/2 mu_full=-0.5
+[PASS] R1: tail rate lambda_K+1 equals modal pencil rate lambda_K1=0.5 pencil=0.5
+[PASS] R1: tail energy decays exactly as exp(-gamma t/2) (Q = gamma P) max_dev=4.33653e-13
+[PASS] R1: Lemma quad_split h(Phi z + x_perp) = h(Phi z) - ||x_perp||^2 (rel 1e-12) max_abs_err=1.80411e-15 scale=0.0499725
+[PASS] R1: (H2a) Phi^T P_eps P_perp = 0 residual=6.34829e-13
+[PASS] R1: Q = gamma P relative error < 1e-12 with K_f = 4 > K_m = 2 (A_full advection-free) rel_err=7.03914e-15
+[PASS] R1: A_r,perp (A_full-based) vanishes by eigenmode invariance norm=1.26968e-12
+[PASS] R1: S3 D_v closed form = attained sup (round-off) >= sampled sup (within 1%) D_v=0.44721 D_v_attained=0.44721 D_v_sampled=0.447169
+[PASS] R1: hypothesis H0 
+[PASS] R1: hypothesis H1 
+[PASS] R1: hypothesis H2 
+[PASS] R1: hypothesis H3 
+[PASS] R1: hypothesis H4 
+[PASS] R1: hypothesis H5 
+[PASS] R1: hypothesis H6 
+[PASS] R1: hypothesis H7 
+[PASS] R1: hypothesis H_sat 
+[PASS] R1: hypothesis timing_ok 
+[PASS] R1: hypothesis codesign_window 
+[PASS] R1: theorem_valid (all of (H0)-(H7)) and the certificate does not refuse 
+[PASS] R1: prop3_valid ((H-dz): r_ss < r_min and mu_R > L_sec) r_ss=0.0116185 r_min=0.15605
+[PASS] R2: (H-dz) honestly fails (L_sec > mu_R: open-loop unstable advection); Prop. 3 not claimed L_sec=2.39192 mu_R=0.5
+[PASS] G-D: ||A_adv,r,perp||_2 > 0 in R2 (K_f > K_m) A_adv_rperp=0.106022 K_f=4
+[PASS] G-D: L_perp_P(R2) materially larger than L_perp_P(R1) (ratio >= Pe ratio / 2) L_perp_R2=0.0474103 L_perp_R1=0.00319885 ratio=14.8211
+[PASS] G-D: L_perp_P = linear advective part + sin-nonlinearity part (both reported) lin_R2=0.0465384 nl_R2=0.000871927
+[PASS] G-D: tail-coupling share of delta_total reported and material in R2 (>= 10%) share_R2=0.270358 share_R1=0.00696696
+[PASS] certificate refuses: state-space LUT ($m = K$ variant) reason=Theorem thm:main_cbf: hypotheses ['H5', 'codesign window'] fail
+[PASS] certificate refuses: $u_{\max}$ below the (H-sat) left side reason=Theorem thm:main_cbf: hypotheses ['H3'] fail
+[PASS] certificate refuses: pure lattice advection (no spectral cutoff) reason=Theorem thm:main_cbf: hypotheses ['H4', 'H6', 'H7'] fail
+[PASS] certificate refuses: plain projector $\Pi_f$ ($w = 1$) reason=Theorem thm:main_cbf: hypotheses ['H4', 'H6', 'H7'] fail
+[PASS] certificate refuses: previous sampling period $T_s=5\times10^{-4}$ at $w^\star$ reason=Theorem thm:main_cbf: hypotheses ['H6'] fail
+[PASS] certificate refuses: $T_s$, $\tau_A$, $\tau_B$ $\times 10$ (hold term) reason=Theorem thm:main_cbf: hypotheses ['H6'] fail
+[PASS] R1: Prop. 3(i) contraction mu_R > L_sec holds mu_R=0.5 L_sec=0.120449
+[PASS] R2: Prop. 3(i) fails (L_sec > mu_R), so Proposition 3 does not apply on R2 mu_R=0.5 L_sec=2.39192
+[PASS] R2: gamma0 h_act exceeds the (H6) margin delta_cert - delta_total (Corollary 1 infeasible on R2 even at sigma = 0) gamma0_h_act=0.00723678 margin=0.000999382
+--- exp1_constants: 59/59 assertions passed, wall 4.5 s, peak RSS 112 MB
+### exp1_constants: exit 0, wall 4.76 s, peak RSS 111.6 MB
+=== exp2_crown ===
+[PASS] b_B=3 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=2.55942 max_gap=0.900068 ratio=2.84359
+[PASS] b_B=3 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=2.32647 max_gap=0.892673 ratio=2.60618
+[PASS] b_B=4 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=1.32873 max_gap=0.536612 ratio=2.47614
+[PASS] b_B=4 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=1.14504 max_gap=0.45087 ratio=2.53962
+[PASS] b_B=5 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.621693 max_gap=0.226293 ratio=2.7473
+[PASS] b_B=5 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.569574 max_gap=0.226108 ratio=2.51904
+[PASS] b_B=6 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.318996 max_gap=0.144929 ratio=2.20105
+[PASS] b_B=6 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.286786 max_gap=0.132626 ratio=2.16237
+[PASS] b_B=7 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.142961 max_gap=0.0664028 ratio=2.15294
+[PASS] b_B=7 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.142429 max_gap=0.0586024 ratio=2.43043
+[PASS] b_B=8 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0786507 max_gap=0.0342208 ratio=2.29833
+[PASS] b_B=8 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0709463 max_gap=0.0362061 ratio=1.95951
+[PASS] b_B=9 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0359147 max_gap=0.0173313 ratio=2.07224
+[PASS] b_B=9 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0355375 max_gap=0.0177641 ratio=2.00052
+[PASS] b_B=10 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0193121 max_gap=0.0102315 ratio=1.88752
+[PASS] b_B=10 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0178101 max_gap=0.00808985 ratio=2.20154
+[PASS] b_B=11 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00940743 max_gap=0.00411146 ratio=2.2881
+[PASS] b_B=11 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00891119 max_gap=0.00392847 ratio=2.26836
+[PASS] b_B=12 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0047185 max_gap=0.00203921 ratio=2.31388
+[PASS] b_B=12 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00445451 max_gap=0.00196565 ratio=2.26618
+[PASS] b_B=13 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00238527 max_gap=0.001043 ratio=2.28694
+[PASS] b_B=13 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00223454 max_gap=0.00113412 ratio=1.97029
+[PASS] b_B=14 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00122415 max_gap=0.000534555 ratio=2.29004
+[PASS] b_B=14 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00113084 max_gap=0.00059938 ratio=1.88668
+[PASS] nearest: eps_CROWN monotone non-increasing in b_B seq=[np.float64(2.5594211781881504), np.float64(1.3287252955818267), np.float64(0.6216933207134896), np.float64(0.3189964220310015), np.float64(0.1429614523678547), np.float64(0.07865071822067513), np.float64(0.03591469922080711), np.float64(0.019312123139982096), np.float64(0.00940742986939465), np.float64(0.004718496644954597), np.float64(0.002385266048784144), np.float64(0.001224151867667666)]
+[PASS] nearest: eps_CROWN scales as 2^(-b_B) (log2 slope within [-1.25,-0.75]) slope=-1.00674
+[PASS] learned: eps_CROWN monotone non-increasing in b_B seq=[np.float64(2.3264691910626722), np.float64(1.1450375742252907), np.float64(0.5695741726447627), np.float64(0.2867861963142664), np.float64(0.14242868557161287), np.float64(0.07094634798645387), np.float64(0.03553745981431138), np.float64(0.017810092437538592), np.float64(0.00891118558069066), np.float64(0.004454511928822765), np.float64(0.002234537528871159), np.float64(0.0011308381280782903)]
+[PASS] learned: eps_CROWN scales as 2^(-b_B) (log2 slope within [-1.25,-0.75]) slope=-1.00038
+[PASS] port box: twin-CROWN bound >= sampled gap on the Path-A table domain eps=0.0043777 max_gap=0.00214224
+[PASS] learned rounding does not increase the certified eps_CROWN at the deployed b_B learned=0.00445451 nearest=0.0047185
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp2_crown: 30/30 assertions passed, wall 5.7 s, peak RSS 149 MB
+### exp2_crown: exit 0, wall 6.24 s, peak RSS 148.9 MB
+=== exp3_delta_cert ===
+[PASS] R2: sound two-branch delta_cert <= brute-force inf over C_act delta_cert=0.0145592 brute_min=0.0146846 branch=1 samples=200000
+[PASS] R2: (H6) delta_total <= delta_cert <= brute-force inf delta_total=0.0135598
+[PASS] R2: Lemma delta_cert_classH: c_M = lambda_min(M,P) - 2 s_nl c_M=0.372524 lambda_min_MP=0.373125 s_nl=0.000300496
+[PASS] R1: sound two-branch delta_cert <= brute-force inf over C_act delta_cert=0.0316126 brute_min=0.0316386 branch=1 samples=200000
+[PASS] R1: (H6) delta_total <= delta_cert <= brute-force inf delta_total=0.00263388
+[PASS] R1: Lemma delta_cert_classH: c_M = lambda_min(M,P) - 2 s_nl c_M=0.982891 lambda_min_MP=0.983492 s_nl=0.000300496
+[PASS] class D gamma0=0.3: closed form = brute-force inf of affine bound over rho closed=0.0578002 brute_affine=0.0578002
+[PASS] class D gamma0=0.3: closed form <= brute-force inf of exact bracket closed=0.0578002 brute_exact=0.0634522
+[PASS] class D gamma0=0.3: branch 1 iff c >= gamma0 c=2.59001 branch=1
+[PASS] class D gamma0=3.0: closed form = brute-force inf of affine bound over rho closed=0.10319 brute_affine=0.10319
+[PASS] class D gamma0=3.0: closed form <= brute-force inf of exact bracket closed=0.10319 brute_exact=0.114811
+[PASS] class D gamma0=3.0: branch 1 iff c >= gamma0 c=2.59001 branch=2
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp3_delta_cert: 12/12 assertions passed, wall 4.6 s, peak RSS 206 MB
+### exp3_delta_cert: exit 0, wall 5.20 s, peak RSS 205.7 MB
+=== exp4_theorem1 ===
+[PASS] R2: interior level h_r = 0.5 h_act lies strictly inside C~_r h_r0=0.0103383 eps_b2_plus_dh=0.00966733
+[PASS] R2 boundary: (a) tail ||x_perp(t)||_Pfe <= eps_basis_P (all seeds, all nodes) max_tail_over_eps_b=1
+[PASS] R2 boundary: (b) h~_r(z(t_k)) >= 0 at every sampling instant min_htil_tk=-7.29384e-17
+[PASS] R2 boundary: (b) h~_r(z(t)) >= -Delta h_dip at every node min_htil=-7.29384e-17 Delta_h_dip=2.05989e-06
+[PASS] R2 boundary: (c) h(x(t)) >= h~_r(z(t)) + Delta h_dip min_gap=-1.7035e-15
+[PASS] R2 boundary: (c) h(x(t)) >= 0 for all t, all seeds (full-order safety) min_h=2.05989e-06 delta_total=0.0135598 seeds=16
+[PASS] R2 boundary: z(t_k) stays in Z_ODD 
+[PASS] R2 boundary: min_t h = Delta h_dip at t = 0 (initial state on the certified floor) min_h=2.05989e-06 Delta_h_dip=2.05989e-06
+[PASS] R2 interior: (a) tail ||x_perp(t)||_Pfe <= eps_basis_P (all seeds, all nodes) max_tail_over_eps_b=0.0582986
+[PASS] R2 interior: (b) h~_r(z(t_k)) >= 0 at every sampling instant min_htil_tk=0.000670922
+[PASS] R2 interior: (b) h~_r(z(t)) >= -Delta h_dip at every node min_htil=0.000670922 Delta_h_dip=2.05989e-06
+[PASS] R2 interior: (c) h(x(t)) >= h~_r(z(t)) + Delta h_dip min_gap=0.00963242
+[PASS] R2 interior: (c) h(x(t)) >= 0 for all t, all seeds (full-order safety) min_h=0.0103383 delta_total=0.0135598 seeds=16
+[PASS] R2 interior: z(t_k) stays in Z_ODD 
+[PASS] R2 interior: min_t h(x_t) = min_j h(x_j(0)) (attained at t = 0; h rises along every closed-loop trajectory) t_min=0 min_h=0.0103383 ratio_over_dh=5018.84
+[PASS] R2 interior: min_t h / Delta h_dip >> 1 (the Theorem 1 floor is not tight from the interior) ratio=5018.84
+[PASS] R1: interior level h_r = 0.5 h_act lies strictly inside C~_r h_r0=0.0127961 eps_b2_plus_dh=5.62021e-05
+[PASS] R1 boundary: (a) tail ||x_perp(t)||_Pfe <= eps_basis_P (all seeds, all nodes) max_tail_over_eps_b=1
+[PASS] R1 boundary: (b) h~_r(z(t_k)) >= 0 at every sampling instant min_htil_tk=-7.77364e-17
+[PASS] R1 boundary: (b) h~_r(z(t)) >= -Delta h_dip at every node min_htil=-7.77364e-17 Delta_h_dip=3.00755e-06
+[PASS] R1 boundary: (c) h(x(t)) >= h~_r(z(t)) + Delta h_dip min_gap=-1.98131e-15
+[PASS] R1 boundary: (c) h(x(t)) >= 0 for all t, all seeds (full-order safety) min_h=3.00755e-06 delta_total=0.00263388 seeds=16
+[PASS] R1 boundary: z(t_k) stays in Z_ODD 
+[PASS] R1 boundary: min_t h = Delta h_dip at t = 0 (initial state on the certified floor) min_h=3.00755e-06 Delta_h_dip=3.00755e-06
+[PASS] R1 interior: (a) tail ||x_perp(t)||_Pfe <= eps_basis_P (all seeds, all nodes) max_tail_over_eps_b=0.0474918
+[PASS] R1 interior: (b) h~_r(z(t_k)) >= 0 at every sampling instant min_htil_tk=0.0127399
+[PASS] R1 interior: (b) h~_r(z(t)) >= -Delta h_dip at every node min_htil=0.0127399 Delta_h_dip=3.00755e-06
+[PASS] R1 interior: (c) h(x(t)) >= h~_r(z(t)) + Delta h_dip min_gap=5.30746e-05
+[PASS] R1 interior: (c) h(x(t)) >= 0 for all t, all seeds (full-order safety) min_h=0.0127961 delta_total=0.00263388 seeds=16
+[PASS] R1 interior: z(t_k) stays in Z_ODD 
+[PASS] R1 interior: min_t h(x_t) = min_j h(x_j(0)) (attained at t = 0; h rises along every closed-loop trajectory) t_min=0 min_h=0.0127961 ratio_over_dh=4254.66
+[PASS] R1 interior: min_t h / Delta h_dip >> 1 (the Theorem 1 floor is not tight from the interior) ratio=4254.66
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp4_theorem1: 32/32 assertions passed, wall 46.1 s, peak RSS 343 MB
+### exp4_theorem1: exit 0, wall 46.75 s, peak RSS 343.0 MB
+=== exp5_deadzone ===
+[PASS] full method (deadzone, b_A=9): prop3_valid ((H-dz) r_ss < r_min and mu_R > L_sec) r_ss=0.0116185 r_min=0.15605
+[PASS] Prop3(b): ||z(t_k)||_P <= max(||z(0)||_P, r_ss) for all k, all seeds max_ratio=1
+[PASS] Prop3: trajectories enter B_ss(r_ss) subset B_int final_max=1.53133e-05 r_ss=0.0116185
+[PASS] deadzone: Path-A control exactly zero in the final window (no limit cycle) nonzero_frac=0
+[PASS] (d) b_A=3: deadzone -> u_A exactly 0 late, no switching, zero late effort nonzero=0 switches=0
+[PASS] (d) b_A=3: mid-rise (no deadzone) -> u_A never zero, persistent sign switching (chattering), effort > 0 nonzero=1 switches_per_time=953.08 effort=0.00194068
+[PASS] (d) b_A=3: deadzone -> once u = 0, ||z||_P contracts at least at rate mu_R - L_sec (Prop3(a)) factor=0.0832433 predicted=0.149905
+[PASS] (d) b_A=3: mid-rise lag error |u_A - T(z)| persists at the LSB scale lag=0.0196963
+[PASS] (d) b_A=5: deadzone -> u_A exactly 0 late, no switching, zero late effort nonzero=0 switches=0
+[PASS] (d) b_A=5: mid-rise (no deadzone) -> u_A never zero, persistent sign switching (chattering), effort > 0 nonzero=1 switches_per_time=859.92 effort=0.000120644
+[PASS] (d) b_A=5: deadzone -> once u = 0, ||z||_P contracts at least at rate mu_R - L_sec (Prop3(a)) factor=0.0835407 predicted=0.149905
+[PASS] (d) b_A=5: mid-rise lag error |u_A - T(z)| persists at the LSB scale lag=0.00485134
+[PASS] (d) b_A=7: deadzone -> u_A exactly 0 late, no switching, zero late effort nonzero=0 switches=0
+[PASS] (d) b_A=7: mid-rise (no deadzone) -> u_A never zero, persistent sign switching (chattering), effort > 0 nonzero=1 switches_per_time=469.4 effort=8.74673e-06
+[PASS] (d) b_A=7: deadzone -> once u = 0, ||z||_P contracts at least at rate mu_R - L_sec (Prop3(a)) factor=0.0837973 predicted=0.149905
+[PASS] (d) b_A=7: mid-rise lag error |u_A - T(z)| persists at the LSB scale lag=0.00128578
+[PASS] (d) b_A=9 (deployed b_A): deadzone -> u_A exactly 0 late, no switching, zero late effort nonzero=0 switches=0
+[PASS] (d) b_A=9 (deployed b_A): mid-rise (no deadzone) -> u_A never zero, persistent sign switching (chattering), effort > 0 nonzero=1 switches_per_time=121.64 effort=6.14888e-07
+[PASS] (d) b_A=9: deadzone -> once u = 0, ||z||_P contracts at least at rate mu_R - L_sec (Prop3(a)) factor=0.0841322 predicted=0.149905
+[PASS] (d) b_A=9: mid-rise lag error |u_A - T(z)| persists at the LSB scale lag=0.000350666
+[PASS] d2: b_A = 1 violates (H-dz): r_ss >= r_min, certificate refuses Prop. 3 (prop3_valid false) r_ss=0.399159 r_min=0.156044
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp5_deadzone: 21/21 assertions passed, wall 48.9 s, peak RSS 209 MB
+### exp5_deadzone: exit 0, wall 49.51 s, peak RSS 209.2 MB
+=== exp6_ablations ===
+[PASS] (a) full certificate refuses K_m too small (tail criterion) reason=['H3', 'H4', 'H6', 'H7'] eps_basis_P=7.79217 dt_tail=7.56796 delta_total=7.59337 delta_cert=-60.6315
+[PASS] (a) naive certificate without tail terms would pass (H4) and (H6) naive_delta_total=0.00795621 naive_delta_cert=0.0335014 naive_H3=0
+[PASS] (a) K_m too small: full-order safety violated (some seed exits C) n_exit=4 min_h=-0.0254511
+[PASS] (b) full certificate refuses coarse b_B reason=['H6'] eps_CROWN=4.46479 dt_quant=2.13797
+[PASS] (b) naive certificate without the quantization term would accept naive_delta_total=0.0113529 delta_cert=0.0145592
+[PASS] (b) coarse b_B: full-order safety violated n_exit=9 min_h=-0.0415515
+[PASS] (c) single-rate at the deployed T_s: certificate refuses (lag term w1 = 1) reason=['H6'] delta_total_single=0.017018 delta_total_multi=0.0135598 delta_cert=0.0145588
+[PASS] (c) multi-rate hold strictly reduces delta_total and keeps (H6) 
+[PASS] (c) single-rate at T_s=0.2: full-order safety violated n_exit=10 min_h=-0.159099
+[PASS] (c) multi-rate at the same T_s=0.2: no exit (outside certificate scope, observed) n_exit=0 min_h=2.05989e-06
+[PASS] (e) certificate refuses eps_adv above the certified level reason=['H6'] eps_adv=1
+[PASS] (e) adversary eps_adv=1.0: full-order safety violated n_exit=16 min_h=-0.0260511
+[PASS] (e) at the largest certifiable eps_adv* the worst-case adversary does not break safety eps_adv_star=0.00422333 min_h=2.05989e-06
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp6_ablations: 13/13 assertions passed, wall 60.9 s, peak RSS 299 MB
+### exp6_ablations: exit 0, wall 61.55 s, peak RSS 298.6 MB
+=== exp7_stochastic ===
+[PASS] z(0) lies strictly inside C~_r and h(x_0) > 0 h0=0.00505058 z0_level=0.9
+  sigma=0.002 valid=True fail=[] share=1.0 med dev/h0=8.399040496717351 noise dev/h0=0.04911180997970645 T_TTL=1015
+  sigma=0.003 valid=True fail=[] share=1.0 med dev/h0=8.401011795734028 noise dev/h0=0.07428449834429601 T_TTL=1248
+  sigma=0.005 valid=True fail=[] share=1.0 med dev/h0=8.405361097959988 noise dev/h0=0.12691100673847827 T_TTL=1667
+  sigma=0.007 valid=True fail=[] share=1.0 med dev/h0=8.410119798771529 noise dev/h0=0.1740299481017091 T_TTL=2022
+  sigma=0.01 valid=False fail=['margin'] share=None med dev/h0=None noise dev/h0=None T_TTL=2440
+  sigma=0.014 valid=False fail=['margin'] share=None med dev/h0=None noise dev/h0=None T_TTL=2793
+  sigma=0.02 valid=False fail=['margin'] share=None med dev/h0=None noise dev/h0=None T_TTL=2933
+[PASS] sigma grid: some grid sigma is accepted by the Corollary at T and meets the fluctuation criterion 
+[PASS] sigma* is the largest grid value with Corollary acceptance and the fluctuation criterion (every larger grid value fails one) sigma_star=0.007 first_refused=0.01
+[PASS] the Corollary's acceptance region on the grid is a down-set (monotone in sigma) 
+[PASS] sigma*: Corollary conditions hold (margin, beta0 > h0, h_act^- > 0, T <= T_TTL, Theorem 1) margin=1 beta0_gt_h0=1 h_act_minus_pos=1 r_min2_pos=1 T_le_TTL=1 theorem=1
+[PASS] sigma*: fluctuation criterion holds on the full Monte Carlo (>= fluct_path_share of the paths) share=1 median_dev_over_h0=8.4003
+[PASS] sigma*: the noise itself is non-trivial: median max_t |h(x_t) - h_det(t)| >= fluct_fraction_of_h0 * h(x_0) median_noise_dev_over_h0=0.180472 end_std_over_h0=0.0796781
+[PASS] sigma*: MC exit frequency <= alpha (Clopper-Pearson upper limit <= alpha) exits=0 paths=2000 freq=0 cp_upper=0.00184274 alpha=0.05
+[PASS] sigma*: the probability bound is conservative (T_TTL >> T and zero observed exits) T_TTL=2022.3 T=2 ratio=1011.15
+[PASS] (f) tail-white noise: full Corollary refuses (OU tail envelope exceeds the safe set) Delta_sigma=1.10013 sqrt_E=0.223607 T_perp=0
+[PASS] (f) crude bound ignoring tail diffusion would accept T_TTL_crude=501.107
+[PASS] (f) MC violates the crude probability bound (Clopper-Pearson lower limit > alpha) exits=2000 paths=2000 cp_lower=0.998157 alpha=0.05
+[PASS] R2, sigma = 0: gamma0 h_act exceeds delta_cert - delta_total, so the Corollary margin fails and the Corollary refuses gamma0_h_act=0.00723678 margin=0.000999382 failing=['margin']
+[PASS] stochastic runs use r_W2 = 0 (no distributional drift of the adversary) r_W2=0
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp7_stochastic: 14/14 assertions passed, wall 145.1 s, peak RSS 1035 MB
+### exp7_stochastic: exit 0, wall 146.34 s, peak RSS 1035.0 MB
+=== exp8_numerics ===
+[PASS] stiffness: at the convergence-test step explicit Euler is unstable (max|1 + h lambda| > 1) while the exponential integrator is used spectral_radius=72.0049 stiffness_ratio=43.833 step=0.05 explicit_euler_amplification=3.72985 rad_times_Ts=0.0216015
+[PASS] ETD2RK convergence: observed order in [1.8, 2.2] on step halving (error ratio ~ 4) ratios=[np.float64(4.001621104675649), np.float64(4.0030382500278385), np.float64(4.011373274259221), np.float64(4.04489987825009)] orders=[2.00058457 2.0010954  2.00409622 2.01610399]
+[PASS] ETD1 (exponential Euler) for reference: observed order ~ 1 orders1=[0.99431343 0.99734446 0.99871612 0.99935868]
+[PASS] exact latch timing: simulator == closed-form augmented exponential (kappa=0) to round-off rel_err=2.80827e-14 periods=20
+[PASS] step-resolution latching would be O(step) wrong (discriminating test) rel_err_grid=0.016754 grid_step=4.28571e-05 tau_A=1.5e-05 tau_B=3e-05
+[PASS] modal sparse propagation == dense nodal ETD2RK (closed loop) rel_err=1.92815e-14
+[PASS] bit-for-bit determinism: two runs give identical SHA-256 sha256=2bde49483745ec98a76b5fd814b08aad147b258c2ac39f417ca1133b03e93614
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp8_numerics: 7/7 assertions passed, wall 7.9 s, peak RSS 220 MB
+### exp8_numerics: exit 0, wall 8.51 s, peak RSS 219.8 MB
+=== exp9_wsweep ===
+  w=1 valid=False failing=['H4', 'H6', 'H7'] share=0.997 margin=-16.4 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.7071 valid=False failing=['H4', 'H6', 'H7'] share=0.995 margin=-6.09 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.5 valid=False failing=['H4', 'H6', 'H7'] share=0.991 margin=-2.49 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.3536 valid=False failing=['H4', 'H6', 'H7'] share=0.983 margin=-1.11 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.25 valid=False failing=['H4', 'H6', 'H7'] share=0.968 margin=-0.521 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.1768 valid=False failing=['H4', 'H6', 'H7'] share=0.939 margin=-0.254 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.125 valid=False failing=['H4', 'H6', 'H7'] share=0.888 margin=-0.126 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.08839 valid=False failing=['H4', 'H6', 'H7'] share=0.805 margin=-0.0618 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.0625 valid=False failing=['H6'] share=0.686 margin=-0.0293 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.04419 valid=False failing=['H6'] share=0.542 margin=-0.0126 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.03125 valid=False failing=['H6'] share=0.395 margin=-0.00379 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.0221 valid=True failing=[] share=0.270 margin=0.000999 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.01562 valid=True failing=[] share=0.178 margin=0.00366 ablations refused={'a': True, 'b': True, 'c': False, 'e': True} exits=16
+  w=0.01105 valid=True failing=[] share=0.116 margin=0.00518 ablations refused={'a': True, 'b': True, 'c': False, 'e': True} exits=16
+  w=0.007812 valid=True failing=[] share=0.076 margin=0.00607 ablations refused={'a': True, 'b': True, 'c': False, 'e': True} exits=16
+  w=0.005524 valid=True failing=[] share=0.050 margin=0.00661 ablations refused={'a': True, 'b': True, 'c': False, 'e': True} exits=16
+  w=0.003906 valid=True failing=[] share=0.034 margin=0.00695 ablations refused={'a': True, 'b': True, 'c': False, 'e': True} exits=16
+[PASS] w grid is geometric, contains w = 1 and reaches down to w <= 0.005 with >= 8 values n=17 w_min=0.00390625
+[PASS] plain projector w = 1 is refused at the R2 Peclet number failing=['H4', 'H6', 'H7']
+[PASS] open loop exits C for every seed at every w (the plant is unsafe for every swept w) exits=[16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]
+[PASS] ||A_adv,r,perp||_2 > 0 at every w (K_f > K_m) and proportional to w 
+[PASS] a certifiable frontier exists: some grid w accepts with (H6) margin > 0 and all ablations refused 
+[PASS] certifiable set is a down-set of the grid (every w below the frontier accepts) w_accept_max=0.0220971
+[PASS] deployed config weight equals the sweep-selected w* (largest admissible grid value) w_star=0.0220971 w_config=0.0220971
+[PASS] at w*, the tail-coupling share of delta_total is material (>= wstar_min_tail_share) share=0.270358
+[PASS] plain projector (w = 1): certifiable-c set and open-loop-unstable-c set are disjoint and both non-empty max_certifiable_c=0.02 min_unstable_c=0.5
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp9_wsweep: 9/9 assertions passed, wall 26.2 s, peak RSS 194 MB
+### exp9_wsweep: exit 0, wall 26.84 s, peak RSS 194.4 MB
+.........................................................s.s             [100%]
+58 passed, 2 skipped in 18.72s
+### pytest: exit 0, wall 20.37 s, peak RSS 1192.8 MB
+summary: 200/200 experiment assertions passed; script failures []; total 392.6 s; peak RSS 1193 MB
+build_section: 171 placeholders, 0 unresolved [], 28 unused keys, 0 lint issues
+33 passed in 1.61s
+red-team gate hits: 0
+standalone_pdf [onecolumn]: engine tectonic, exit 0, 0 errors, 0 undefined references, 0 overfull hboxes
+standalone_pdf [onecolumn]: 10 figures sized by \pgcfig (source has 10), 0 above the caps (w <= 0.62 textwidth, h <= 0.72 textheight)
+pages 13 issues 0
+standalone_pdf [onecolumn]: 13 pages, page-sweep issues 0, '??' occurrences 0
+standalone_pdf [onecolumn]: 0 overfull boxes > 1pt, 0 overlapping text spans, 0 objects in the bottom margin
+standalone_pdf [twocolumn]: engine tectonic, exit 0, 0 errors, 0 undefined references, 0 overfull hboxes
+standalone_pdf [twocolumn]: 10 figures sized by \pgcfig (source has 10), 0 above the caps (w <= 0.62 textwidth, h <= 0.72 textheight)
+pages 12 issues 0
+standalone_pdf [twocolumn]: 12 pages, page-sweep issues 0, '??' occurrences 0
+standalone_pdf [twocolumn]: 0 overfull boxes > 1pt, 0 overlapping text spans, 0 objects in the bottom margin
+standalone_pdf: onecolumn PASS, twocolumn PASS
+total wall-clock: 392.575370482 s (suite) + 7.767817134 s (section build, lint, gates, PDF); status: PASS

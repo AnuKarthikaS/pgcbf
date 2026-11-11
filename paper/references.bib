@@ -1,0 +1,624 @@
+% references.bib -- verified bibliography for the L4DC 2027 submission
+% 53 entries: the 45 entries of candidates.bib (43 kept unchanged, 2 with corrected
+% metadata, 0 dropped) plus 8 entries added on the orchestrator's instruction
+% (6 in the first pass, then pauli2022lipschitz and so2023almostsure).
+% Each entry was resolved on its DOI record (doi.org handle + Crossref), its
+% proceedings page (NeurIPS, PMLR, Springer) or its arXiv page; see verification_log.md.
+% Metadata changes relative to candidates.bib:
+%   zhang2018crown  : pages field removed (the NeurIPS page lists no page numbers)
+%   xu2020autolirpa : pages 1129--1140 -> 1129--1141 (NeurIPS proceedings BibTeX)
+
+% ===== bucket 1: sampled-data and inter-sample CBF guarantees (incl. foundational CBF papers)
+
+@article{ames2017cbf,
+  author  = {Ames, Aaron D. and Xu, Xiangru and Grizzle, Jessy W. and Tabuada, Paulo},
+  title   = {Control Barrier Function Based Quadratic Programs for Safety Critical Systems},
+  journal = {IEEE Transactions on Automatic Control},
+  volume  = {62},
+  number  = {8},
+  pages   = {3861--3876},
+  year    = {2017},
+  doi     = {10.1109/TAC.2016.2638961},
+  url     = {https://doi.org/10.1109/TAC.2016.2638961}
+}
+
+@inproceedings{ames2019theory,
+  author    = {Ames, Aaron D. and Coogan, Samuel and Egerstedt, Magnus and Notomista, Gennaro and Sreenath, Koushil and Tabuada, Paulo},
+  title     = {Control Barrier Functions: Theory and Applications},
+  booktitle = {Proceedings of the 18th European Control Conference (ECC)},
+  pages     = {3420--3431},
+  year      = {2019},
+  doi       = {10.23919/ECC.2019.8796030},
+  url       = {https://doi.org/10.23919/ECC.2019.8796030}
+}
+
+@inproceedings{singletary2020sampled,
+  author    = {Singletary, Andrew and Chen, Yuxiao and Ames, Aaron D.},
+  title     = {Control Barrier Functions for Sampled-Data Systems with Input Delays},
+  booktitle = {Proceedings of the 59th IEEE Conference on Decision and Control (CDC)},
+  pages     = {804--809},
+  year      = {2020},
+  doi       = {10.1109/CDC42340.2020.9304281},
+  url       = {https://doi.org/10.1109/CDC42340.2020.9304281}
+}
+
+@article{breeden2022sampled,
+  author  = {Breeden, Joseph and Garg, Kunal and Panagou, Dimitra},
+  title   = {Control Barrier Functions in Sampled-Data Systems},
+  journal = {IEEE Control Systems Letters},
+  volume  = {6},
+  pages   = {367--372},
+  year    = {2022},
+  doi     = {10.1109/LCSYS.2021.3076127},
+  url     = {https://doi.org/10.1109/LCSYS.2021.3076127}
+}
+
+@inproceedings{taylor2022sampled,
+  author    = {Taylor, Andrew J. and Dorobantu, Victor D. and Cosner, Ryan K. and Yue, Yisong and Ames, Aaron D.},
+  title     = {Safety of Sampled-Data Systems with Control Barrier Functions via Approximate Discrete Time Models},
+  booktitle = {Proceedings of the 61st IEEE Conference on Decision and Control (CDC)},
+  pages     = {7127--7134},
+  year      = {2022},
+  doi       = {10.1109/CDC51059.2022.9993226},
+  url       = {https://doi.org/10.1109/CDC51059.2022.9993226}
+}
+
+@article{usevitch2023adversarial,
+  author  = {Usevitch, James and Panagou, Dimitra},
+  title   = {Adversarial Resilience for Sampled-Data Systems Under High-Relative-Degree Safety Constraints},
+  journal = {IEEE Transactions on Automatic Control},
+  volume  = {68},
+  number  = {3},
+  pages   = {1537--1552},
+  year    = {2023},
+  doi     = {10.1109/TAC.2022.3157791},
+  url     = {https://doi.org/10.1109/TAC.2022.3157791}
+}
+
+@inproceedings{niu2024sampling,
+  author    = {Niu, Luyao and Ramasubramanian, Bhaskar and Clark, Andrew and Poovendran, Radha},
+  title     = {Sampling and Quantization-Aware Control Barrier Functions for Safety-Critical Control of Cyber-Physical Systems},
+  booktitle = {Proceedings of the 63rd IEEE Conference on Decision and Control (CDC)},
+  pages     = {1637--1644},
+  year      = {2024},
+  doi       = {10.1109/CDC56724.2024.10886708},
+  url       = {https://doi.org/10.1109/CDC56724.2024.10886708}
+}
+
+@inproceedings{tan2025zeroorder,
+  author    = {Tan, Xiao and Da{\c{s}}, Ersin and Ames, Aaron D. and Burdick, Joel W.},
+  title     = {Zero-Order Control Barrier Functions for Sampled-Data Systems with State and Input Dependent Safety Constraints},
+  booktitle = {Proceedings of the 2025 American Control Conference (ACC)},
+  pages     = {283--290},
+  year      = {2025},
+  doi       = {10.23919/ACC63710.2025.11107720},
+  url       = {https://doi.org/10.23919/ACC63710.2025.11107720}
+}
+
+@article{kiss2026integral,
+  author  = {Kiss, Adam K. and Da{\c{s}}, Ersin and Molnar, Tamas G. and Ames, Aaron D.},
+  title   = {Integral Control Barrier Functions With Input Delay: Prediction, Feasibility, and Robustness},
+  journal = {IEEE Control Systems Letters},
+  volume  = {10},
+  pages   = {2077--2082},
+  year    = {2026},
+  doi     = {10.1109/LCSYS.2026.3715118},
+  url     = {https://doi.org/10.1109/LCSYS.2026.3715118}
+}
+
+% ===== bucket 2: reduced-order and infinite-dimensional CBFs, model-error robust CBFs
+
+@article{jankovic2018robust,
+  author  = {Jankovic, Mrdjan},
+  title   = {Robust control barrier functions for constrained stabilization of nonlinear systems},
+  journal = {Automatica},
+  volume  = {96},
+  pages   = {359--367},
+  year    = {2018},
+  doi     = {10.1016/j.automatica.2018.07.004},
+  url     = {https://doi.org/10.1016/j.automatica.2018.07.004}
+}
+
+@article{kolathaya2019issf,
+  author  = {Kolathaya, Shishir and Ames, Aaron D.},
+  title   = {Input-to-State Safety With Control Barrier Functions},
+  journal = {IEEE Control Systems Letters},
+  volume  = {3},
+  number  = {1},
+  pages   = {108--113},
+  year    = {2019},
+  doi     = {10.1109/LCSYS.2018.2853698},
+  url     = {https://doi.org/10.1109/LCSYS.2018.2853698}
+}
+
+@article{ahmadi2017distributed,
+  author  = {Ahmadi, Mohamadreza and Valmorbida, Giorgio and Papachristodoulou, Antonis},
+  title   = {Safety verification for distributed parameter systems using barrier functionals},
+  journal = {Systems \& Control Letters},
+  volume  = {108},
+  pages   = {33--39},
+  year    = {2017},
+  doi     = {10.1016/j.sysconle.2017.08.002},
+  url     = {https://doi.org/10.1016/j.sysconle.2017.08.002}
+}
+
+@article{singletary2022kinematic,
+  author  = {Singletary, Andrew and Kolathaya, Shishir and Ames, Aaron D.},
+  title   = {Safety-Critical Kinematic Control of Robotic Systems},
+  journal = {IEEE Control Systems Letters},
+  volume  = {6},
+  pages   = {139--144},
+  year    = {2022},
+  doi     = {10.1109/LCSYS.2021.3050609},
+  url     = {https://doi.org/10.1109/LCSYS.2021.3050609}
+}
+
+@article{molnar2022modelfree,
+  author  = {Molnar, Tamas G. and Cosner, Ryan K. and Singletary, Andrew W. and Ubellacker, Wyatt and Ames, Aaron D.},
+  title   = {Model-Free Safety-Critical Control for Robotic Systems},
+  journal = {IEEE Robotics and Automation Letters},
+  volume  = {7},
+  number  = {2},
+  pages   = {944--951},
+  year    = {2022},
+  doi     = {10.1109/LRA.2021.3135569},
+  url     = {https://doi.org/10.1109/LRA.2021.3135569}
+}
+
+@article{koga2023stefan,
+  author  = {Koga, Shumon and Krstic, Miroslav},
+  title   = {Safe {PDE} Backstepping {QP} Control With High Relative Degree {CBFs}: {S}tefan Model With Actuator Dynamics},
+  journal = {IEEE Transactions on Automatic Control},
+  volume  = {68},
+  number  = {12},
+  pages   = {7195--7208},
+  year    = {2023},
+  doi     = {10.1109/TAC.2023.3250514},
+  url     = {https://doi.org/10.1109/TAC.2023.3250514}
+}
+
+@article{cohen2024romsurvey,
+  author  = {Cohen, Max H. and Molnar, Tamas G. and Ames, Aaron D.},
+  title   = {Safety-critical control for autonomous systems: Control barrier functions via reduced-order models},
+  journal = {Annual Reviews in Control},
+  volume  = {57},
+  pages   = {100947},
+  year    = {2024},
+  doi     = {10.1016/j.arcontrol.2024.100947},
+  url     = {https://doi.org/10.1016/j.arcontrol.2024.100947}
+}
+
+@inproceedings{cohen2025romsynthesis,
+  author    = {Cohen, Max H. and Csomay-Shanklin, Noel and Compton, William D. and Molnar, Tamas G. and Ames, Aaron D.},
+  title     = {Safety-Critical Controller Synthesis with Reduced-Order Models},
+  booktitle = {Proceedings of the 2025 American Control Conference (ACC)},
+  pages     = {5216--5221},
+  year      = {2025},
+  doi       = {10.23919/ACC63710.2025.11108063},
+  url       = {https://doi.org/10.23919/ACC63710.2025.11108063}
+}
+
+% ===== bucket 3: verified / quantized neural networks, CROWN-family verifiers, neural CBF verification
+
+@inproceedings{zhang2018crown,
+  author    = {Zhang, Huan and Weng, Tsui-Wei and Chen, Pin-Yu and Hsieh, Cho-Jui and Daniel, Luca},
+  title     = {Efficient Neural Network Robustness Certification with General Activation Functions},
+  booktitle = {Advances in Neural Information Processing Systems 31 (NeurIPS)},
+  year      = {2018},
+  eprint    = {1811.00866},
+  archivePrefix = {arXiv},
+  url       = {https://proceedings.neurips.cc/paper/2018/hash/d04863f100d59b3eb688a11f95b0ae60-Abstract.html}
+}
+
+@inproceedings{anil2019groupsort,
+  author    = {Anil, Cem and Lucas, James and Grosse, Roger},
+  title     = {Sorting Out {L}ipschitz Function Approximation},
+  booktitle = {Proceedings of the 36th International Conference on Machine Learning (ICML)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {97},
+  pages     = {291--301},
+  year      = {2019},
+  eprint    = {1811.05381},
+  archivePrefix = {arXiv},
+  url       = {https://proceedings.mlr.press/v97/anil19a.html}
+}
+
+@inproceedings{fazlyab2019lipschitz,
+  author    = {Fazlyab, Mahyar and Robey, Alexander and Hassani, Hamed and Morari, Manfred and Pappas, George},
+  title     = {Efficient and Accurate Estimation of {L}ipschitz Constants for Deep Neural Networks},
+  booktitle = {Advances in Neural Information Processing Systems 32 (NeurIPS)},
+  year      = {2019},
+  eprint    = {1906.04893},
+  archivePrefix = {arXiv},
+  url       = {https://proceedings.neurips.cc/paper/2019/hash/95e1533eb1b20a97777749fb94fdb944-Abstract.html}
+}
+
+@inproceedings{xu2020autolirpa,
+  author    = {Xu, Kaidi and Shi, Zhouxing and Zhang, Huan and Wang, Yihan and Chang, Kai-Wei and Huang, Minlie and Kailkhura, Bhavya and Lin, Xue and Hsieh, Cho-Jui},
+  title     = {Automatic Perturbation Analysis for Scalable Certified Robustness and Beyond},
+  booktitle = {Advances in Neural Information Processing Systems 33 (NeurIPS)},
+  pages     = {1129--1141},
+  year      = {2020},
+  eprint    = {2002.12920},
+  archivePrefix = {arXiv},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2020/hash/0cbc5671ae26f67871cb914d81ef8fc1-Abstract.html}
+}
+
+@inproceedings{paulsen2020reludiff,
+  author    = {Paulsen, Brandon and Wang, Jingbo and Wang, Chao},
+  title     = {{ReluDiff}: Differential Verification of Deep Neural Networks},
+  booktitle = {Proceedings of the ACM/IEEE 42nd International Conference on Software Engineering (ICSE)},
+  pages     = {714--726},
+  year      = {2020},
+  doi       = {10.1145/3377811.3380337},
+  url       = {https://doi.org/10.1145/3377811.3380337}
+}
+
+@inproceedings{giacobbe2020bits,
+  author    = {Giacobbe, Mirco and Henzinger, Thomas A. and Lechner, Mathias},
+  title     = {How Many Bits Does it Take to Quantize Your Neural Network?},
+  booktitle = {Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2020)},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {12079},
+  pages     = {79--97},
+  publisher = {Springer},
+  year      = {2020},
+  doi       = {10.1007/978-3-030-45237-7_5},
+  url       = {https://doi.org/10.1007/978-3-030-45237-7_5}
+}
+
+@inproceedings{wang2021betacrown,
+  author    = {Wang, Shiqi and Zhang, Huan and Xu, Kaidi and Lin, Xue and Jana, Suman and Hsieh, Cho-Jui and Kolter, J. Zico},
+  title     = {Beta-{CROWN}: Efficient Bound Propagation with Per-neuron Split Constraints for Neural Network Robustness Verification},
+  booktitle = {Advances in Neural Information Processing Systems 34 (NeurIPS)},
+  pages     = {29909--29921},
+  year      = {2021},
+  eprint    = {2103.06624},
+  archivePrefix = {arXiv},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2021/hash/fac7fead96dafceaf80c1daffeae82a4-Abstract.html}
+}
+
+@article{everett2021reachability,
+  author  = {Everett, Michael and Habibi, Golnaz and Sun, Chuangchuang and How, Jonathan P.},
+  title   = {Reachability Analysis of Neural Feedback Loops},
+  journal = {IEEE Access},
+  volume  = {9},
+  pages   = {163938--163953},
+  year    = {2021},
+  doi     = {10.1109/ACCESS.2021.3133370},
+  url     = {https://doi.org/10.1109/ACCESS.2021.3133370}
+}
+
+@article{pauli2022lipschitz,
+  author  = {Pauli, Patricia and Koch, Anne and Berberich, Julian and Kohler, Paul and Allg{\"o}wer, Frank},
+  title   = {Training Robust Neural Networks Using {L}ipschitz Bounds},
+  journal = {IEEE Control Systems Letters},
+  volume  = {6},
+  pages   = {121--126},
+  year    = {2022},
+  doi     = {10.1109/LCSYS.2021.3050444},
+  url     = {https://doi.org/10.1109/LCSYS.2021.3050444}
+}
+
+@inproceedings{zhang2023qebverif,
+  author    = {Zhang, Yedi and Song, Fu and Sun, Jun},
+  title     = {{QEBVerif}: Quantization Error Bound Verification of Neural Networks},
+  booktitle = {Computer Aided Verification (CAV 2023)},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {13965},
+  pages     = {413--437},
+  publisher = {Springer},
+  year      = {2023},
+  doi       = {10.1007/978-3-031-37703-7_20},
+  url       = {https://doi.org/10.1007/978-3-031-37703-7_20}
+}
+
+@inproceedings{zhang2023exactncbf,
+  author    = {Zhang, Hongchao and Wu, Junlin and Vorobeychik, Yevgeniy and Clark, Andrew},
+  title     = {Exact Verification of {ReLU} Neural Control Barrier Functions},
+  booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS)},
+  pages     = {5685--5705},
+  year      = {2023},
+  doi       = {10.52202/075280-0248},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/120ed726cf129dbeb8375b6f8a0686f8-Abstract-Conference.html}
+}
+
+@article{dawson2023certificates,
+  author  = {Dawson, Charles and Gao, Sicun and Fan, Chuchu},
+  title   = {Safe Control With Learned Certificates: A Survey of Neural {L}yapunov, Barrier, and Contraction Methods for Robotics and Control},
+  journal = {IEEE Transactions on Robotics},
+  volume  = {39},
+  number  = {3},
+  pages   = {1749--1767},
+  year    = {2023},
+  doi     = {10.1109/TRO.2022.3232542},
+  url     = {https://doi.org/10.1109/TRO.2022.3232542}
+}
+
+@inproceedings{yang2024lyapunov,
+  author    = {Yang, Lujie and Dai, Hongkai and Shi, Zhouxing and Hsieh, Cho-Jui and Tedrake, Russ and Zhang, Huan},
+  title     = {{L}yapunov-stable Neural Control for State and Output Feedback: A Novel Formulation},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {235},
+  pages     = {56033--56046},
+  year      = {2024},
+  eprint    = {2404.07956},
+  archivePrefix = {arXiv},
+  url       = {https://proceedings.mlr.press/v235/yang24f.html}
+}
+
+% ===== bucket 4: structure-preserving reduction, port-Hamiltonian / GENERIC modelling, matrix measures
+
+@article{grmela1997generic,
+  author  = {Grmela, Miroslav and {\"O}ttinger, Hans Christian},
+  title   = {Dynamics and thermodynamics of complex fluids. {I}. {D}evelopment of a general formalism},
+  journal = {Physical Review E},
+  volume  = {56},
+  number  = {6},
+  pages   = {6620--6632},
+  year    = {1997},
+  doi     = {10.1103/PhysRevE.56.6620},
+  url     = {https://doi.org/10.1103/PhysRevE.56.6620}
+}
+
+@article{soderlind2006logarithmic,
+  author  = {S{\"o}derlind, Gustaf},
+  title   = {The logarithmic norm. {H}istory and modern theory},
+  journal = {BIT Numerical Mathematics},
+  volume  = {46},
+  number  = {3},
+  pages   = {631--652},
+  year    = {2006},
+  doi     = {10.1007/s10543-006-0069-9},
+  url     = {https://doi.org/10.1007/s10543-006-0069-9}
+}
+
+@article{gugercin2012phmor,
+  author  = {Gugercin, Serkan and Polyuga, Rostyslav V. and Beattie, Christopher and van der Schaft, Arjan},
+  title   = {Structure-preserving tangential interpolation for model reduction of port-{H}amiltonian systems},
+  journal = {Automatica},
+  volume  = {48},
+  number  = {9},
+  pages   = {1963--1974},
+  year    = {2012},
+  doi     = {10.1016/j.automatica.2012.05.052},
+  url     = {https://doi.org/10.1016/j.automatica.2012.05.052}
+}
+
+@article{vanderschaft2014overview,
+  author  = {van der Schaft, Arjan and Jeltsema, Dimitri},
+  title   = {Port-{H}amiltonian Systems Theory: An Introductory Overview},
+  journal = {Foundations and Trends in Systems and Control},
+  volume  = {1},
+  number  = {2-3},
+  pages   = {173--378},
+  year    = {2014},
+  doi     = {10.1561/2600000002},
+  url     = {https://doi.org/10.1561/2600000002}
+}
+
+@article{chaturantabut2016nonlinearph,
+  author  = {Chaturantabut, Saifon and Beattie, Christopher and Gugercin, Serkan},
+  title   = {Structure-Preserving Model Reduction for Nonlinear Port-{H}amiltonian Systems},
+  journal = {SIAM Journal on Scientific Computing},
+  volume  = {38},
+  number  = {5},
+  pages   = {B837--B865},
+  year    = {2016},
+  doi     = {10.1137/15M1055085},
+  url     = {https://doi.org/10.1137/15M1055085}
+}
+
+@article{davydov2022contraction,
+  author  = {Davydov, Alexander and Jafarpour, Saber and Bullo, Francesco},
+  title   = {Non-{E}uclidean Contraction Theory for Robust Nonlinear Stability},
+  journal = {IEEE Transactions on Automatic Control},
+  volume  = {67},
+  number  = {12},
+  pages   = {6667--6681},
+  year    = {2022},
+  doi     = {10.1109/TAC.2022.3183966},
+  url     = {https://doi.org/10.1109/TAC.2022.3183966}
+}
+
+@article{califano2023passivity,
+  author  = {Califano, Federico},
+  title   = {Passivity-Preserving Safety-Critical Control Using Control Barrier Functions},
+  journal = {IEEE Control Systems Letters},
+  volume  = {7},
+  pages   = {1742--1747},
+  year    = {2023},
+  doi     = {10.1109/LCSYS.2023.3280082},
+  url     = {https://doi.org/10.1109/LCSYS.2023.3280082}
+}
+
+@article{toledozucco2024pfem,
+  author  = {Toledo-Zucco, Jesus-Pablo and Matignon, Denis and Poussot-Vassal, Charles and Le Gorrec, Yann},
+  title   = {Structure-preserving discretization and model order reduction of boundary-controlled {1D} port-{H}amiltonian systems},
+  journal = {Systems \& Control Letters},
+  volume  = {194},
+  pages   = {105947},
+  year    = {2024},
+  doi     = {10.1016/j.sysconle.2024.105947},
+  url     = {https://doi.org/10.1016/j.sysconle.2024.105947}
+}
+
+% ===== bucket 5: stochastic CBFs, barrier certificates, distributional robustness
+
+@book{kushner1967stochastic,
+  author    = {Kushner, Harold J.},
+  title     = {Stochastic Stability and Control},
+  series    = {Mathematics in Science and Engineering},
+  volume    = {33},
+  publisher = {Academic Press},
+  address   = {New York},
+  year      = {1967},
+  doi       = {10.1016/S0076-5392(08)X6039-4},
+  url       = {https://doi.org/10.1016/S0076-5392(08)X6039-4}
+}
+
+@article{prajna2007barrier,
+  author  = {Prajna, Stephen and Jadbabaie, Ali and Pappas, George J.},
+  title   = {A Framework for Worst-Case and Stochastic Safety Verification Using Barrier Certificates},
+  journal = {IEEE Transactions on Automatic Control},
+  volume  = {52},
+  number  = {8},
+  pages   = {1415--1428},
+  year    = {2007},
+  doi     = {10.1109/TAC.2007.902736},
+  url     = {https://doi.org/10.1109/TAC.2007.902736}
+}
+
+@article{esfahani2018wasserstein,
+  author  = {Mohajerin Esfahani, Peyman and Kuhn, Daniel},
+  title   = {Data-driven distributionally robust optimization using the {W}asserstein metric: performance guarantees and tractable reformulations},
+  journal = {Mathematical Programming},
+  volume  = {171},
+  number  = {1-2},
+  pages   = {115--166},
+  year    = {2018},
+  doi     = {10.1007/s10107-017-1172-1},
+  url     = {https://doi.org/10.1007/s10107-017-1172-1}
+}
+
+@article{santoyo2021finitetime,
+  author  = {Santoyo, Cesar and Dutreix, Maxence and Coogan, Samuel},
+  title   = {A barrier function approach to finite-time stochastic system verification and control},
+  journal = {Automatica},
+  volume  = {125},
+  pages   = {109439},
+  year    = {2021},
+  doi     = {10.1016/j.automatica.2020.109439},
+  url     = {https://doi.org/10.1016/j.automatica.2020.109439}
+}
+
+@article{clark2021stochastic,
+  author  = {Clark, Andrew},
+  title   = {Control barrier functions for stochastic systems},
+  journal = {Automatica},
+  volume  = {130},
+  pages   = {109688},
+  year    = {2021},
+  doi     = {10.1016/j.automatica.2021.109688},
+  url     = {https://doi.org/10.1016/j.automatica.2021.109688}
+}
+
+@article{jagtap2021stochastic,
+  author  = {Jagtap, Pushpak and Soudjani, Sadegh and Zamani, Majid},
+  title   = {Formal Synthesis of Stochastic Systems via Control Barrier Certificates},
+  journal = {IEEE Transactions on Automatic Control},
+  volume  = {66},
+  number  = {7},
+  pages   = {3097--3110},
+  year    = {2021},
+  doi     = {10.1109/TAC.2020.3013916},
+  url     = {https://doi.org/10.1109/TAC.2020.3013916}
+}
+
+@misc{so2023almostsure,
+  author        = {So, Oswin and Clark, Andrew and Fan, Chuchu},
+  title         = {Almost-Sure Safety Guarantees of Stochastic Zero-Control Barrier Functions Do Not Hold},
+  howpublished  = {arXiv preprint arXiv:2312.02430},
+  year          = {2023},
+  eprint        = {2312.02430},
+  archivePrefix = {arXiv},
+  primaryClass  = {math.OC},
+  url           = {https://arxiv.org/abs/2312.02430}
+}
+
+@article{mestres2024dro,
+  author  = {Mestres, Pol and Long, Kehan and Atanasov, Nikolay and Cort{\'e}s, Jorge},
+  title   = {Feasibility Analysis and Regularity Characterization of Distributionally Robust Safe Stabilizing Controllers},
+  journal = {IEEE Control Systems Letters},
+  volume  = {8},
+  pages   = {91--96},
+  year    = {2024},
+  doi     = {10.1109/LCSYS.2023.3348688},
+  url     = {https://doi.org/10.1109/LCSYS.2023.3348688}
+}
+
+@article{cosner2024freedman,
+  author  = {Cosner, Ryan K. and Culbertson, Preston and Ames, Aaron D.},
+  title   = {Bounding Stochastic Safety: Leveraging {F}reedman's Inequality With Discrete-Time Control Barrier Functions},
+  journal = {IEEE Control Systems Letters},
+  volume  = {8},
+  pages   = {1937--1942},
+  year    = {2024},
+  doi     = {10.1109/LCSYS.2024.3409105},
+  url     = {https://doi.org/10.1109/LCSYS.2024.3409105}
+}
+
+@article{long2026drcbf,
+  author  = {Long, Kehan and Yi, Yinzhuang and Dai, Zhirui and Herbert, Sylvia and Cort{\'e}s, Jorge and Atanasov, Nikolay},
+  title   = {Sensor-based distributionally robust control for safe robot navigation in dynamic environments},
+  journal = {The International Journal of Robotics Research},
+  volume  = {45},
+  number  = {2},
+  pages   = {328--351},
+  year    = {2026},
+  doi     = {10.1177/02783649251352000},
+  url     = {https://doi.org/10.1177/02783649251352000}
+}
+
+% ===== bucket 6: classical quantized and sector-bounded feedback
+
+@article{delchamps1990quantized,
+  author  = {Delchamps, David F.},
+  title   = {Stabilizing a linear system with quantized state feedback},
+  journal = {IEEE Transactions on Automatic Control},
+  volume  = {35},
+  number  = {8},
+  pages   = {916--924},
+  year    = {1990},
+  doi     = {10.1109/9.58500},
+  url     = {https://doi.org/10.1109/9.58500}
+}
+
+@article{brockett2000quantized,
+  author  = {Brockett, Roger W. and Liberzon, Daniel},
+  title   = {Quantized feedback stabilization of linear systems},
+  journal = {IEEE Transactions on Automatic Control},
+  volume  = {45},
+  number  = {7},
+  pages   = {1279--1289},
+  year    = {2000},
+  doi     = {10.1109/9.867021},
+  url     = {https://doi.org/10.1109/9.867021}
+}
+
+@article{elia2001limited,
+  author  = {Elia, Nicola and Mitter, Sanjoy K.},
+  title   = {Stabilization of linear systems with limited information},
+  journal = {IEEE Transactions on Automatic Control},
+  volume  = {46},
+  number  = {9},
+  pages   = {1384--1400},
+  year    = {2001},
+  doi     = {10.1109/9.948466},
+  url     = {https://doi.org/10.1109/9.948466}
+}
+
+@article{liberzon2003hybrid,
+  author  = {Liberzon, Daniel},
+  title   = {Hybrid feedback stabilization of systems with quantized signals},
+  journal = {Automatica},
+  volume  = {39},
+  number  = {9},
+  pages   = {1543--1554},
+  year    = {2003},
+  doi     = {10.1016/S0005-1098(03)00151-1},
+  url     = {https://doi.org/10.1016/S0005-1098(03)00151-1}
+}
+
+@article{fu2005sector,
+  author  = {Fu, Minyue and Xie, Lihua},
+  title   = {The sector bound approach to quantized feedback control},
+  journal = {IEEE Transactions on Automatic Control},
+  volume  = {50},
+  number  = {11},
+  pages   = {1698--1711},
+  year    = {2005},
+  doi     = {10.1109/TAC.2005.858689},
+  url     = {https://doi.org/10.1109/TAC.2005.858689}
+}

@@ -1,0 +1,313 @@
+% Section V template.  tools/build_section.py fills every double-brace placeholder from the logs, CSV tables and configuration of the
+% final run (results/section_numbers.json) and writes results/experimental_section.tex; no number in the prose is typed
+% by hand.  To be \input from the main paper (macros and labels of Sections II-IV and Appendices A-D); paths are
+% relative to results/.  Packages: graphicx, booktabs, amssymb.
+% Review round: every figure goes through \pgcfig, which keeps the natural size of the PDF (3.5in single panel, 4.4in
+% multi-panel) and caps it at width <= min(\linewidth, 0.62\textwidth) and height <= 0.72\textheight (keepaspectratio),
+% so the same source fits the one-column and the two-column IEEEtran layout; the final size is written to the log.
+\makeatletter
+\@ifundefined{pgcfigw}{\newlength{\pgcfigw}\newsavebox{\pgcfigbox}}{}
+\makeatother
+\providecommand{\pgcfig}[1]{\sbox{\pgcfigbox}{\includegraphics{#1}}\setlength{\pgcfigw}{\wd\pgcfigbox}\ifdim\pgcfigw>0.62\textwidth\setlength{\pgcfigw}{0.62\textwidth}\fi\ifdim\pgcfigw>\linewidth\setlength{\pgcfigw}{\linewidth}\fi\sbox{\pgcfigbox}{\includegraphics[width=\pgcfigw,height=0.72\textheight,keepaspectratio]{#1}}\typeout{PGCFIG #1 wd=\the\wd\pgcfigbox\space ht=\the\ht\pgcfigbox\space tw=\the\textwidth\space th=\the\textheight\space lw=\the\linewidth}\usebox{\pgcfigbox}}
+\section{Numerical Validation}
+\label{sec:numerics}
+
+\subsection{Benchmark, implementation and protocol}
+The benchmark is the class-(H) telegraph reaction--diffusion--advection lattice
+\begin{align*}
+\dot q &= p,\\
+\dot p &= -(\nu L_h + \alpha I)q - \gamma p - c\,W_f D_h W_f\, q\\
+&\quad - \kappa(q - \sin q) + Bu + B_w w,
+\end{align*}
+on \(N_m = {{N_m}}\) nodes (\(N = {{N}}\) states) with Dirichlet data, \(\nu = {{nu}}\), \(\alpha = {{alpha}}\),
+\(\gamma = {{gamma}}\), \(\kappa = {{kappa}}\), two actuators (\(m = {{m}}\)) and one disturbance channel. Here \(D_h\) is the
+skew central difference and the advection filter is
+\[
+W_f = \Phi_f \operatorname{diag}(\underbrace{1,\dots,1}_{{{n_adv_full_weight}}},\,w,\dots,w)\,\Phi_f^\top ,
+\]
+where \(\Phi_f\) holds the first \(K_f = {{n_adv_modes}}\) mass-normalised sine modes. The plain projector
+\(\Pi_f = \Phi_f\Phi_f^\top\) is the special case \(w = {{e9_wmax}}\). The cutoff-mode weight \(w\) is a disclosed benchmark
+parameter: it is a configuration literal, it is swept in Experiment 9, and the deployed value
+\(w^\star = {{w_star_exp}} \approx {{w_star}}\) is the one selected by that sweep. The ROM keeps \(K_m = {{K_m}}\)
+eigenmodes (\(K = {{K}}\)), so \(K_f > K_m\) and the advection couples the ROM to the tail.
+
+The advection is not folded into the damped-wave operator. \(A_{\mathrm{full}} = (J_{\mathrm{full}} - R_{\mathrm{full}})P_{\mathrm{full}}\)
+stays the pure damped wave, so \(Q = \gamma P\) holds (relative error \({{Q_identity_relerr_R2}}\)), \(\lambda_{K+1} = {{lambda_K1_R2}}\)
+is unchanged, and (H2a) holds by eigenmode invariance (Lemma~\ref{lem:h2a_char}, residual \({{H2a_residual_R2}}\)). For
+the same reason the block \(P_0^{-1}\Phi^\top P_{\mathrm{full}}A_{\mathrm{full}}P_\perp\) vanishes to round-off
+(\({{A_rperp_full_norm_R2}}\)). The linear cross-coupling sits in the nonlinearity,
+\(F_{\mathrm{nl}}(x) = A_{\mathrm{adv}}x + F_{\sin}(x)\) with
+\[
+A_{\mathrm{adv}} = \begin{bmatrix}0&0\\-c\,W_fD_hW_f&0\end{bmatrix},
+\]
+and its ROM--tail block \(A_{\mathrm{adv},r,\perp} := P_0^{-1}\Phi^\top P_{\mathrm{full}}A_{\mathrm{adv}}P_\perp\) of
+Lemma~\ref{lem:delta_cert_classH} has norm \(\|A_{\mathrm{adv},r,\perp}\|_2 = {{A_adv_rperp_norm_R2}}\) in R2 and
+\({{A_adv_rperp_norm_R1}}\) in R1.
+
+Two regimes are used. R2 has \(c = {{c_R2}}\) (\(\mathrm{Pe} = {{Pe_R2}}\)) and is open-loop unstable. R1 has
+\(c = {{c_R1}}\) (\(\mathrm{Pe} = {{Pe_R1}}\)). The sampling period of R2 is \(T_s = {{Ts_R2}}\) with
+\(\tau_A = {{tauA_R2}}\), \(\tau_B = {{tauB_R2}}\). This is a trade-off forced by the active tail coupling: at the
+previous \(T_s = {{Ts_wave2}}\) the certificate refuses at \(w^\star\), because
+\(\delta_{\mathrm{total}} = {{wave2_delta_total}} > \delta_{\mathrm{cert}} = {{wave2_delta_cert}}\) and
+the authority condition (H6), \eqref{eq:control_authority}, fails (Table~\ref{tab:exp1_refusals}). R1 keeps \(T_s = {{Ts_R1}}\).
+The short period is set by the hold term, not by the plant time scale: the slowest mode (\(\omega_{\min} = {{omega_min_R2}}\))
+is sampled \({{samples_per_period_R2}}\) times per period \(2\pi/\omega_{\min}\) in R2 (\({{samples_per_period_R1}}\) in R1),
+and the hold term \(\phi L_{\mathrm{hold}}T_s\) of \eqref{eq:delta_total_exact}, with \(L_{\mathrm{hold}} = {{L_hold_R2}}\)
+and \(\mathrm{Lip}(L_fh) = {{L_Lfh_R2}}\), is a share \({{hold_share_R2}}\) of \(\delta_{\mathrm{total}}\) in R2
+(\({{hold_share_R1}}\) in R1, where \(L_{\mathrm{hold}} = {{L_hold_R1}}\) and \(\mathrm{Lip}(L_fh) = {{L_Lfh_R1}}\)).
+
+Every constant of Sections~\ref{sec:problem}--\ref{sec:theory} is computed at run time in float64 by a function that
+names the equation it implements. A pytest AST scan fails if a float literal appears in the numerical modules, and a
+perturbation test fails if any certificate quantity does not depend on the configuration inputs. The certificate raises
+(refuses) unless (H0)--(H7), the timing order and the codesign window all hold. This single flag is the
+Theorem~\ref{thm:main_cbf} hypothesis row of Table~\ref{tab:exp1_hypotheses}. (H-dz) is checked separately and only
+for Proposition~\ref{prop:deadzone_stability}. The Path-A LUT is indexed in port space \(v = g_r^\top P z\) by default.
+When \(\mathcal C_{r,0} = \{\|z\|_P^2 \le E_{\mathrm{safe}}\}\) as in \eqref{eq:Cr0}, its range is
+\(D_v = 2\sqrt{E_{\mathrm{safe}}}\max_j \sqrt{(g_r^\top P g_r)_{jj}} = {{D_v_R2}}\) by \eqref{eq:Dv_closed}; the largest
+sampled value is \({{D_v_sampled_R2}}\) (both to four significant digits).
+The modulus \(\mathrm{Lip}(L_fh)\) that enters \(L_{\mathrm{hold}}\) carries the factor of two of the gradient
+\(\nabla_z(z^\top P z) = 2Pz\); it is cross-checked against finite-difference quotients of \(L_fh\) at random pairs in
+\(\mathcal C_{r,0}\), which must not exceed the certified modulus.
+
+The full-order plant is integrated with an exponential integrator (ETD2RK in the lattice eigenbasis). The latch
+instants \(\tau_A\), \(\tau_B\) are integration nodes, so the switching times are exact. The disturbance is the worst
+case of Remark~\ref{rem:hji_game} with \(\epsilon_{\mathrm{adv}} = {{eps_adv}}\). All seeds come from the configuration
+file. The suite runs {{n_assert}} experiment assertions and {{n_tests}} pytest tests on two CPU cores in
+\({{rt_total}}\)~s, with a peak resident memory of \({{rt_peak}}\)~MB (Table~\ref{tab:runtimes}).
+
+\input{tables/exp1_constants}
+\input{tables/exp1_constants_b}
+\input{tables/exp1_hypotheses}
+
+\subsection{Experiment 0: open-loop exit}
+With \(\mathrm{Pe} = {{Pe_R2}}\) and \(w = w^\star\) the linearisation has growth rate \({{open_loop_growth_R2}}\)
+(Table~\ref{tab:exp1_constants}). All {{e0_exits}} of
+{{n_seeds}} initial conditions satisfying (H7) leave \(\mathcal C\) without control: the worst \(\min_t h\) is
+\({{e0_minh}}\) and the latest exit is at \(t = {{e0_lastexit}}\) (Fig.~\ref{fig:exp0}, Table~\ref{tab:exp0_openloop}).
+The safety problem is therefore not trivial: invariance in the later experiments comes from the controller, not from
+passivity.
+
+\input{tables/exp0_openloop}
+\begin{figure}[t]\centering\pgcfig{figures/exp0_openloop_h.pdf}
+\caption{Experiment 0: raw open-loop \(h(x(t))\) in R2 (\(\mathrm{Pe}={{Pe_R2}}\)) for all seeds.}\label{fig:exp0}\end{figure}
+
+\subsection{Experiment 1: constants, hypotheses and refusals}
+Tables~\ref{tab:exp1_constants} and~\ref{tab:exp1_constants_b} list every certificate constant for R2 and R1, and
+Table~\ref{tab:exp1_hypotheses} lists the hypotheses. Proposition~\ref{prop:dahlquist} holds to round-off:
+\(\mu_{2,P}(A_{r,0}) = {{mu2P}}\).
+
+The tail coupling is now active. In R2, \(\|A_{\mathrm{adv},r,\perp}\|_2 = {{A_adv_rperp_norm_R2}}\) and
+\(L_{\perp,P} = {{L_perp_R2}}\). Of this, \({{L_perp_lin_R2}}\) is the linear advective part and \({{L_perp_nl_R2}}\)
+the \(\sin\) nonlinearity, so the advective part is a fraction \({{L_perp_lin_share_R2}}\) of the total. In R1,
+\(L_{\perp,P} = {{L_perp_R1}}\), and the ratio between the regimes is \({{Lperp_ratio}}\). The tail term
+\(L_h L_{\perp,P}\varepsilon_{\mathrm{basis},P}\) is a share \({{tail_share_R2}}\) of
+\(\delta_{\mathrm{total}} = {{delta_total_R2}}\) in R2 (and a share \({{tail_share_R1}}\) of
+\(\delta_{\mathrm{total}} = {{delta_total_R1}}\) in R1). With
+\(\varepsilon_{\mathrm{basis},P} = {{eps_basis_P_R2}}\), the R2 margin is
+\(\delta_{\mathrm{cert}} - \delta_{\mathrm{total}} = {{delta_cert_R2}} - {{delta_total_R2}} = {{H6_margin_R2}}\).
+
+Lemma~\ref{lem:delta_cert_classH} gives \(c_M = {{c_M_R2}}\) from \(\lambda_{\min}(M,P) = {{lambda_min_MP_R2}}\) and
+\(s_{\mathrm{nl}} = {{s_nl_R2}}\) in R2, and \(c_M = {{c_M_R1}}\) from \(\lambda_{\min}(M,P) = {{lambda_min_MP_R1}}\) and
+\(s_{\mathrm{nl}} = {{s_nl_R1}}\) in R1. The codesign window is
+\([{{codesign_lo}}, {{codesign_hi}}]\) and contains \(b_A = {{b_A}}\).
+
+Table~\ref{tab:exp1_refusals} shows the certificate refusing {{n_refusals}} inadmissible variants. The state-space LUT (the
+\(m = K\) variant of Remark~\ref{rem:lut_variants}) has an empty window \([{{ss_window}}]\). The other refusals are
+\(u_{\max}\) below the (H-sat) left side, unfiltered lattice advection, the plain projector \(\Pi_f\), the previous
+sampling period and \(T_s\), \(\tau_A\), \(\tau_B\) scaled by {{Ts_refusal_factor}}. Proposition~\ref{prop:deadzone_stability} needs (i) \(\mu_R > L_{\mathrm{sec}}\), (H-dz) and (H3)
+(Table~\ref{tab:exp1_hypotheses}). In R1 all three hold: \(\mu_R = {{mu_R_R1}} > L_{\mathrm{sec}} = {{L_sec_R1}}\) and
+\(r_{\mathrm{ss}} = {{r_ss_R1}} < r_{\min} = {{r_min_R1}}\). In R2, \(L_{\mathrm{sec}} = {{L_sec_R2}}\) exceeds
+\(\mu_R = {{mu_R_R2}}\), so condition (i) fails and Proposition~\ref{prop:deadzone_stability} does not apply; this does
+not affect Theorem~\ref{thm:main_cbf}.
+
+\input{tables/exp1_refusals}
+
+\subsection{Experiment 9: the cutoff-mode weight and the certifiable frontier}
+The weight \(w\) is swept over {{e9_n}} geometric values from \({{e9_wmax}}\) down to \({{e9_wmin}}\) at the R2 P\'eclet number
+(Table~\ref{tab:exp9_wsweep}, Fig.~\ref{fig:exp9}). At every \(w\) the open loop leaves \(\mathcal C\) on all seeds, so
+the plant is unsafe throughout the sweep. For \(w \ge {{e9_wH4}}\), the tail tolerance (H4) fails together with (H6) and
+(H7). For \({{e9_H6_lo}} \le w \le {{e9_H6_hi}}\), only the authority condition (H6) fails. The certificate accepts
+for \(w \le w^\star = {{e9_wstar}}\). Below \(w^\star\) the single-rate ablation (c) is no longer refused (first at
+\(w = {{e9_c_acc}}\)). The deployed \(w^\star\) is therefore the largest grid value that is accepted with a positive
+authority margin \(\delta_{\mathrm{cert}}-\delta_{\mathrm{total}}\) in \eqref{eq:control_authority} while every ablation still breaks. \(\|A_{\mathrm{adv},r,\perp}\|_2\) is proportional to
+\(w\), and the tail share of \(\delta_{\mathrm{total}}\) falls from \({{e9_share_w1}}\) at \(w = {{e9_wmax}}\) to
+\({{e9_share_star}}\) at \(w^\star\).
+
+For the plain projector (\(w = {{e9_wmax}}\)), the P\'eclet scan of Table~\ref{tab:exp9_plain_peclet} shows that the certifiable
+advection speeds (\(c \le {{e9_plain_cert}}\), \(\mathrm{Pe} \le {{e9_plain_cert_Pe}}\)) and the open-loop-unstable speeds
+(\(c \ge {{e9_plain_unst}}\), \(\mathrm{Pe} \ge {{e9_plain_unst_Pe}}\)) are disjoint. Under the Euclidean-ODD supremum that
+defines \(M_\perp\) in~\eqref{eq:M_perp}, full-strength cutoff-mode advection is not certifiable at any P\'eclet number
+where the open loop is unstable: no softening. The plain-projector result is the \(L^2\)-ODD conservatism of
+Remark~\ref{rem:rda_cutoff}. Keeping \(A_{\mathrm{adv}}\) inside \(F_{\mathrm{nl}}\) preserves (H2a) exactly (eigenmode
+invariance, Lemma~\ref{lem:h2a_char}) at the price of charging \(A_{\mathrm{adv},r,\perp}\) in \(M_\perp\) and
+\(L_{\perp,P}\). The weight \(w\) attenuates the cutoff modes, which is what an \(H^1\)-bounded ODD would do for a smooth
+field; certifying \(w = {{e9_wmax}}\) at \(\mathrm{Pe} \ge {{e9_plain_unst_Pe}}\) would require that \(H^1\) formulation,
+which is outside the present theorem.
+
+\input{tables/exp9_wsweep}
+\input{tables/exp9_plain_peclet}
+\begin{figure*}[t]\centering\pgcfig{figures/exp9_wsweep.pdf}
+\caption{Experiment 9: tail constants (left) and the authority margin \(\delta_{\mathrm{cert}}-\delta_{\mathrm{total}}\) of \eqref{eq:control_authority} (right)
+versus the cutoff-mode weight \(w\); the dotted line marks \(w^\star\).}\label{fig:exp9}\end{figure*}
+
+\subsection{Experiment 2: Proposition~\ref{prop:twin_crown} (twin-CROWN)}
+For \(b_B = {{e2_bB_lo}},\dots,{{e2_bB_hi}}\), with nearest and Adam-learned rounding, the twin-CROWN bound exceeds the
+largest Student--Teacher gap over {{e2_nsamp}} samples (uniform samples of \(\mathcal Z_{\mathrm{ODD}}\) plus all box
+vertices) by a factor of \({{e2_ratio_lo}}\)--\({{e2_ratio_hi}}\) (Fig.~\ref{fig:exp2}, Table~\ref{tab:exp2_crown}).
+The bound is monotone non-increasing in \(b_B\) and halves with every additional bit of \(b_B\). At \(b_B = {{e2_bB}}\), learned rounding
+lowers \(\varepsilon_{\mathrm{CROWN}}\) from \({{e2_near}}\) to \({{e2_learn}}\). The port box that indexes the Path-A
+table is certified as well.
+
+\input{tables/exp2_crown}
+\begin{figure}[t]\centering\pgcfig{figures/exp2_crown.pdf}
+\caption{Experiment 2: certified \(\varepsilon_{\mathrm{CROWN}}\), explicit \(E_q\) and the largest sampled gap versus \(b_B\).}\label{fig:exp2}\end{figure}
+
+\subsection{Experiment 3: \(\delta_{\mathrm{cert}}\), Lemma~\ref{lem:delta_cert_classH} and Lemma~\ref{lem:delta_cert_closed}}
+In class (H), the certified bound of Lemma~\ref{lem:delta_cert_classH} is compared with the brute-force minimum of the
+exact bracket of~\eqref{eq:teacher_cbf} over samples of \(\mathcal C_{r,\mathrm{act}}\). The bound is
+\({{e3_bound_R2}} \le {{e3_brute_R2}}\) in R2 and \({{e3_bound_R1}} \le {{e3_brute_R1}}\) in R1, so it is sound and nearly
+tight. In both regimes \(\delta_{\mathrm{total}} \le \delta_{\mathrm{cert}}\) (Fig.~\ref{fig:exp3}).
+
+On a class-(D) instance, the closed form~\eqref{eq:delta_cert_closed} equals the brute-force infimum of its affine bound
+in both branches and lies below the exact-bracket minimum (Table~\ref{tab:exp3_delta_cert}). This is a standalone check
+of the lemma, so \(\delta_{\mathrm{total}}\) is reported as N/A there. Using branch 1 unconditionally would overestimate
+the margin when \(c < \gamma_0\).
+
+\begin{figure}[t]\centering\pgcfig{figures/exp3_delta_cert.pdf}
+\caption{Experiment 3: exact bracket samples versus the certified \(\delta_{\mathrm{cert}}\) and \(\delta_{\mathrm{total}}\) (top);
+class-(D) closed form versus the exact bracket (bottom).}\label{fig:exp3}\end{figure}
+\input{tables/exp3_delta_cert}
+
+\subsection{Experiment 4: Theorem~\ref{thm:main_cbf} (positive case)}
+The full method runs with the worst-case adversary on {{n_seeds}} seeds per regime from two kinds of initial
+condition: the boundary start \(\tilde h_r(z(0)) = 0\), with the tail at its largest admissible value (H7), and the
+interior start \(h_r(z(0)) = {{interior_level}}\,h_{\mathrm{act}}\). Conclusions (a)--(c) hold at every integrator
+node for both starts and both regimes (Fig.~\ref{fig:exp4}, Table~\ref{tab:exp4_theorem1}); the largest tail ratio
+\(\|x_\perp\|/\epsP\) (norm weighted by \(\Pfe\)) is \({{e4_tailratio_R2}}\) in R2 and \({{e4_tailratio_R1}}\) in R1.
+For both starts the minimum of \(h(x(t))\) over the run is attained at the initial instant
+(\(t = {{e4_btmin_R2}}\) for the boundary start, \(t = {{e4_itmin_R2}}\) for the interior start): \(\min_t h\) is
+\({{e4_bmin_R2}}\) in R2 and \({{e4_bmin_R1}}\) in R1 from the boundary, \({{e4_imin_R2}}\) and \({{e4_imin_R1}}\) from
+the interior. The inter-sample dip floor \(-\Delta h_{\mathrm{dip}}\) of conclusion (b) is therefore not exercised
+dynamically by these runs. Experiment 4b measures how much of each budget term the same trajectories use.
+
+\begin{figure*}[t]\centering\pgcfig{figures/exp4_theorem1.pdf}
+\caption{Experiment 4: raw closed-loop \(h(x(t))\) for the boundary start (top row) and the interior start (middle row),
+and the tail ratio \(\|x_\perp\|/\epsP\), with the norm weighted by \(\Pfe\), for the boundary start (bottom row); R2 left, R1 right.}\label{fig:exp4}\end{figure*}
+\input{tables/exp4_theorem1}
+
+\subsection{Experiment 4b: budget utilisation along the certified trajectories}
+Experiment 4b re-runs the closed loops of Experiment 4 and evaluates, at each of the {{e4b_nodes_R2}} (R2) and
+{{e4b_nodes_R1}} (R1) integrator nodes over both starts and all seeds, every term of~\eqref{eq:ode_diff_ineq} next to
+the bound the proof uses for it (Table~\ref{tab:exp4b_budget}). Each fraction below is the realised term over its
+bound: the maximum over all nodes and, in parentheses, the median over the {{e4b_act_R2}} (R2) and {{e4b_act_R1}} (R1)
+nodes whose sample \(z_k\) lies in \(\mathcal C_{r,\mathrm{act}}\), where the budget enters the proof. A fraction
+{{e4b_intfrac_R2}} (R2) and {{e4b_intfrac_R1}} (R1) of the nodes belong to periods with \(z_k \in \mathcal B_{\mathrm{int}}\);
+there the proof uses only the Lipschitz branch, and its inequality holds at every such node.
+\begin{itemize}
+\item Adversary: \({{e4b_adv_max_R2}}\) (\({{e4b_adv_med_R2}}\)) in R2 and \({{e4b_adv_max_R1}}\) (\({{e4b_adv_med_R1}}\))
+in R1. The worst-case \(w\) has norm \(\varepsilon_{\mathrm{adv}}\) at every node, so the gap to one is the supremum
+of \(\|d_r^\top\nabla\tilde h_r\|_2\) over \(\Crz\) in \(\overline d_h\).
+\item Quantization and lag: \({{e4b_quant_max_R2}}\) (\({{e4b_quant_med_R2}}\)) and \({{e4b_quant_max_R1}}\)
+(\({{e4b_quant_med_R1}}\)). The mismatch \(e_u\) reaches at most \({{e4b_eu_max_R2}}\) (R2) and \({{e4b_eu_max_R1}}\) (R1)
+of its phase bound, so \(\varepsilon_{\mathrm{CROWN}}\), \(\varepsilon_A\) and \(\Delta u_{\mathrm{lag}}\) are the conservative constants of this term.
+\item Tail coupling: \({{e4b_tail_max_R2}}\) (\({{e4b_tail_med_R2}}\)) and \({{e4b_tail_max_R1}}\) (\({{e4b_tail_med_R1}}\)).
+Of the factors of \(L_h\Lperp\epsP\), the two least used are the Lipschitz constant \(\Lperp\) (median
+\(\|\Delta_\perp\|_2/(\Lperp\|x_\perp\|) = {{e4b_lip_med_R2}}\) in R2 and \({{e4b_lip_med_R1}}\) in R1) and the
+alignment of \(\nabla\tilde h_r\) with \(\Delta_\perp\) (median cosine \({{e4b_cos_med_R2}}\) and \({{e4b_cos_med_R1}}\)).
+\item Hold shift: \({{e4b_hold_max_R2}}\) (\({{e4b_hold_med_R2}}\)) and \({{e4b_hold_max_R1}}\) (\({{e4b_hold_med_R1}}\)), the
+smallest of the four fractions in both regimes. Two constants of \(L_{\mathrm{hold}}\) are conservative here:
+\(\|z - z_k\|_2\) reaches at most \({{e4b_mz_max_R2}}\) (R2) and \({{e4b_mz_max_R1}}\) (R1) of \(M_z s\), and the hold shift
+at most \({{e4b_lipH_max_R2}}\) (R2) and \({{e4b_lipH_max_R1}}\) (R1) of
+\(L_{\mathrm{hold}}\|z - z_k\|_2/M_z\), its Lipschitz bound in \(z\).
+\end{itemize}
+The realised rate \(\dot{\tilde h}_r + \gamma_0\tilde h_r\) minus the right-hand side of~\eqref{eq:ode_diff_ineq} is
+positive at every active-shell node, so the soundness check passes. Its minimum is \({{e4b_minslack_R2}}\,\delta_{\mathrm{total}}\)
+in R2 and \({{e4b_minslack_R1}}\,\delta_{\mathrm{total}}\) in R1, attained at a sampling instant, where the hold term
+vanishes; the Teacher margin at \(z_k\) (the left-hand side of~\eqref{eq:teacher_cbf} minus \(\delta_{\mathrm{total}}\))
+supplies a fraction \({{e4b_teachshare_R2}}\) (R2) and \({{e4b_teachshare_R1}}\) (R1) of it.
+
+\input{tables/exp4b_budget}
+
+\subsection{Experiment 5: Proposition~\ref{prop:deadzone_stability} and ablation (d)}
+In R1, (H-dz) holds and the trajectories enter \(\mathcal B_{\mathrm{ss}}\). With the mid-tread deadzone, Path A is
+silent late in the run (\(u_A \equiv 0\)) for every \(b_A \in \{{{e5_bAs}}\}\). Ablation (d) replaces it with a
+mid-rise quantiser and gives a persistent actuator limit cycle at every \(b_A\), including the deployed
+\(b_A = {{e5_bA_dep}}\) (Figs.~\ref{fig:exp5} and~\ref{fig:exp5z}, Table~\ref{tab:exp5_deadzone}). The number of sign switches per unit time
+falls from \({{e5_sw_lo}}\) at \(b_A = {{e5_bA_lo}}\) to \({{e5_sw_hi}}\) at \(b_A = {{e5_bA_hi}}\), and the final lag error \(\|u_A - \hat{\mathcal T}\|_2\) of the mid-rise quantiser at
+\(b_A = {{e5_bA_hi}}\) is \({{e5_lag_dep}}\). With \(b_A = 1\), \(r_{\mathrm{ss}} = {{e5_rss1}} > r_{\min} = {{e5_rmin1}}\), so (H-dz) fails and
+Proposition~\ref{prop:deadzone_stability} is refused.
+
+R1 is open-loop stable, so the chattering appears in the actuator signal, not as a larger state amplitude.
+
+\begin{figure*}[t]\centering\pgcfig{figures/exp5_deadzone_sweep.pdf}
+\caption{Experiment 5 / ablation (d): late sign switches of the mid-rise Path-A command (left) and the late-window state
+size (right) versus \(b_A\).}\label{fig:exp5}\end{figure*}
+\begin{figure*}[t]\centering\pgcfig{figures/exp5_deadzone_z.pdf}
+\caption{Experiment 5: \(\|z(t_k)\|_P\) for the deadzone (left) and mid-rise (right) quantiser over the \(b_A\) sweep.}\label{fig:exp5z}\end{figure*}
+\input{tables/exp5_deadzone}
+
+\subsection{Experiment 6: ablations (a), (b), (c), (e)}
+Each ablation removes one component at the deployed \(w^\star\). In every case the full certificate refuses and the
+full-order plant leaves \(\mathcal C\) (Fig.~\ref{fig:exp6}, Table~\ref{tab:exp6_ablations}). For (a) and (b), a naive
+certificate with the corresponding term dropped would accept.
+\begin{itemize}
+\item (a) \(K_m = {{abl_K_m}}\) without tail bookkeeping: {{e6_a_exits}} of {{n_seeds}} seeds exit.
+\item (b) \(b_B = {{abl_b_B}}\) without the CROWN margin: {{e6_b_exits}} of {{n_seeds}} seeds exit.
+\item (c) Single-rate hold (Table~\ref{tab:exp6_multirate}). At the deployed \(T_s\), \(\delta_{\mathrm{total}}\) rises from
+\({{e6_c_multi}}\) to \({{e6_c_single}} > \delta_{\mathrm{cert}}\), so (H6) fails. At \(T_s = {{e6_TsV}}\), single rate gives
+{{e6_c_exits}} exits and multi-rate gives none.
+\item (e) \(\epsilon_{\mathrm{adv}} = {{abl_eps_adv}}\): {{e6_e_exits}} of {{n_seeds}} seeds exit. At the largest certifiable
+\(\epsilon_{\mathrm{adv}}^\star = {{e6_eps_star}}\) there are no exits.
+\end{itemize}
+
+\begin{figure*}[t]\centering\pgcfig{figures/exp6_ablations.pdf}
+\caption{Experiment 6: raw \(h(x(t))\) under each ablation; violations appear below \(h=0\).}\label{fig:exp6}\end{figure*}
+\input{tables/exp6_ablations}
+\input{tables/exp6_multirate}
+
+\subsection{Experiment 7: Corollary~\ref{cor:stochastic_w2} and ablation (f)}
+In R1 the paths start on the level \({{e7_z0}}\) of \(\tilde{\mathcal C}_r\) (\(h(x_0) = {{e7_h0}}\)), with spatially smooth
+noise. The intensity is chosen by a grid search over \(\sigma \in \{{{e7_grid}}\}\) (Table~\ref{tab:exp7_sigma_grid}).
+\(\sigma^\star = {{e7_sigma}}\) is the largest grid value for which the Corollary accepts at \(T = {{e7_T}}\) and
+\(\max_t|h(x_t) - h(x_0)| \ge {{e7_ffrac}}\,h(x_0)\) holds on at least half of the paths; the Corollary refuses from
+\(\sigma = {{e7_first_refused}}\) on (failing condition: {{e7_refused_cond}}). On the screening paths at \(\sigma^\star\) the criterion is driven mostly by the closed-loop drift (median
+deviation \({{e7_meddev}}\,h(x_0)\)). The noise itself is not negligible: the median deviation from the noise-free
+trajectory is \({{e7_noisedev}}\,h(x_0)\) (Table~\ref{tab:exp7_sigma_grid}).
+
+Out of {{e7_paths}} Monte Carlo paths, {{e7_exits}} exit. The exact Clopper--Pearson \({{e7_cp_pct}}\%\) upper limit is
+\({{e7_cp_hi}} \le \alpha = {{e7_alpha}}\) (Fig.~\ref{fig:exp7}, Table~\ref{tab:exp7_stochastic}). The bound is very
+conservative: \(T_{\mathrm{TTL}} = {{e7_TTL}}\) exceeds the horizon by a factor of \({{e7_TTL_ratio}}\), and no exit is
+observed.
+
+Ablation (f) uses spatially white small-scale noise. The full Corollary refuses it: the tail envelope
+\(\Delta_\sigma = {{e7f_Dsig}}\) exceeds \(\sqrt{E_{\mathrm{safe}}} = {{e7f_sqrtE}}\). A cruder bound that ignores the tail
+diffusion (\(\bar\sigma_\perp := 0\)) accepts it, yet {{e7f_exits}} of {{e7_paths}} paths exit (Clopper--Pearson lower
+limit \({{e7f_cp_lo}} > \alpha\)). The tail-diffusion term is therefore load-bearing. The constants are split into
+Tables~\ref{tab:exp7_corollary_det} and~\ref{tab:exp7_corollary_stoch}.
+
+The Corollary is not exercised on R2. There the pointwise penalty \(\gamma_0h_{\mathrm{act}} = {{e7_R2_gamma0_h_act}}\)
+already exceeds the margin \(\delta_{\mathrm{cert}} - \delta_{\mathrm{total}} = {{e7_R2_margin}}\), so its authority condition
+fails even at \(\sigma = 0\) (asserted; Table~\ref{tab:exp1_constants_b}). All stochastic runs use \(r_{W_{\scriptstyle 2}} = {{r_W2}}\),
+i.e.\ no distributional drift of the adversary.
+
+\begin{figure*}[t]\centering\pgcfig{figures/exp7_stochastic.pdf}
+\caption{Experiment 7: raw stochastic \(h(x_t)\) paths for profile noise at \(\sigma^\star\) with the noise-free run (left)
+and for ablation (f) (right).}\label{fig:exp7}\end{figure*}
+\input{tables/exp7_sigma_grid}
+\input{tables/exp7_stochastic}
+\input{tables/exp7_corollary_det}
+\input{tables/exp7_corollary_stoch}
+
+\subsection{Experiment 8: numerical method}
+At the convergence-test step, explicit Euler is unstable (amplification \({{e8_amp}}\)). The stiffness is moderate
+(spectral radius \({{e8_rad}}\), stiffness ratio \({{e8_stiff}}\)). Step halving gives error ratios of
+\({{e8_r_lo}}\)--\({{e8_r_hi}}\) for ETD2RK, i.e.\ order 2 (Fig.~\ref{fig:exp8}, Table~\ref{tab:exp8_convergence}).
+The simulator matches the closed-form augmented exponential of a latched linear system to \({{e8_latch}}\), whereas
+rounding the latch instants to a step grid gives \({{e8_grid}}\). The sparse modal propagation equals a dense nodal
+ETD2RK to \({{e8_modal}}\), and two runs give identical SHA-256 hashes (Table~\ref{tab:exp8_numerics}).
+
+\begin{figure}[t]\centering\pgcfig{figures/exp8_convergence.pdf}
+\caption{Experiment 8: step-halving convergence of ETD2RK and ETD1.}\label{fig:exp8}\end{figure}
+\input{tables/exp8_convergence}
+\input{tables/exp8_numerics}
+\input{tables/runtimes}

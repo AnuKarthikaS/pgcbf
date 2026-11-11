@@ -1,0 +1,367 @@
+{
+ "experiment": "exp7_stochastic",
+ "wall_clock_s": 165.1950507540023,
+ "peak_rss_MB": 1039.73828125,
+ "assertions": [
+  {
+   "assertion": "z(0) lies strictly inside C~_r and h(x_0) > 0",
+   "passed": true,
+   "h0": 0.00505058187387545,
+   "z0_level": 0.9
+  },
+  {
+   "assertion": "sigma grid: some grid sigma is accepted by the Corollary at T and meets the fluctuation criterion",
+   "passed": true
+  },
+  {
+   "assertion": "sigma* is the largest grid value with Corollary acceptance and the fluctuation criterion (every larger grid value fails one)",
+   "passed": true,
+   "sigma_star": 0.007,
+   "first_refused": 0.01
+  },
+  {
+   "assertion": "the Corollary's acceptance region on the grid is a down-set (monotone in sigma)",
+   "passed": true
+  },
+  {
+   "assertion": "sigma*: Corollary conditions hold (margin, beta0 > h0, h_act^- > 0, T <= T_TTL, Theorem 1)",
+   "passed": true,
+   "margin": true,
+   "beta0_gt_h0": true,
+   "h_act_minus_pos": true,
+   "r_min2_pos": true,
+   "T_le_TTL": true,
+   "theorem": true
+  },
+  {
+   "assertion": "sigma*: fluctuation criterion holds on the full Monte Carlo (>= fluct_path_share of the paths)",
+   "passed": true,
+   "share": 1.0,
+   "median_dev_over_h0": 8.400297642092262
+  },
+  {
+   "assertion": "sigma*: the noise itself is non-trivial: median max_t |h(x_t) - h_det(t)| >= fluct_fraction_of_h0 * h(x_0)",
+   "passed": true,
+   "median_noise_dev_over_h0": 0.18047178152682536,
+   "end_std_over_h0": 0.07967813399543056
+  },
+  {
+   "assertion": "sigma*: MC exit frequency <= alpha (Clopper-Pearson upper limit <= alpha)",
+   "passed": true,
+   "exits": 0,
+   "paths": 2000,
+   "freq": 0.0,
+   "cp_upper": 0.0018427397934059364,
+   "alpha": 0.05
+  },
+  {
+   "assertion": "sigma*: the probability bound is conservative (T_TTL >> T and zero observed exits)",
+   "passed": true,
+   "T_TTL": 2022.2977375949642,
+   "T": 2.0,
+   "ratio": 1011.1488687974821
+  },
+  {
+   "assertion": "(f) tail-white noise: full Corollary refuses (OU tail envelope exceeds the safe set)",
+   "passed": true,
+   "Delta_sigma": 1.100126316645186,
+   "sqrt_E": 0.22360679774997896,
+   "T_perp": 0
+  },
+  {
+   "assertion": "(f) crude bound ignoring tail diffusion would accept",
+   "passed": true,
+   "T_TTL_crude": 501.10670813730763
+  },
+  {
+   "assertion": "(f) MC violates the crude probability bound (Clopper-Pearson lower limit > alpha)",
+   "passed": true,
+   "exits": 2000,
+   "paths": 2000,
+   "cp_lower": 0.998157260206594,
+   "alpha": 0.05
+  },
+  {
+   "assertion": "R2, sigma = 0: gamma0 h_act exceeds delta_cert - delta_total, so the Corollary margin fails and the Corollary refuses",
+   "passed": true,
+   "gamma0_h_act": 0.007236775797006998,
+   "margin": 0.0009993816328806807,
+   "failing": [
+    "margin"
+   ]
+  },
+  {
+   "assertion": "stochastic runs use r_W2 = 0 (no distributional drift of the adversary)",
+   "passed": true,
+   "r_W2": 0.0
+  }
+ ],
+ "data": {
+  "sigma_star": {
+   "sigma": 0.007,
+   "exits": 0,
+   "paths": 2000,
+   "freq": 0.0,
+   "cp": [
+    0,
+    0.0018427397934059364
+   ],
+   "alpha": 0.05,
+   "T": 2.0,
+   "T_TTL": 2022.2977375949642,
+   "h0": 0.00505058187387545,
+   "fluct_share": 1.0,
+   "median_dev_over_h0": 8.400297642092262,
+   "median_noise_dev_over_h0": 0.18047178152682536,
+   "end_std_over_h0": 0.07967813399543056,
+   "min_h": 0.004941529044413535,
+   "full": {
+    "sigma_r": 0.0069999648808436645,
+    "sigma_perp2": 4.916669553477499e-10,
+    "T": 2.0,
+    "alpha": 0.05,
+    "eps_adv_T": 0.002,
+    "M_perp_T": 0.003646729066900746,
+    "eb_T": 0.007293458133801511,
+    "Delta_sigma": 9.70330147718012e-05,
+    "eb_sigma": 0.0073904911485733115,
+    "M_z_T": 0.7886723628304089,
+    "du_lag_T": 0.0009441085130128915,
+    "L_hold_T": 1.4737787456201106,
+    "dh_T": 3.0075517121914222e-06,
+    "T_perp": "inf",
+    "delta_Ito": 4.899950833304461e-05,
+    "sigma_h": 0.0031304794627355285,
+    "r_BM": 0.003237493786510956,
+    "N_T": 1000,
+    "h_act_sigma": 0.025591497274016942,
+    "r_min2_sigma": 0.02435087581485373,
+    "h_act_minus": 0.02180450519585645,
+    "delta_cert_sigma": 0.03161171180773048,
+    "delta_total_sigma": 0.002634127339286174,
+    "Delta_delta_pw": 0.008873439305538279,
+    "h0": 0.004360901039171291,
+    "delta_stoch": 0.020744748838545823,
+    "delta_drift": 0.0015805855903865242,
+    "theta_K": 845.8984556124989,
+    "mu_int": 0.6203107295816036,
+    "c_int": 5.145754099582628e-06,
+    "beta0": 0.004997244860599256,
+    "T_TTL": 2022.2977375949642,
+    "T_TTL_drift": "inf",
+    "T_TTL_kushner": 2022.2977375949642,
+    "conditions": {
+     "margin": true,
+     "beta0_gt_h0": true,
+     "h_act_minus_pos": true,
+     "r_min2_pos": true,
+     "T_le_TTL": true,
+     "theorem": true
+    },
+    "valid": true,
+    "bound": 0.05
+   }
+  },
+  "noise_tail": {
+   "exits": 2000,
+   "paths": 2000,
+   "cp": [
+    0.998157260206594,
+    1
+   ],
+   "full": {
+    "sigma_r": 8.741546424155184e-18,
+    "sigma_perp2": 0.0632,
+    "T": 2.0,
+    "alpha": 0.05,
+    "eps_adv_T": 0.002,
+    "M_perp_T": 0.003646729066900746,
+    "eb_T": 0.007293458133801511,
+    "Delta_sigma": 1.100126316645186,
+    "eb_sigma": 1.1074197747789876,
+    "M_z_T": 0.7921911866540814,
+    "du_lag_T": 0.0009483208471636651,
+    "L_hold_T": 1.4803543123640734,
+    "dh_T": 3.020904546700904e-06,
+    "T_perp": 0,
+    "delta_Ito": 8.786215349400969e-35,
+    "sigma_h": 3.909338406576243e-18,
+    "r_BM": 4.042977745523854e-18,
+    "N_T": 1000,
+    "h_act_sigma": -0.5875677108646659,
+    "r_min2_sigma": -0.5888138676114244,
+    "h_act_minus": -0.5888138676114243,
+    "delta_cert_sigma": -1.1562530903007948,
+    "delta_total_sigma": 0.0054084481829645105,
+    "Delta_delta_pw": 0.0019042052521431397,
+    "h0": -0.11751354217293318,
+    "delta_stoch": -0.17436610800725663,
+    "delta_drift": 0.05,
+    "theta_K": -31.39110085444768,
+    "mu_int": 0.6230783733792103,
+    "c_int": -1.8369681170905272e-07,
+    "beta0": -0.11763513694306216,
+    "T_TTL": 0,
+    "T_TTL_drift": "inf",
+    "T_TTL_kushner": "inf",
+    "conditions": {
+     "margin": false,
+     "beta0_gt_h0": false,
+     "h_act_minus_pos": false,
+     "r_min2_pos": false,
+     "T_le_TTL": false,
+     "theorem": true
+    },
+    "valid": false,
+    "bound": 0.05
+   },
+   "crude": {
+    "sigma_r": 8.741546424155184e-18,
+    "sigma_perp2": 0,
+    "T": 2.0,
+    "alpha": 0.05,
+    "eps_adv_T": 0.002,
+    "M_perp_T": 0.003646729066900746,
+    "eb_T": 0.007293458133801511,
+    "Delta_sigma": 0,
+    "eb_sigma": 0.007293458133801511,
+    "M_z_T": 0.7886720524367774,
+    "du_lag_T": 0.0009441081414450724,
+    "L_hold_T": 1.4737781655927655,
+    "dh_T": 3.007550534344789e-06,
+    "T_perp": "inf",
+    "delta_Ito": 8.786215349400969e-35,
+    "sigma_h": 3.909338406576243e-18,
+    "r_BM": 4.042977745523854e-18,
+    "N_T": 1000,
+    "h_act_sigma": 0.02559220944440725,
+    "r_min2_sigma": 0.024351588473508896,
+    "h_act_minus": 0.024351588473508896,
+    "delta_cert_sigma": 0.0316126259247998,
+    "delta_total_sigma": 0.0026338826178779235,
+    "Delta_delta_pw": 0.0018957134055159197,
+    "h0": 0.0048703176947017795,
+    "delta_stoch": 0.009573376238838093,
+    "delta_drift": 0.0015806312962399899,
+    "theta_K": 757.4207034023506,
+    "mu_int": 0.6203104854491741,
+    "c_int": 4.5778021954832866e-06,
+    "beta0": 0.004997387342325955,
+    "T_TTL": 501.10670813730763,
+    "T_TTL_drift": "inf",
+    "T_TTL_kushner": 501.10670813730763,
+    "conditions": {
+     "margin": true,
+     "beta0_gt_h0": true,
+     "h_act_minus_pos": true,
+     "r_min2_pos": true,
+     "T_le_TTL": true,
+     "theorem": true
+    },
+    "valid": true,
+    "bound": 0.05
+   }
+  },
+  "sigma_grid": [
+   {
+    "sigma": 0.002,
+    "valid": true,
+    "fail": [],
+    "share": 1.0,
+    "med_dev": 8.399040496717351,
+    "med_ndev": 0.04911180997970645,
+    "end_std": 0.021731904308548152,
+    "T_TTL": 1015.1371991950455,
+    "lhs": 0.01609782039429191,
+    "dcert": 0.031612365981039364
+   },
+   {
+    "sigma": 0.003,
+    "valid": true,
+    "fail": [],
+    "share": 1.0,
+    "med_dev": 8.401011795734028,
+    "med_ndev": 0.07428449834429601,
+    "end_std": 0.03261030575212327,
+    "T_TTL": 1248.212888546641,
+    "lhs": 0.017501001256797023,
+    "dcert": 0.03161223563939562
+   },
+   {
+    "sigma": 0.005,
+    "valid": true,
+    "fail": [],
+    "share": 1.0,
+    "med_dev": 8.405361097959988,
+    "med_ndev": 0.12691100673847827,
+    "end_std": 0.054398733650596935,
+    "T_TTL": 1666.7075709260994,
+    "lhs": 0.020843393953782745,
+    "dcert": 0.03161197421658109
+   },
+   {
+    "sigma": 0.007,
+    "valid": true,
+    "fail": [],
+    "share": 1.0,
+    "med_dev": 8.410119798771529,
+    "med_ndev": 0.1740299481017091,
+    "end_std": 0.07626315876311048,
+    "T_TTL": 2022.2977375949642,
+    "lhs": 0.024959461768218522,
+    "dcert": 0.03161171180773048
+   },
+   {
+    "sigma": 0.01,
+    "valid": false,
+    "fail": [
+     "margin"
+    ],
+    "share": null,
+    "med_dev": null,
+    "med_ndev": null,
+    "end_std": null,
+    "T_TTL": 2440.499263371247,
+    "lhs": 0.03276074724967393,
+    "dcert": 0.03161131634563695
+   },
+   {
+    "sigma": 0.014,
+    "valid": false,
+    "fail": [
+     "margin"
+    ],
+    "share": null,
+    "med_dev": null,
+    "med_ndev": null,
+    "end_std": null,
+    "T_TTL": 2793.4882607113955,
+    "lhs": 0.04671164022858476,
+    "dcert": 0.0316107856117193
+   },
+   {
+    "sigma": 0.02,
+    "valid": false,
+    "fail": [
+     "margin"
+    ],
+    "share": null,
+    "med_dev": null,
+    "med_ndev": null,
+    "end_std": null,
+    "T_TTL": 2932.7799342659223,
+    "lhs": 0.07733378809774111,
+    "dcert": 0.03160998211557233
+   }
+  ],
+  "R2_sigma0": {
+   "gamma0_h_act": 0.007236775797006998,
+   "margin": 0.0009993816328806807,
+   "valid": false,
+   "r_W2": 0.0,
+   "failing": [
+    "margin"
+   ]
+  }
+ }
+}

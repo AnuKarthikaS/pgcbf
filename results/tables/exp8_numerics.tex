@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Numerical-integrity checks.}
+\label{tab:exp8_numerics}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lr}
+\toprule
+check & value \\
+\midrule
+spectral radius $\max|\lambda|$ & $72$ \\
+explicit Euler amplification at conv. step & $3.73$ \\
+stiffness ratio & $43.83$ \\
+latch: rel. error exact & $2.808\times10^{-14}$ \\
+latch: rel. error grid-rounded & $0.01675$ \\
+modal vs nodal rel. error & $1.928\times10^{-14}$ \\
+ETD2RK observed orders & $2.001,\ 2.001,\ 2.004,\ 2.016$ \\
+determinism SHA-256 (prefix) & \texttt{2bde49483745ec98} \\
+\bottomrule
+\end{tabular}
+\end{table}

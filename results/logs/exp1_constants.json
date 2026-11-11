@@ -1,0 +1,545 @@
+{
+ "experiment": "exp1_constants",
+ "wall_clock_s": 4.414895622001495,
+ "peak_rss_MB": 111.66015625,
+ "assertions": [
+  {
+   "assertion": "R2: Prop2 mu_2P(A_r0) = -gamma/2",
+   "passed": true,
+   "mu_2P": -0.49999999999999206,
+   "minus_gamma_half": -0.5
+  },
+  {
+   "assertion": "R2: Prop2 Q = gamma P identity",
+   "passed": true,
+   "rel_err": 7.0391444193556365e-15
+  },
+  {
+   "assertion": "R2: Prop2 full-order mu_2,Pfe(A_full) = -gamma/2",
+   "passed": true,
+   "mu_full": -0.4999999998021664
+  },
+  {
+   "assertion": "R2: tail rate lambda_K+1 equals modal pencil rate",
+   "passed": true,
+   "lambda_K1": 0.49999999999999867,
+   "pencil": 0.5
+  },
+  {
+   "assertion": "R2: tail energy decays exactly as exp(-gamma t/2) (Q = gamma P)",
+   "passed": true,
+   "max_dev": 4.3365311341858614e-13
+  },
+  {
+   "assertion": "R2: Lemma quad_split h(Phi z + x_perp) = h(Phi z) - ||x_perp||^2 (rel 1e-12)",
+   "passed": true,
+   "max_abs_err": 1.9836020846708546e-15,
+   "scale": 0.0498746861200982
+  },
+  {
+   "assertion": "R2: (H2a) Phi^T P_eps P_perp = 0",
+   "passed": true,
+   "residual": 6.348289743006388e-13
+  },
+  {
+   "assertion": "R2: Q = gamma P relative error < 1e-12 with K_f = 4 > K_m = 2 (A_full advection-free)",
+   "passed": true,
+   "rel_err": 7.0391444193556365e-15
+  },
+  {
+   "assertion": "R2: A_r,perp (A_full-based) vanishes by eigenmode invariance",
+   "passed": true,
+   "norm": 1.2696790156457327e-12
+  },
+  {
+   "assertion": "R2: S3 D_v closed form = attained sup (round-off) >= sampled sup (within 1%)",
+   "passed": true,
+   "D_v": 0.4472101183798,
+   "D_v_attained": 0.4472101183798,
+   "D_v_sampled": 0.44716910507469576
+  },
+  {
+   "assertion": "R2: hypothesis H0",
+   "passed": true
+  },
+  {
+   "assertion": "R2: hypothesis H1",
+   "passed": true
+  },
+  {
+   "assertion": "R2: hypothesis H2",
+   "passed": true
+  },
+  {
+   "assertion": "R2: hypothesis H3",
+   "passed": true
+  },
+  {
+   "assertion": "R2: hypothesis H4",
+   "passed": true
+  },
+  {
+   "assertion": "R2: hypothesis H5",
+   "passed": true
+  },
+  {
+   "assertion": "R2: hypothesis H6",
+   "passed": true
+  },
+  {
+   "assertion": "R2: hypothesis H7",
+   "passed": true
+  },
+  {
+   "assertion": "R2: hypothesis H_sat",
+   "passed": true
+  },
+  {
+   "assertion": "R2: hypothesis timing_ok",
+   "passed": true
+  },
+  {
+   "assertion": "R2: hypothesis codesign_window",
+   "passed": true
+  },
+  {
+   "assertion": "R2: theorem_valid (all of (H0)-(H7)) and the certificate does not refuse",
+   "passed": true
+  },
+  {
+   "assertion": "R1: Prop2 mu_2P(A_r0) = -gamma/2",
+   "passed": true,
+   "mu_2P": -0.49999999999999206,
+   "minus_gamma_half": -0.5
+  },
+  {
+   "assertion": "R1: Prop2 Q = gamma P identity",
+   "passed": true,
+   "rel_err": 7.0391444193556365e-15
+  },
+  {
+   "assertion": "R1: Prop2 full-order mu_2,Pfe(A_full) = -gamma/2",
+   "passed": true,
+   "mu_full": -0.4999999998021664
+  },
+  {
+   "assertion": "R1: tail rate lambda_K+1 equals modal pencil rate",
+   "passed": true,
+   "lambda_K1": 0.49999999999999867,
+   "pencil": 0.5
+  },
+  {
+   "assertion": "R1: tail energy decays exactly as exp(-gamma t/2) (Q = gamma P)",
+   "passed": true,
+   "max_dev": 4.3365311341858614e-13
+  },
+  {
+   "assertion": "R1: Lemma quad_split h(Phi z + x_perp) = h(Phi z) - ||x_perp||^2 (rel 1e-12)",
+   "passed": true,
+   "max_abs_err": 1.8041124150158794e-15,
+   "scale": 0.04997251704462725
+  },
+  {
+   "assertion": "R1: (H2a) Phi^T P_eps P_perp = 0",
+   "passed": true,
+   "residual": 6.348289743006388e-13
+  },
+  {
+   "assertion": "R1: Q = gamma P relative error < 1e-12 with K_f = 4 > K_m = 2 (A_full advection-free)",
+   "passed": true,
+   "rel_err": 7.0391444193556365e-15
+  },
+  {
+   "assertion": "R1: A_r,perp (A_full-based) vanishes by eigenmode invariance",
+   "passed": true,
+   "norm": 1.2696790156457327e-12
+  },
+  {
+   "assertion": "R1: S3 D_v closed form = attained sup (round-off) >= sampled sup (within 1%)",
+   "passed": true,
+   "D_v": 0.4472101183798,
+   "D_v_attained": 0.4472101183798,
+   "D_v_sampled": 0.44716910507469576
+  },
+  {
+   "assertion": "R1: hypothesis H0",
+   "passed": true
+  },
+  {
+   "assertion": "R1: hypothesis H1",
+   "passed": true
+  },
+  {
+   "assertion": "R1: hypothesis H2",
+   "passed": true
+  },
+  {
+   "assertion": "R1: hypothesis H3",
+   "passed": true
+  },
+  {
+   "assertion": "R1: hypothesis H4",
+   "passed": true
+  },
+  {
+   "assertion": "R1: hypothesis H5",
+   "passed": true
+  },
+  {
+   "assertion": "R1: hypothesis H6",
+   "passed": true
+  },
+  {
+   "assertion": "R1: hypothesis H7",
+   "passed": true
+  },
+  {
+   "assertion": "R1: hypothesis H_sat",
+   "passed": true
+  },
+  {
+   "assertion": "R1: hypothesis timing_ok",
+   "passed": true
+  },
+  {
+   "assertion": "R1: hypothesis codesign_window",
+   "passed": true
+  },
+  {
+   "assertion": "R1: theorem_valid (all of (H0)-(H7)) and the certificate does not refuse",
+   "passed": true
+  },
+  {
+   "assertion": "R1: prop3_valid ((H-dz): r_ss < r_min and mu_R > L_sec)",
+   "passed": true,
+   "r_ss": 0.011618489750609692,
+   "r_min": 0.15604995505769587
+  },
+  {
+   "assertion": "R2: (H-dz) honestly fails (L_sec > mu_R: open-loop unstable advection); Prop. 3 not claimed",
+   "passed": true,
+   "L_sec": 2.391917990075819,
+   "mu_R": 0.49999999999999206
+  },
+  {
+   "assertion": "G-D: ||A_adv,r,perp||_2 > 0 in R2 (K_f > K_m)",
+   "passed": true,
+   "A_adv_rperp": 0.10602227042040727,
+   "K_f": 4
+  },
+  {
+   "assertion": "G-D: L_perp_P(R2) materially larger than L_perp_P(R1) (ratio >= Pe ratio / 2)",
+   "passed": true,
+   "L_perp_R2": 0.0474102972031406,
+   "L_perp_R1": 0.0031988455907822613,
+   "ratio": 14.821064617735004
+  },
+  {
+   "assertion": "G-D: L_perp_P = linear advective part + sin-nonlinearity part (both reported)",
+   "passed": true,
+   "lin_R2": 0.0465383701182297,
+   "nl_R2": 0.000871927084910896
+  },
+  {
+   "assertion": "G-D: tail-coupling share of delta_total reported and material in R2 (>= 10%)",
+   "passed": true,
+   "share_R2": 0.2703579629617286,
+   "share_R1": 0.006966955333723062
+  },
+  {
+   "assertion": "certificate refuses: state-space LUT ($m = K$ variant)",
+   "passed": true,
+   "reason": "Theorem thm:main_cbf: hypotheses ['H5', 'codesign window'] fail"
+  },
+  {
+   "assertion": "certificate refuses: $u_{\\max}$ below the (H-sat) left side",
+   "passed": true,
+   "reason": "Theorem thm:main_cbf: hypotheses ['H3'] fail"
+  },
+  {
+   "assertion": "certificate refuses: pure lattice advection (no spectral cutoff)",
+   "passed": true,
+   "reason": "Theorem thm:main_cbf: hypotheses ['H4', 'H6', 'H7'] fail"
+  },
+  {
+   "assertion": "certificate refuses: plain projector $\\Pi_f$ ($w = 1$)",
+   "passed": true,
+   "reason": "Theorem thm:main_cbf: hypotheses ['H4', 'H6', 'H7'] fail"
+  },
+  {
+   "assertion": "certificate refuses: previous sampling period $T_s=5\\times10^{-4}$ at $w^\\star$",
+   "passed": true,
+   "reason": "Theorem thm:main_cbf: hypotheses ['H6'] fail"
+  },
+  {
+   "assertion": "certificate refuses: $T_s$, $\\tau_A$, $\\tau_B$ $\\times 10$ (hold term)",
+   "passed": true,
+   "reason": "Theorem thm:main_cbf: hypotheses ['H6'] fail"
+  },
+  {
+   "assertion": "R1: Prop. 3(i) contraction mu_R > L_sec holds",
+   "passed": true,
+   "mu_R": 0.49999999999999206,
+   "L_sec": 0.12044944712118472
+  },
+  {
+   "assertion": "R2: Prop. 3(i) fails (L_sec > mu_R), so Proposition 3 does not apply on R2",
+   "passed": true,
+   "mu_R": 0.49999999999999206,
+   "L_sec": 2.391917990075819
+  },
+  {
+   "assertion": "R2: gamma0 h_act exceeds the (H6) margin delta_cert - delta_total (Corollary 1 infeasible on R2 even at sigma = 0)",
+   "passed": true,
+   "gamma0_h_act": 0.007236775797006998,
+   "margin": 0.0009993816328806807
+  },
+  {
+   "assertion": "R1: the six budget parts (tail, LUT, CROWN, lag, hold, adversary) sum to delta_total",
+   "passed": true,
+   "parts_sum": 0.0026338826178779235,
+   "delta_total": 0.0026338826178779235
+  },
+  {
+   "assertion": "R2: the six budget parts (tail, LUT, CROWN, lag, hold, adversary) sum to delta_total",
+   "passed": true,
+   "parts_sum": 0.013559796519887677,
+   "delta_total": 0.013559796519887677
+  }
+ ],
+ "data": {
+  "L_perp_ratio": 14.821064617735004,
+  "constants": {
+   "R2": {
+    "N_m": 160,
+    "N": 320,
+    "m": 2,
+    "nu": 0.05,
+    "alpha_plant": 1.0,
+    "gamma_plant": 1.0,
+    "kappa": 0.05,
+    "c": 1.0,
+    "K_m": 2,
+    "K": 4,
+    "n_adv_full_weight": 2,
+    "E_safe": 0.05,
+    "eps_adv": 0.002,
+    "open_loop_growth": 0.29248296462287793,
+    "K_f": 4,
+    "adv_cutoff_weight": 0.02209708691207961,
+    "Pe": 20.0,
+    "lambda_min_Pfe": 0.6891689945372996,
+    "omega_min": 1.222073877572939,
+    "mu_2P_Ar0": -0.49999999999999206,
+    "Q_identity_relerr": 7.0391444193556365e-15,
+    "lambda_K1": 0.49999999999999867,
+    "H2a_residual": 6.348289743006388e-13,
+    "A_rperp_full_norm": 1.2696790156457327e-12,
+    "rho_ODD": 0.28282085835193677,
+    "D_ODD": 0.5656417167038756,
+    "L_Fnl": 2.6704397990708513,
+    "M_perp": 0.04915605184112799,
+    "eps_basis_P": 0.09831210368225625,
+    "A_adv_rperp_norm": 0.10602227042040727,
+    "L_perp_lin": 0.0465383701182297,
+    "L_perp_nl": 0.000871927084910896,
+    "L_perp": 0.0474102972031406,
+    "L_perp_lin_share": 0.9816089091115603,
+    "L_h": 0.786525252838093,
+    "g_h": 0.4788343334992233,
+    "d_h": 0.44721135181936117,
+    "M_z": 4.324227228738613,
+    "L_Lfh": 1.7697247134995542,
+    "L_Lgh": 2.3941716674961175,
+    "L_Tz": 5.985429168740294,
+    "eta_T": 4.975020826390129,
+    "H_sat_lhs": 3.385608430215711,
+    "u_max": 3.4,
+    "eps_CROWN_backward": 0.004454511928822765,
+    "E_q": 0.005673592641430619,
+    "eps_CROWN": 0.004454511928822765,
+    "D_v": 0.4472101183798,
+    "D_v_sampled": 0.44716910507469576,
+    "M_v": 5.176471157430621,
+    "Delta_qA": 0.0008734572624605469,
+    "eps_A": 0.007542649695635218,
+    "du_lag": 0.00776470673614593,
+    "codesign_lo": 8,
+    "b_A": 9,
+    "codesign_hi": 11,
+    "T_s": 0.0003,
+    "tau_A": 1.5e-05,
+    "tau_B": 3e-05,
+    "samples_per_period": 17138.040022201458,
+    "b_B": 12,
+    "gamma0": 0.35,
+    "w1": 0.049997506289276676,
+    "w2": 0.049997768776551245,
+    "w3": 0.9000047249347052,
+    "phi": 0.5000087499999984,
+    "L_hold": 44.04308553405919,
+    "Delta_h_dip": 2.059889567494835e-06,
+    "dt_tail": 0.0036659989652923688,
+    "dt_quant": 0.0022069052706440895,
+    "dt_lag": 0.00018589113710411334,
+    "dt_adv": 0.0008944227036387223,
+    "dt_hold": 0.006606578443208384,
+    "delta_total": 0.013559796519887677,
+    "tail_share": 0.2703579629617286,
+    "hold_share": 0.4872181107967769,
+    "h_act": 0.02067650227716285,
+    "r_min": 0.1402004568567412,
+    "lambda_min_MP": 0.37312539838093284,
+    "s_nl": 0.0003004959611457041,
+    "c_M": 0.37252440645864143,
+    "delta_cert": 0.014559178152768358,
+    "delta_cert_branch": 1,
+    "H6_margin": 0.0009993816328806807,
+    "gamma0_h_act": 0.007236775797006998,
+    "null_space_rate": 1.0000000000000036,
+    "mu_R": 0.49999999999999206,
+    "L_sec": 2.391917990075819,
+    "eps_q_bar": 0.019983925401114627,
+    "r_ss": "inf"
+   },
+   "R1": {
+    "N_m": 160,
+    "N": 320,
+    "m": 2,
+    "nu": 0.05,
+    "alpha_plant": 1.0,
+    "gamma_plant": 1.0,
+    "kappa": 0.05,
+    "c": 0.05,
+    "K_m": 2,
+    "K": 4,
+    "n_adv_full_weight": 2,
+    "E_safe": 0.05,
+    "eps_adv": 0.002,
+    "open_loop_growth": -0.49999999999996814,
+    "K_f": 4,
+    "adv_cutoff_weight": 0.02209708691207961,
+    "Pe": 1.0,
+    "lambda_min_Pfe": 0.6891689945372996,
+    "omega_min": 1.222073877572939,
+    "mu_2P_Ar0": -0.49999999999999206,
+    "Q_identity_relerr": 7.0391444193556365e-15,
+    "lambda_K1": 0.49999999999999867,
+    "H2a_residual": 6.348289743006388e-13,
+    "A_rperp_full_norm": 1.2696790156457327e-12,
+    "rho_ODD": 0.28282085835193677,
+    "D_ODD": 0.5656417167038756,
+    "L_Fnl": 0.13540906731574723,
+    "M_perp": 0.003646729066900746,
+    "eps_basis_P": 0.007293458133801511,
+    "A_adv_rperp_norm": 0.0053011135210203645,
+    "L_perp_lin": 0.002326918505871365,
+    "L_perp_nl": 0.000871927084910896,
+    "L_perp": 0.0031988455907822613,
+    "L_perp_lin_share": 0.7274244535517981,
+    "L_h": 0.786525252838093,
+    "g_h": 0.4788343334992233,
+    "d_h": 0.44721135181936117,
+    "M_z": 0.7886720524367774,
+    "L_Lfh": 0.7947654782615868,
+    "L_Lgh": 2.3941716674961175,
+    "L_Tz": 0.5985429168740294,
+    "eta_T": 0.4975020826390129,
+    "H_sat_lhs": 0.33856084302157113,
+    "u_max": 0.35,
+    "eps_CROWN_backward": 0.0004535920633954849,
+    "E_q": 0.0005579947436092157,
+    "eps_CROWN": 0.0004535920633954849,
+    "D_v": 0.4472101183798,
+    "D_v_sampled": 0.44716910507469576,
+    "M_v": 0.9441081414450724,
+    "Delta_qA": 0.0008734572624605469,
+    "eps_A": 0.0007624058400767303,
+    "du_lag": 0.0009441081414450724,
+    "codesign_lo": 8,
+    "b_A": 9,
+    "codesign_hi": 11,
+    "T_s": 0.002,
+    "tau_A": 0.0001,
+    "tau_B": 0.0002,
+    "samples_per_period": 2570.7060033302187,
+    "b_B": 12,
+    "gamma0": 0.3,
+    "w1": 0.04998575128252031,
+    "w2": 0.0499872508777459,
+    "w3": 0.9000269978397637,
+    "phi": 0.5000499999997,
+    "L_hold": 1.4737781655927655,
+    "Delta_h_dip": 3.007550534344789e-06,
+    "dt_tail": 1.835014255302506e-05,
+    "dt_quant": 0.000224587100082288,
+    "dt_lag": 2.259712819544742e-05,
+    "dt_adv": 0.0008944227036387223,
+    "dt_hold": 0.0014739255434084407,
+    "delta_total": 0.0026338826178779235,
+    "tail_share": 0.006966955333723062,
+    "hold_share": 0.5596018339632609,
+    "h_act": 0.02559220944440725,
+    "r_min": 0.15604995505769587,
+    "lambda_min_MP": 0.9834922360608616,
+    "s_nl": 0.0003004959611457041,
+    "c_M": 0.9828912441385701,
+    "delta_cert": 0.0316126259247998,
+    "delta_cert_branch": 1,
+    "H6_margin": 0.028978743306921875,
+    "gamma0_h_act": 0.007677662833322174,
+    "null_space_rate": 1.0000000000000036,
+    "mu_R": 0.49999999999999206,
+    "L_sec": 0.12044944712118472,
+    "eps_q_bar": 0.0023418083462856294,
+    "r_ss": 0.011618489750609692
+   }
+  },
+  "hypotheses": {
+   "R2": {
+    "H0": true,
+    "H1": true,
+    "H2": true,
+    "H3": true,
+    "H4": true,
+    "H5": true,
+    "H6": true,
+    "H7": true,
+    "H_sat": true,
+    "timing_ok": true,
+    "codesign_window": true,
+    "theorem_valid": true,
+    "mu_R_gt_L_sec": false,
+    "Hdz": false,
+    "prop3_valid": false
+   },
+   "R1": {
+    "H0": true,
+    "H1": true,
+    "H2": true,
+    "H3": true,
+    "H4": true,
+    "H5": true,
+    "H6": true,
+    "H7": true,
+    "H_sat": true,
+    "timing_ok": true,
+    "codesign_window": true,
+    "theorem_valid": true,
+    "mu_R_gt_L_sec": true,
+    "Hdz": true,
+    "prop3_valid": true
+   }
+  },
+  "train_hist": {
+   "R2": [
+    4.123540258444431e-12,
+    8.718806343130666e-12
+   ],
+   "R1": [
+    4.123540258374775e-14,
+    5.877222294278264e-13
+   ]
+  }
+ }
+}

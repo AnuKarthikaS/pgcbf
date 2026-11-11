@@ -1,0 +1,49 @@
+% Official L4DC 2027 class (l4dc2027.cls, downloaded from the venue's author page; it loads jmlr with the pmlr option,
+% sets volume/year/proceedings, and provides the anon/final options). Verified to compile with tectonic 0.15.
+% Do not load amsthm (the class defines proof). The sample template loads the times package; we do the same.
+\documentclass{l4dc2027}
+\usepackage[T1]{fontenc}   % times.sty selects ptm, which XeTeX (tectonic) finds only in T1 encoding; harmless under pdflatex
+\usepackage{times}
+\usepackage{mathtools}      % amsmath is loaded by the class; mathtools adds \coloneqq etc.
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+% Separate theorem counters (the class default shares one counter across all environments).
+\makeatletter
+\let\theorem\relax\let\endtheorem\relax
+\let\lemma\relax\let\endlemma\relax
+\let\proposition\relax\let\endproposition\relax
+\let\corollary\relax\let\endcorollary\relax
+\let\remark\relax\let\endremark\relax
+\let\c@theorem\relax
+\makeatother
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{assumption}{Assumption}
+\theorembodyfont{\upshape}
+\newtheorem{remark}{Remark}
+% Shared notation macros (identical to wave3/final/sections_II_IV.tex so the supplement and the main paper agree).
+\providecommand{\Pfe}{P_{\mathrm{full},\epsilon}}
+\providecommand{\Pf}{P_{\mathrm{full}}}
+\providecommand{\Af}{A_{\mathrm{full}}}
+\providecommand{\XO}{\mathcal{X}_{\mathrm{ODD}}}
+\providecommand{\ZO}{\mathcal{Z}_{\mathrm{ODD}}}
+\providecommand{\DO}{D_{\mathrm{ODD}}}
+\providecommand{\Tt}{\hat{\mathcal{T}}}
+\providecommand{\Ttv}{\hat{\mathcal{T}}_v}
+\providecommand{\epsP}{\varepsilon_{\mathrm{basis},P}}
+\providecommand{\epsS}{\varepsilon_{\mathrm{basis},\sigma}}
+\providecommand{\Lperp}{L_{\perp,P}}
+\providecommand{\LTz}{L_{\mathcal{T},z}}
+\providecommand{\eC}{\varepsilon_{\mathrm{CROWN}}(b_B)}
+\providecommand{\eA}{\varepsilon_A(b_A)}
+\providecommand{\dul}{\Delta u_{\mathrm{lag}}}
+\providecommand{\hdip}{\Delta h_{\mathrm{dip}}}
+\providecommand{\Crz}{\mathcal{C}_{r,0}}
+\providecommand{\Cact}{\mathcal{C}_{r,\mathrm{act}}}
+\providecommand{\Bint}{\mathcal{B}_{\mathrm{int}}}
+\providecommand{\Lsec}{L_{\mathrm{sec}}}
+\providecommand{\thK}{\theta_{\mathrm{K}}}
+% Venue fields are set by l4dc2027.cls (volume, year, proceedings); editors and workshop name are added by the class's final option.

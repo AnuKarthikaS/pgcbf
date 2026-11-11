@@ -1,0 +1,28 @@
+\begin{table*}[t]
+\centering
+\caption{Hypothesis ledger of Theorem~\ref{thm:main_cbf}, hypotheses (H0)--(H7), and of Proposition~\ref{prop:deadzone_stability}, conditions (i) $\mu_R>L_{\mathrm{sec}}$ and (H-dz); \checkmark{} = satisfied.}
+\label{tab:exp1_hypotheses}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llcc}
+\toprule
+hypothesis & content & R2 & R1 \\
+\midrule
+(H0) & ODD containment and $E_{\mathrm{safe}}$ & \checkmark & \checkmark \\
+(H1) & Assumption~\ref{assump:generic} constants on $\mathcal{X}_{\mathrm{ODD}}$ & \checkmark & \checkmark \\
+(H2) & (H2a)--(H2c), $\gamma<2\omega_{\min}$, $\epsilon=\gamma/2$ & \checkmark & \checkmark \\
+(H3) & Teacher: $H/2\ge m$, $G_{\mathrm{port}}\succ0$, (H-sat) & \checkmark & \checkmark \\
+(H4) & tail tolerance, $h_{\mathrm{act}}$ interval & \checkmark & \checkmark \\
+(H5) & $b_A\ge1$ satisfies \eqref{eq:lut_capacity} & \checkmark & \checkmark \\
+(H6) & authority \eqref{eq:control_authority} & \checkmark & \checkmark \\
+(H7) & initial conditions & \checkmark & \checkmark \\
+(H-sat) & $L_{\mathcal{T},z}\sqrt{K}D_{\mathrm{ODD}}/2\le u_{\max}$ \eqref{eq:sat_cond} & \checkmark & \checkmark \\
+timing $0<\tau_A<\tau_B<T_s$ & latch order of \eqref{eq:multirate_hold} & \checkmark & \checkmark \\
+codesign window \eqref{eq:codesign_window} & $b_A$ inside the window & \checkmark & \checkmark \\
+Thm.~\ref{thm:main_cbf} hypotheses & all of the above & \checkmark & \checkmark \\
+$\mu_R>L_{\mathrm{sec}}$ & Prop.~\ref{prop:deadzone_stability}(i) contraction rate & $\times$ & \checkmark \\
+(H-dz) & $r_{\mathrm{ss}}<r_{\min}$ (Prop.~\ref{prop:deadzone_stability} only) & $\times$ & \checkmark \\
+Prop.~\ref{prop:deadzone_stability} hypotheses & (i) $\mu_R>L_{\mathrm{sec}}$, (H-dz) and (H3) & $\times$ & \checkmark \\
+\bottomrule
+\end{tabular}
+\end{table*}

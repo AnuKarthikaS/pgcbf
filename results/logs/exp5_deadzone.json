@@ -1,0 +1,152 @@
+{
+ "experiment": "exp5_deadzone",
+ "wall_clock_s": 53.63243718497688,
+ "peak_rss_MB": 209.4609375,
+ "assertions": [
+  {
+   "assertion": "full method (deadzone, b_A=9): prop3_valid ((H-dz) r_ss < r_min and mu_R > L_sec)",
+   "passed": true,
+   "r_ss": 0.011618489750609692,
+   "r_min": 0.15604995505769587
+  },
+  {
+   "assertion": "Prop3(b): ||z(t_k)||_P <= max(||z(0)||_P, r_ss) for all k, all seeds",
+   "passed": true,
+   "max_ratio": 1.0
+  },
+  {
+   "assertion": "Prop3: trajectories enter B_ss(r_ss) subset B_int",
+   "passed": true,
+   "final_max": 1.5313276191233482e-05,
+   "r_ss": 0.011618489750609692
+  },
+  {
+   "assertion": "deadzone: Path-A control exactly zero in the final window (no limit cycle)",
+   "passed": true,
+   "nonzero_frac": 0.0
+  },
+  {
+   "assertion": "(d) b_A=3: deadzone -> u_A exactly 0 late, no switching, zero late effort",
+   "passed": true,
+   "nonzero": 0.0,
+   "switches": 0.0
+  },
+  {
+   "assertion": "(d) b_A=3: mid-rise (no deadzone) -> u_A never zero, persistent sign switching (chattering), effort > 0",
+   "passed": true,
+   "nonzero": 1.0,
+   "switches_per_time": 953.0800000000002,
+   "effort": 0.0019406788242291465
+  },
+  {
+   "assertion": "(d) b_A=3: deadzone -> once u = 0, ||z||_P contracts at least at rate mu_R - L_sec (Prop3(a))",
+   "passed": true,
+   "factor": 0.08324325954563791,
+   "predicted": 0.14990511309818633
+  },
+  {
+   "assertion": "(d) b_A=3: mid-rise lag error |u_A - T(z)| persists at the LSB scale",
+   "passed": true,
+   "lag": 0.019696276088804445
+  },
+  {
+   "assertion": "(d) b_A=5: deadzone -> u_A exactly 0 late, no switching, zero late effort",
+   "passed": true,
+   "nonzero": 0.0,
+   "switches": 0.0
+  },
+  {
+   "assertion": "(d) b_A=5: mid-rise (no deadzone) -> u_A never zero, persistent sign switching (chattering), effort > 0",
+   "passed": true,
+   "nonzero": 1.0,
+   "switches_per_time": 859.9199999999998,
+   "effort": 0.00012064404583072981
+  },
+  {
+   "assertion": "(d) b_A=5: deadzone -> once u = 0, ||z||_P contracts at least at rate mu_R - L_sec (Prop3(a))",
+   "passed": true,
+   "factor": 0.0835407261660056,
+   "predicted": 0.14990511309818633
+  },
+  {
+   "assertion": "(d) b_A=5: mid-rise lag error |u_A - T(z)| persists at the LSB scale",
+   "passed": true,
+   "lag": 0.004851344403329552
+  },
+  {
+   "assertion": "(d) b_A=7: deadzone -> u_A exactly 0 late, no switching, zero late effort",
+   "passed": true,
+   "nonzero": 0.0,
+   "switches": 0.0
+  },
+  {
+   "assertion": "(d) b_A=7: mid-rise (no deadzone) -> u_A never zero, persistent sign switching (chattering), effort > 0",
+   "passed": true,
+   "nonzero": 1.0,
+   "switches_per_time": 469.4,
+   "effort": 8.746728166385218e-06
+  },
+  {
+   "assertion": "(d) b_A=7: deadzone -> once u = 0, ||z||_P contracts at least at rate mu_R - L_sec (Prop3(a))",
+   "passed": true,
+   "factor": 0.08379732872463773,
+   "predicted": 0.14990511309818633
+  },
+  {
+   "assertion": "(d) b_A=7: mid-rise lag error |u_A - T(z)| persists at the LSB scale",
+   "passed": true,
+   "lag": 0.0012857834422669258
+  },
+  {
+   "assertion": "(d) b_A=9 (deployed b_A): deadzone -> u_A exactly 0 late, no switching, zero late effort",
+   "passed": true,
+   "nonzero": 0.0,
+   "switches": 0.0
+  },
+  {
+   "assertion": "(d) b_A=9 (deployed b_A): mid-rise (no deadzone) -> u_A never zero, persistent sign switching (chattering), effort > 0",
+   "passed": true,
+   "nonzero": 1.0,
+   "switches_per_time": 121.64000000000001,
+   "effort": 6.148880719228219e-07
+  },
+  {
+   "assertion": "(d) b_A=9: deadzone -> once u = 0, ||z||_P contracts at least at rate mu_R - L_sec (Prop3(a))",
+   "passed": true,
+   "factor": 0.08413216502977441,
+   "predicted": 0.14990511309818633
+  },
+  {
+   "assertion": "(d) b_A=9: mid-rise lag error |u_A - T(z)| persists at the LSB scale",
+   "passed": true,
+   "lag": 0.0003506660014275865
+  },
+  {
+   "assertion": "d2: b_A = 1 violates (H-dz): r_ss >= r_min, certificate refuses Prop. 3 (prop3_valid false)",
+   "passed": true,
+   "r_ss": 0.3991591754239107,
+   "r_min": 0.1560439140846656
+  }
+ ],
+ "data": {
+  "midrise_switches_per_time": {
+   "3": 953.0800000000002,
+   "5": 859.9199999999998,
+   "7": 469.4,
+   "9": 121.64000000000001
+  },
+  "deployed_b_A": 9,
+  "midrise_late_max_z": {
+   "3": 0.00012566086747680492,
+   "5": 8.267554783678634e-05,
+   "7": 0.00015587490569138852,
+   "9": 0.00018448761718657032
+  },
+  "deadzone_late_max_z": {
+   "3": 0.00020352162107390733,
+   "5": 0.00020114369835066032,
+   "7": 0.00019739169460220244,
+   "9": 0.00019342783105246578
+  }
+ }
+}

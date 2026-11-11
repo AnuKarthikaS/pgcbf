@@ -1,0 +1,5 @@
+date: 2026-11-10T16:49:01Z
+cpu: Intel(R) Xeon(R) Processor @ 2.90GHz
+cores on machine: 2; used: 2 (BLAS threads=2, taskset -c 0,1)
+memory: 7957 MB
+python 3.14.8 numpy 2.5.4 scipy 1.18.1 matplotlib 3.11.2

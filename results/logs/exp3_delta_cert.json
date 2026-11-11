@@ -1,0 +1,101 @@
+{
+ "experiment": "exp3_delta_cert",
+ "wall_clock_s": 5.234841161989607,
+ "peak_rss_MB": 205.515625,
+ "assertions": [
+  {
+   "assertion": "R2: sound two-branch delta_cert <= brute-force inf over C_act",
+   "passed": true,
+   "delta_cert": 0.014559178152768358,
+   "brute_min": 0.01468464959754254,
+   "branch": 1,
+   "samples": 200000
+  },
+  {
+   "assertion": "R2: (H6) delta_total <= delta_cert <= brute-force inf",
+   "passed": true,
+   "delta_total": 0.013559796519887677
+  },
+  {
+   "assertion": "R2: Lemma delta_cert_classH: c_M = lambda_min(M,P) - 2 s_nl",
+   "passed": true,
+   "c_M": 0.37252440645864143,
+   "lambda_min_MP": 0.37312539838093284,
+   "s_nl": 0.0003004959611457041
+  },
+  {
+   "assertion": "R1: sound two-branch delta_cert <= brute-force inf over C_act",
+   "passed": true,
+   "delta_cert": 0.0316126259247998,
+   "brute_min": 0.031638639609550184,
+   "branch": 1,
+   "samples": 200000
+  },
+  {
+   "assertion": "R1: (H6) delta_total <= delta_cert <= brute-force inf",
+   "passed": true,
+   "delta_total": 0.0026338826178779235
+  },
+  {
+   "assertion": "R1: Lemma delta_cert_classH: c_M = lambda_min(M,P) - 2 s_nl",
+   "passed": true,
+   "c_M": 0.9828912441385701,
+   "lambda_min_MP": 0.9834922360608616,
+   "s_nl": 0.0003004959611457041
+  },
+  {
+   "assertion": "class D gamma0=0.3: closed form = brute-force inf of affine bound over rho",
+   "passed": true,
+   "closed": 0.05780016661112103,
+   "brute_affine": 0.05780016661112103
+  },
+  {
+   "assertion": "class D gamma0=0.3: closed form <= brute-force inf of exact bracket",
+   "passed": true,
+   "closed": 0.05780016661112103,
+   "brute_exact": 0.063452231197762
+  },
+  {
+   "assertion": "class D gamma0=0.3: branch 1 iff c >= gamma0",
+   "passed": true,
+   "c": 2.5900083305560515,
+   "branch": 1
+  },
+  {
+   "assertion": "class D gamma0=3.0: closed form = brute-force inf of affine bound over rho",
+   "passed": true,
+   "closed": 0.10319034155279812,
+   "brute_affine": 0.1031903415527981
+  },
+  {
+   "assertion": "class D gamma0=3.0: closed form <= brute-force inf of exact bracket",
+   "passed": true,
+   "closed": 0.10319034155279812,
+   "brute_exact": 0.11481072158508415
+  },
+  {
+   "assertion": "class D gamma0=3.0: branch 1 iff c >= gamma0",
+   "passed": true,
+   "c": 2.5900083305560515,
+   "branch": 2
+  }
+ ],
+ "data": {
+  "R2": {
+   "c_M": 0.37252440645864143,
+   "lambda_min_MP": 0.37312539838093284,
+   "s_nl": 0.0003004959611457041,
+   "delta_cert": 0.014559178152768358,
+   "brute": 0.01468464959754254,
+   "ratio_brute_over_bound": 1.0086180307334398
+  },
+  "R1": {
+   "c_M": 0.9828912441385701,
+   "lambda_min_MP": 0.9834922360608616,
+   "s_nl": 0.0003004959611457041,
+   "delta_cert": 0.0316126259247998,
+   "brute": 0.031638639609550184,
+   "ratio_brute_over_bound": 1.000822889082744
+  }
+ }
+}

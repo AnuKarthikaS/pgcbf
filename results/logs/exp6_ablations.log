@@ -1,0 +1,19 @@
+=== exp6_ablations ===
+[PASS] (a) full certificate refuses K_m too small (tail criterion) reason=['H3', 'H4', 'H6', 'H7'] eps_basis_P=7.79217 dt_tail=7.56796 delta_total=7.59337 delta_cert=-60.6315
+[PASS] (a) naive certificate without tail terms would pass (H4) and (H6) naive_delta_total=0.00795621 naive_delta_cert=0.0335014 naive_H3=0
+[PASS] (a) K_m too small: full-order safety violated (some seed exits C) n_exit=4 min_h=-0.0254511
+[PASS] (b) full certificate refuses coarse b_B reason=['H6'] eps_CROWN=4.46479 dt_quant=2.13797
+[PASS] (b) naive certificate without the quantization term would accept naive_delta_total=0.0113529 delta_cert=0.0145592
+[PASS] (b) coarse b_B: full-order safety violated n_exit=9 min_h=-0.0415515
+[PASS] (c) single-rate at the deployed T_s: certificate refuses (lag term w1 = 1) reason=['H6'] delta_total_single=0.017018 delta_total_multi=0.0135598 delta_cert=0.0145588
+[PASS] (c) multi-rate hold strictly reduces delta_total and keeps (H6) 
+[PASS] (c) single-rate at T_s=0.2: full-order safety violated n_exit=10 min_h=-0.159099
+[PASS] (c) multi-rate at the same T_s=0.2: no exit (outside certificate scope, observed) n_exit=0 min_h=2.05989e-06
+[PASS] (e) certificate refuses eps_adv above the certified level reason=['H6'] eps_adv=1
+[PASS] (e) adversary eps_adv=1.0: full-order safety violated n_exit=16 min_h=-0.0260511
+[PASS] (e) at the largest certifiable eps_adv* the worst-case adversary does not break safety eps_adv_star=0.00422333 min_h=2.05989e-06
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp6_ablations: 13/13 assertions passed, wall 64.5 s, peak RSS 299 MB

@@ -1,0 +1,20 @@
+=== exp3_delta_cert ===
+[PASS] R2: sound two-branch delta_cert <= brute-force inf over C_act delta_cert=0.0145592 brute_min=0.0146846 branch=1 samples=200000
+[PASS] R2: (H6) delta_total <= delta_cert <= brute-force inf delta_total=0.0135598
+[PASS] R2: Lemma delta_cert_classH: c_M = lambda_min(M,P) - 2 s_nl c_M=0.372524 lambda_min_MP=0.373125 s_nl=0.000300496
+[PASS] R1: sound two-branch delta_cert <= brute-force inf over C_act delta_cert=0.0316126 brute_min=0.0316386 branch=1 samples=200000
+[PASS] R1: (H6) delta_total <= delta_cert <= brute-force inf delta_total=0.00263388
+[PASS] R1: Lemma delta_cert_classH: c_M = lambda_min(M,P) - 2 s_nl c_M=0.982891 lambda_min_MP=0.983492 s_nl=0.000300496
+[PASS] class D gamma0=0.3: closed form = brute-force inf of affine bound over rho closed=0.0578002 brute_affine=0.0578002
+[PASS] class D gamma0=0.3: closed form <= brute-force inf of exact bracket closed=0.0578002 brute_exact=0.0634522
+[PASS] class D gamma0=0.3: branch 1 iff c >= gamma0 c=2.59001 branch=1
+[PASS] class D gamma0=3.0: closed form = brute-force inf of affine bound over rho closed=0.10319 brute_affine=0.10319
+[PASS] class D gamma0=3.0: closed form <= brute-force inf of exact bracket closed=0.10319 brute_exact=0.114811
+[PASS] class D gamma0=3.0: branch 1 iff c >= gamma0 c=2.59001 branch=2
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp3_delta_cert: 12/12 assertions passed, wall 5.2 s, peak RSS 206 MB

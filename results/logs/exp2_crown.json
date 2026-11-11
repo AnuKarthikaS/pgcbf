@@ -1,0 +1,431 @@
+{
+ "experiment": "exp2_crown",
+ "wall_clock_s": 6.208347211009823,
+ "peak_rss_MB": 149.8125,
+ "assertions": [
+  {
+   "assertion": "b_B=3 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 2.5594211781881504,
+   "max_gap": 0.9000677003144244,
+   "ratio": 2.8435874071406597
+  },
+  {
+   "assertion": "b_B=3 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 2.3264691910626722,
+   "max_gap": 0.8926734377720839,
+   "ratio": 2.6061817150838795
+  },
+  {
+   "assertion": "b_B=4 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 1.3287252955818267,
+   "max_gap": 0.5366116222507327,
+   "ratio": 2.4761396147342065
+  },
+  {
+   "assertion": "b_B=4 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 1.1450375742252907,
+   "max_gap": 0.4508703195779421,
+   "ratio": 2.539616214474166
+  },
+  {
+   "assertion": "b_B=5 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.6216933207134896,
+   "max_gap": 0.22629256265200942,
+   "ratio": 2.7472989541840303
+  },
+  {
+   "assertion": "b_B=5 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.5695741726447627,
+   "max_gap": 0.22610803452182843,
+   "ratio": 2.519035530291057
+  },
+  {
+   "assertion": "b_B=6 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.3189964220310015,
+   "max_gap": 0.1449291758274375,
+   "ratio": 2.2010504110698887
+  },
+  {
+   "assertion": "b_B=6 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.2867861963142664,
+   "max_gap": 0.13262611606902924,
+   "ratio": 2.1623659412977148
+  },
+  {
+   "assertion": "b_B=7 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.1429614523678547,
+   "max_gap": 0.06640281512745053,
+   "ratio": 2.152942643974672
+  },
+  {
+   "assertion": "b_B=7 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.14242868557161287,
+   "max_gap": 0.05860236083689679,
+   "ratio": 2.430425729229973
+  },
+  {
+   "assertion": "b_B=8 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.07865071822067513,
+   "max_gap": 0.03422075166197593,
+   "ratio": 2.29833403420145
+  },
+  {
+   "assertion": "b_B=8 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.07094634798645387,
+   "max_gap": 0.036206141947266686,
+   "ratio": 1.9595114025069393
+  },
+  {
+   "assertion": "b_B=9 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.03591469922080711,
+   "max_gap": 0.017331314116418434,
+   "ratio": 2.0722432805475566
+  },
+  {
+   "assertion": "b_B=9 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.03553745981431138,
+   "max_gap": 0.017764133118256236,
+   "ratio": 2.000517535966304
+  },
+  {
+   "assertion": "b_B=10 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.019312123139982096,
+   "max_gap": 0.010231459366404995,
+   "ratio": 1.8875238075414216
+  },
+  {
+   "assertion": "b_B=10 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.017810092437538592,
+   "max_gap": 0.0080898515810463,
+   "ratio": 2.2015351281926887
+  },
+  {
+   "assertion": "b_B=11 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.00940742986939465,
+   "max_gap": 0.004111460669238493,
+   "ratio": 2.288099200310982
+  },
+  {
+   "assertion": "b_B=11 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.00891118558069066,
+   "max_gap": 0.0039284672489051185,
+   "ratio": 2.2683619376422826
+  },
+  {
+   "assertion": "b_B=12 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.004718496644954597,
+   "max_gap": 0.002039211246332223,
+   "ratio": 2.3138832003998626
+  },
+  {
+   "assertion": "b_B=12 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.004454511928822765,
+   "max_gap": 0.0019656460672876196,
+   "ratio": 2.2661820980668774
+  },
+  {
+   "assertion": "b_B=13 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.002385266048784144,
+   "max_gap": 0.0010429953628034881,
+   "ratio": 2.286938306583396
+  },
+  {
+   "assertion": "b_B=13 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.002234537528871159,
+   "max_gap": 0.001134117343012994,
+   "ratio": 1.970287768402072
+  },
+  {
+   "assertion": "b_B=14 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.001224151867667666,
+   "max_gap": 0.0005345550990042198,
+   "ratio": 2.290038706857424
+  },
+  {
+   "assertion": "b_B=14 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples)",
+   "passed": true,
+   "eps_crown": 0.0011308381280782903,
+   "max_gap": 0.0005993802964046594,
+   "ratio": 1.8866788495743743
+  },
+  {
+   "assertion": "nearest: eps_CROWN monotone non-increasing in b_B",
+   "passed": true,
+   "seq": [
+    2.5594211781881504,
+    1.3287252955818267,
+    0.6216933207134896,
+    0.3189964220310015,
+    0.1429614523678547,
+    0.07865071822067513,
+    0.03591469922080711,
+    0.019312123139982096,
+    0.00940742986939465,
+    0.004718496644954597,
+    0.002385266048784144,
+    0.001224151867667666
+   ]
+  },
+  {
+   "assertion": "nearest: eps_CROWN scales as 2^(-b_B) (log2 slope within [-1.25,-0.75])",
+   "passed": true,
+   "slope": -1.0067420842219108
+  },
+  {
+   "assertion": "learned: eps_CROWN monotone non-increasing in b_B",
+   "passed": true,
+   "seq": [
+    2.3264691910626722,
+    1.1450375742252907,
+    0.5695741726447627,
+    0.2867861963142664,
+    0.14242868557161287,
+    0.07094634798645387,
+    0.03553745981431138,
+    0.017810092437538592,
+    0.00891118558069066,
+    0.004454511928822765,
+    0.002234537528871159,
+    0.0011308381280782903
+   ]
+  },
+  {
+   "assertion": "learned: eps_CROWN scales as 2^(-b_B) (log2 slope within [-1.25,-0.75])",
+   "passed": true,
+   "slope": -1.000380720229819
+  },
+  {
+   "assertion": "port box: twin-CROWN bound >= sampled gap on the Path-A table domain",
+   "passed": true,
+   "eps": 0.004377700866652904,
+   "max_gap": 0.0021422445963585348
+  },
+  {
+   "assertion": "learned rounding does not increase the certified eps_CROWN at the deployed b_B",
+   "passed": true,
+   "learned": 0.004454511928822765,
+   "nearest": 0.004718496644954597
+  }
+ ],
+ "data": {
+  "sweep": [
+   {
+    "b_B": 3,
+    "rounding": "nearest",
+    "eps_crown": 2.5594211781881504,
+    "E_q": 2.8865161259254757,
+    "max_gap": 0.9000677003144244,
+    "mean_gap": 0.39454045705990554
+   },
+   {
+    "b_B": 3,
+    "rounding": "learned",
+    "eps_crown": 2.3264691910626722,
+    "E_q": 3.1892064891370753,
+    "max_gap": 0.8926734377720839,
+    "mean_gap": 0.35740492409174973
+   },
+   {
+    "b_B": 4,
+    "rounding": "nearest",
+    "eps_crown": 1.3287252955818267,
+    "E_q": 1.4805237345758862,
+    "max_gap": 0.5366116222507327,
+    "mean_gap": 0.17010999022686718
+   },
+   {
+    "b_B": 4,
+    "rounding": "learned",
+    "eps_crown": 1.1450375742252907,
+    "E_q": 1.6032796255026294,
+    "max_gap": 0.4508703195779421,
+    "mean_gap": 0.13969390598546355
+   },
+   {
+    "b_B": 5,
+    "rounding": "nearest",
+    "eps_crown": 0.6216933207134896,
+    "E_q": 0.7167432182646161,
+    "max_gap": 0.22629256265200942,
+    "mean_gap": 0.07976290325176448
+   },
+   {
+    "b_B": 5,
+    "rounding": "learned",
+    "eps_crown": 0.5695741726447627,
+    "E_q": 0.7490711438249305,
+    "max_gap": 0.22610803452182843,
+    "mean_gap": 0.07149604078508907
+   },
+   {
+    "b_B": 6,
+    "rounding": "nearest",
+    "eps_crown": 0.3189964220310015,
+    "E_q": 0.3508333858756638,
+    "max_gap": 0.1449291758274375,
+    "mean_gap": 0.03817750353024178
+   },
+   {
+    "b_B": 6,
+    "rounding": "learned",
+    "eps_crown": 0.2867861963142664,
+    "E_q": 0.3615865814219835,
+    "max_gap": 0.13262611606902924,
+    "mean_gap": 0.03538045389281535
+   },
+   {
+    "b_B": 7,
+    "rounding": "nearest",
+    "eps_crown": 0.1429614523678547,
+    "E_q": 0.18007569027611936,
+    "max_gap": 0.06640281512745053,
+    "mean_gap": 0.01818749177101361
+   },
+   {
+    "b_B": 7,
+    "rounding": "learned",
+    "eps_crown": 0.14242868557161287,
+    "E_q": 0.18377824811067306,
+    "max_gap": 0.05860236083689679,
+    "mean_gap": 0.018158428329046253
+   },
+   {
+    "b_B": 8,
+    "rounding": "nearest",
+    "eps_crown": 0.07865071822067513,
+    "E_q": 0.08686379681213559,
+    "max_gap": 0.03422075166197593,
+    "mean_gap": 0.009510389815921779
+   },
+   {
+    "b_B": 8,
+    "rounding": "learned",
+    "eps_crown": 0.07094634798645387,
+    "E_q": 0.09282302303554163,
+    "max_gap": 0.036206141947266686,
+    "mean_gap": 0.009369981681883122
+   },
+   {
+    "b_B": 9,
+    "rounding": "nearest",
+    "eps_crown": 0.03591469922080711,
+    "E_q": 0.041181636140052255,
+    "max_gap": 0.017331314116418434,
+    "mean_gap": 0.004777123894381005
+   },
+   {
+    "b_B": 9,
+    "rounding": "learned",
+    "eps_crown": 0.03553745981431138,
+    "E_q": 0.041306612445742304,
+    "max_gap": 0.017764133118256236,
+    "mean_gap": 0.004759729124116721
+   },
+   {
+    "b_B": 10,
+    "rounding": "nearest",
+    "eps_crown": 0.019312123139982096,
+    "E_q": 0.023447404908123637,
+    "max_gap": 0.010231459366404995,
+    "mean_gap": 0.002452607814623205
+   },
+   {
+    "b_B": 10,
+    "rounding": "learned",
+    "eps_crown": 0.017810092437538592,
+    "E_q": 0.02393971552220826,
+    "max_gap": 0.0080898515810463,
+    "mean_gap": 0.0023981683395040677
+   },
+   {
+    "b_B": 11,
+    "rounding": "nearest",
+    "eps_crown": 0.00940742986939465,
+    "E_q": 0.011117485699231466,
+    "max_gap": 0.004111460669238493,
+    "mean_gap": 0.0012211423971363723
+   },
+   {
+    "b_B": 11,
+    "rounding": "learned",
+    "eps_crown": 0.00891118558069066,
+    "E_q": 0.01101464103219026,
+    "max_gap": 0.0039284672489051185,
+    "mean_gap": 0.0012021151211660138
+   },
+   {
+    "b_B": 12,
+    "rounding": "nearest",
+    "eps_crown": 0.004718496644954597,
+    "E_q": 0.005477565520634759,
+    "max_gap": 0.002039211246332223,
+    "mean_gap": 0.0006125998981965609
+   },
+   {
+    "b_B": 12,
+    "rounding": "learned",
+    "eps_crown": 0.004454511928822765,
+    "E_q": 0.005673592641430619,
+    "max_gap": 0.0019656460672876196,
+    "mean_gap": 0.0006013712279314014
+   },
+   {
+    "b_B": 13,
+    "rounding": "nearest",
+    "eps_crown": 0.002385266048784144,
+    "E_q": 0.0027678936741863057,
+    "max_gap": 0.0010429953628034881,
+    "mean_gap": 0.000308385174218049
+   },
+   {
+    "b_B": 13,
+    "rounding": "learned",
+    "eps_crown": 0.002234537528871159,
+    "E_q": 0.0027765288947550655,
+    "max_gap": 0.001134117343012994,
+    "mean_gap": 0.0003016018346915562
+   },
+   {
+    "b_B": 14,
+    "rounding": "nearest",
+    "eps_crown": 0.001224151867667666,
+    "E_q": 0.001344945771825483,
+    "max_gap": 0.0005345550990042198,
+    "mean_gap": 0.00015679145082076156
+   },
+   {
+    "b_B": 14,
+    "rounding": "learned",
+    "eps_crown": 0.0011308381280782903,
+    "E_q": 0.0014169133265199787,
+    "max_gap": 0.0005993802964046594,
+    "mean_gap": 0.00015085414013488762
+   }
+  ],
+  "deployed_eps_crown": 0.004454511928822765,
+  "deployed_eps_A": 0.007542649695635218
+ }
+}

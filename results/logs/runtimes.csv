@@ -1,0 +1,14 @@
+name,exit_code,wall_clock_s,peak_rss_MB
+exp0_openloop,0,18.40,213.7
+exp1_constants,0,4.75,111.7
+exp2_crown,0,6.88,149.8
+exp3_delta_cert,0,5.91,205.5
+exp4_theorem1,0,52.60,342.8
+exp4b_budget,0,203.64,1010.0
+exp5_deadzone,0,54.38,209.5
+exp6_ablations,0,65.25,298.6
+exp7_stochastic,0,166.43,1039.7
+exp8_numerics,0,9.20,219.8
+exp9_wsweep,0,31.42,194.0
+pytest,0,23.74,1193.0
+TOTAL,0,642.920579990,

@@ -1,0 +1,15 @@
+% Local macros of the main paper (loaded after preamble_jmlr.tex).
+% Items that live only in the supplement: \suppref{<original label>} -> its S-prefixed number via supp_labels.tex (written by the
+% supplement assembler as \newlabel{S-<label>}{{<n>}{<page>}...}).
+\newcommand{\suppref}[1]{\ref{S-#1}}
+\InputIfFileExists{supp_labels}{}{}
+\newcommand{\dtot}{\delta_{\mathrm{total}}}
+\newcommand{\dcert}{\delta_{\mathrm{cert}}}
+\newcommand{\eadv}{\varepsilon_{\mathrm{adv}}}
+\newcommand{\Lhold}{L_{\mathrm{hold}}}
+\newcommand{\gh}{\overline{g}_h}
+\newcommand{\dhb}{\overline{d}_h}
+\newcommand{\hact}{h_{\mathrm{act}}}
+\newcommand{\Esafe}{E_{\mathrm{safe}}}
+
+\setlength{\emergencystretch}{2em}

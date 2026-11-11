@@ -1,0 +1,15 @@
+\begin{table*}[t]
+\centering
+\caption{Corollary~\ref{cor:stochastic_w2} (R1, $T=2$, $\alpha=0.05$, $r_{W_{\scriptstyle 2}}=0$, worst-case adversary, $z(0)$ on the level $0.9$ of $\tilde{\mathcal{C}}_r$): Monte Carlo exit frequency vs.\ the bound $\alpha$ with the exact Clopper--Pearson interval; crude: bound with $\sigma_\perp:=0$. On R2 the Corollary refuses already at $\sigma=0$: $\gamma_0h_{\mathrm{act}}=0.007237$ exceeds the margin $\delta_{\mathrm{cert}}-\delta_{\mathrm{total}}=9.994\times10^{-4}$.}
+\label{tab:exp7_stochastic}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+noise & $\sigma$ & $h(x_0)$ & Corollary & crude & $T_{\mathrm{TTL}}$ & $T_{\mathrm{TTL}}/T$ & exits & CP $95\%$ interval \\
+\midrule
+profile, $\sigma^\star$ & $0.007$ & $0.005051$ & \checkmark & \checkmark & $2022$ & $1011$ & $0/2000$ & $[0,\,0.001843]$ \\
+tail-white (f) & $0.02$ & $0.005051$ & $\times$ & \checkmark & $0$ & $0$ & $2000/2000$ & $[0.9982,\,1]$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

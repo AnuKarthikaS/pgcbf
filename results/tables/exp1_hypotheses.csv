@@ -1,0 +1,16 @@
+hypothesis,content,R2,R1
+(H0),ODD containment and $E_{\mathrm{safe}}$,True,True
+(H1),Assumption~\ref{assump:generic} constants on $\mathcal{X}_{\mathrm{ODD}}$,True,True
+(H2),"(H2a)--(H2c), $\gamma<2\omega_{\min}$, $\epsilon=\gamma/2$",True,True
+(H3),"Teacher: $H/2\ge m$, $G_{\mathrm{port}}\succ0$, (H-sat)",True,True
+(H4),"tail tolerance, $h_{\mathrm{act}}$ interval",True,True
+(H5),$b_A\ge1$ satisfies \eqref{eq:lut_capacity},True,True
+(H6),authority \eqref{eq:control_authority},True,True
+(H7),initial conditions,True,True
+(H-sat),"$L_{\mathcal{T},z}\sqrt{K}D_{\mathrm{ODD}}/2\le u_{\max}$ \eqref{eq:sat_cond}",True,True
+timing $0<\tau_A<\tau_B<T_s$,latch order of \eqref{eq:multirate_hold},True,True
+codesign window \eqref{eq:codesign_window},$b_A$ inside the window,True,True
+Thm.~\ref{thm:main_cbf} hypotheses,all of the above,True,True
+$\mu_R>L_{\mathrm{sec}}$,Prop.~\ref{prop:deadzone_stability}(i) contraction rate,False,True
+(H-dz),$r_{\mathrm{ss}}<r_{\min}$ (Prop.~\ref{prop:deadzone_stability} only),False,True
+Prop.~\ref{prop:deadzone_stability} hypotheses,"(i) $\mu_R>L_{\mathrm{sec}}$, (H-dz) and (H3)",False,True

@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\caption{Proposition~\ref{prop:deadzone_stability} and ablation (d) on R1 (disturbance $w\equiv0$): mid-tread LUT with deadzone vs.\ mid-rise LUT (no zero level) at the deployed $b_A=9$ and over the sweep $b_A\in\{3,5,7,9\}$; the last row is $b_A=1$, which violates (H-dz). Final lag: $\min$ over seeds of $\|u_A(t_k)-\hat{\mathcal{T}}(z(t_k))\|_2$ at the last sample. For every swept $b_A$, $u_A\equiv0$ in the late window with the deadzone and $u_A\neq0$ at every late sample without it (asserted).}
+\label{tab:exp5_deadzone}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+LUT & $b_A$ & $\varepsilon_A$ & $r_{\mathrm{ss}}$ & $r_{\min}$ & (H-dz) & late $\max\|z\|_P$ & final lag $\|u_A-\hat{\mathcal{T}}\|_2$ & switches/time & $\min h$ \\
+\midrule
+deadzone & $3$ & $0.02022$ & $0.105$ & $0.156$ & \checkmark & $2.035\times10^{-4}$ & $1.966\times10^{-6}$ & $0$ & $3.939\times10^{-6}$ \\
+deadzone & $5$ & $0.005395$ & $0.03145$ & $0.156$ & \checkmark & $2.011\times10^{-4}$ & $1.914\times10^{-6}$ & $0$ & $3.939\times10^{-6}$ \\
+deadzone & $7$ & $0.001689$ & $0.01306$ & $0.156$ & \checkmark & $1.974\times10^{-4}$ & $1.854\times10^{-6}$ & $0$ & $3.939\times10^{-6}$ \\
+deadzone & $9$ & $7.624\times10^{-4}$ & $0.01162$ & $0.156$ & \checkmark & $1.934\times10^{-4}$ & $1.833\times10^{-6}$ & $0$ & $3.939\times10^{-6}$ \\
+mid-rise & $3$ & $0.02022$ & $0.105$ & $0.156$ & \checkmark & $1.257\times10^{-4}$ & $0.0197$ & $953.1$ & $3.939\times10^{-6}$ \\
+mid-rise & $5$ & $0.005395$ & $0.03145$ & $0.156$ & \checkmark & $8.268\times10^{-5}$ & $0.004851$ & $859.9$ & $3.939\times10^{-6}$ \\
+mid-rise & $7$ & $0.001689$ & $0.01306$ & $0.156$ & \checkmark & $1.559\times10^{-4}$ & $0.001286$ & $469.4$ & $3.939\times10^{-6}$ \\
+mid-rise & $9$ & $7.624\times10^{-4}$ & $0.01162$ & $0.156$ & \checkmark & $1.845\times10^{-4}$ & $3.507\times10^{-4}$ & $121.6$ & $3.939\times10^{-6}$ \\
+deadzone & $1$ & $0.07951$ & $0.3992$ & $0.156$ & $\times$ & $2.067\times10^{-4}$ & $2.005\times10^{-6}$ & $0$ & $3.939\times10^{-6}$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

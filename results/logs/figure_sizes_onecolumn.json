@@ -1,0 +1,72 @@
+[
+ {
+  "figure": "figures/exp0_openloop_h.pdf",
+  "width_pt": 252.94823,
+  "height_pt": 173.45021,
+  "width_cap_pt": 319.92,
+  "height_cap_pt": 501.12
+ },
+ {
+  "figure": "figures/exp9_wsweep.pdf",
+  "width_pt": 318.00175,
+  "height_pt": 216.81938,
+  "width_cap_pt": 319.92,
+  "height_cap_pt": 501.12
+ },
+ {
+  "figure": "figures/exp2_crown.pdf",
+  "width_pt": 252.94823,
+  "height_pt": 224.03986,
+  "width_cap_pt": 319.92,
+  "height_cap_pt": 501.12
+ },
+ {
+  "figure": "figures/exp3_delta_cert.pdf",
+  "width_pt": 252.94823,
+  "height_pt": 433.62555,
+  "width_cap_pt": 319.92,
+  "height_cap_pt": 501.12
+ },
+ {
+  "figure": "figures/exp4_theorem1.pdf",
+  "width_pt": 318.00175,
+  "height_pt": 411.95682,
+  "width_cap_pt": 319.92,
+  "height_cap_pt": 501.12
+ },
+ {
+  "figure": "figures/exp5_deadzone_sweep.pdf",
+  "width_pt": 318.00175,
+  "height_pt": 209.59206,
+  "width_cap_pt": 319.92,
+  "height_cap_pt": 501.12
+ },
+ {
+  "figure": "figures/exp5_deadzone_z.pdf",
+  "width_pt": 318.00175,
+  "height_pt": 159.00087,
+  "width_cap_pt": 319.92,
+  "height_cap_pt": 501.12
+ },
+ {
+  "figure": "figures/exp6_ablations.pdf",
+  "width_pt": 318.00175,
+  "height_pt": 379.43394,
+  "width_cap_pt": 319.92,
+  "height_cap_pt": 501.12
+ },
+ {
+  "figure": "figures/exp7_stochastic.pdf",
+  "width_pt": 318.00175,
+  "height_pt": 166.22816,
+  "width_cap_pt": 319.92,
+  "height_cap_pt": 501.12
+ },
+ {
+  "figure": "figures/exp8_convergence.pdf",
+  "width_pt": 252.94823,
+  "height_pt": 173.45021,
+  "width_cap_pt": 319.92,
+  "height_cap_pt": 501.12
+ }
+]

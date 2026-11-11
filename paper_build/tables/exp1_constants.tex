@@ -1,0 +1,58 @@
+\begin{table*}[t]
+\centering
+\caption{Certificate constants (part 1 of 2), computed at run time in float64 from the lattice operators. $K_f$ is the advection band, $w$ the disclosed cutoff-mode weight (Table~\ref{tab:exp9_wsweep}); $L_{\perp,P}(\mathrm{R2})/L_{\perp,P}(\mathrm{R1})=14.82$.}
+\label{tab:exp1_constants}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrr}
+\toprule
+quantity & equation & R2 (Pe $= 20$) & R1 (Pe $= 1$) \\
+\midrule
+$N_m$ & -- & $160$ & $160$ \\
+$N$ & -- & $320$ & $320$ \\
+$m$ & -- & $2$ & $2$ \\
+$\nu$ & -- & $0.05$ & $0.05$ \\
+$\alpha$ (plant) & -- & $1$ & $1$ \\
+$\gamma$ & -- & $1$ & $1$ \\
+$\kappa$ & -- & $0.05$ & $0.05$ \\
+$c$ & -- & $1$ & $0.05$ \\
+$K_m$ & -- & $2$ & $2$ \\
+$K$ & -- & $4$ & $4$ \\
+full-weight advection modes & -- & $2$ & $2$ \\
+$E_{\mathrm{safe}}$ & \eqref{eq:H0} & $0.05$ & $0.05$ \\
+$\varepsilon_{\mathrm{adv}}$ & \eqref{eq:M_perp} & $0.002$ & $0.002$ \\
+open-loop growth $\max\operatorname{Re}\lambda(A_{\mathrm{lin}})$ & -- & $0.2925$ & $-0.5$ \\
+$K_f$ & -- & $4$ & $4$ \\
+$w$ (cutoff weight) & -- & $0.0221$ & $0.0221$ \\
+$\mathrm{Pe}$ & Remark~\ref{rem:rda_cutoff} & $20$ & $1$ \\
+$\lambda_{\min}(P_{\mathrm{full},\epsilon})$ & \eqref{eq:eps_choice} & $0.6892$ & $0.6892$ \\
+$\omega_{\min}$ & \eqref{eq:eps_choice} & $1.222$ & $1.222$ \\
+$\mu_{2,P}(A_{r,0})$ & \eqref{eq:mu_pe} & $-0.5$ & $-0.5$ \\
+$\|Q-\gamma P\|/\|\gamma P\|$ & \eqref{eq:mu_pe} & $7.039\times10^{-15}$ & $7.039\times10^{-15}$ \\
+$\lambda_{K+1}$ & \eqref{eq:tail_dissipation} & $0.5$ & $0.5$ \\
+(H2a) residual $\|\Phi^\top P_{\mathrm{full},\epsilon}P_\perp\|$ & Lemma~\ref{lem:h2a_char} & $6.348\times10^{-13}$ & $6.348\times10^{-13}$ \\
+$\|A_{r,\perp}\|_2$ (eigenmode invariance) & Lemma~\ref{lem:h2a_char} & $1.27\times10^{-12}$ & $1.27\times10^{-12}$ \\
+$\rho_{\mathrm{ODD}}$ & \eqref{eq:H0} & $0.2828$ & $0.2828$ \\
+$D_{\mathrm{ODD}}$ & \eqref{eq:Cr0} & $0.5656$ & $0.5656$ \\
+$\mathrm{Lip}(F_{\mathrm{nl}})$ & Assumption~\ref{assump:generic} & $2.67$ & $0.1354$ \\
+$M_\perp$ & \eqref{eq:M_perp} & $0.04916$ & $0.003647$ \\
+$\varepsilon_{\mathrm{basis},P}$ & \eqref{eq:eps_basis_P} & $0.09831$ & $0.007293$ \\
+$\|A_{\mathrm{adv},r,\perp}\|_2$ & Lemma~\ref{lem:delta_cert_classH} & $0.106$ & $0.005301$ \\
+$L_{\perp,P}$ (advective, linear) & \eqref{eq:Lperp_def} & $0.04654$ & $0.002327$ \\
+$L_{\perp,P}$ ($\sin$ nonlinearity) & \eqref{eq:Lperp_def} & $8.719\times10^{-4}$ & $8.719\times10^{-4}$ \\
+$L_{\perp,P}$ & \eqref{eq:Lperp_def} & $0.04741$ & $0.003199$ \\
+linear share of $L_{\perp,P}$ & \eqref{eq:Lperp_def} & $0.9816$ & $0.7274$ \\
+$L_h$ & \eqref{eq:reduced_constants} & $0.7865$ & $0.7865$ \\
+$g_h$ & \eqref{eq:reduced_constants} & $0.4788$ & $0.4788$ \\
+$d_h$ & \eqref{eq:reduced_constants} & $0.4472$ & $0.4472$ \\
+$M_z$ & \eqref{eq:reduced_constants} & $4.324$ & $0.7887$ \\
+$\mathrm{Lip}(L_fh)$ & \eqref{eq:reduced_constants} & $1.77$ & $0.7948$ \\
+$\mathrm{Lip}(L_gh)$ & \eqref{eq:reduced_constants} & $2.394$ & $2.394$ \\
+$L_{\mathcal{T},z}$ & \eqref{eq:LTz} & $5.985$ & $0.5985$ \\
+$\eta_{\mathcal{T}}$ & Lemma~\ref{lem:sector} & $4.975$ & $0.4975$ \\
+(H-sat) left side $L_{\mathcal{T},z}\sqrt{K}D_{\mathrm{ODD}}/2$ & \eqref{eq:sat_cond} & $3.386$ & $0.3386$ \\
+$u_{\max}$ & \eqref{eq:sat_cond} & $3.4$ & $0.35$ \\
+$\varepsilon_{\mathrm{CROWN}}$ (backward) & \eqref{eq:twin_crown_bound} & $0.004455$ & $4.536\times10^{-4}$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

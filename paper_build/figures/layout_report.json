@@ -1,0 +1,106 @@
+{
+ "exp0_openloop_h": {
+  "width_in": 3.5,
+  "height_in": 2.4,
+  "out_of_canvas": [],
+  "long_titles": [],
+  "overlapping_axes": [],
+  "legend_outside_axes": []
+ },
+ "exp2_crown": {
+  "width_in": 3.5,
+  "height_in": 3.1,
+  "out_of_canvas": [],
+  "long_titles": [],
+  "overlapping_axes": [],
+  "legend_outside_axes": []
+ },
+ "exp3_delta_cert": {
+  "width_in": 3.5,
+  "height_in": 6.0,
+  "out_of_canvas": [],
+  "long_titles": [],
+  "overlapping_axes": [],
+  "legend_outside_axes": []
+ },
+ "exp4_theorem1": {
+  "width_in": 4.4,
+  "height_in": 5.699999999999999,
+  "out_of_canvas": [],
+  "long_titles": [],
+  "overlapping_axes": [],
+  "legend_outside_axes": []
+ },
+ "exp5_deadzone_sweep": {
+  "width_in": 4.4,
+  "height_in": 2.9,
+  "out_of_canvas": [],
+  "long_titles": [],
+  "overlapping_axes": [],
+  "legend_outside_axes": []
+ },
+ "exp5_deadzone_z": {
+  "width_in": 4.4,
+  "height_in": 2.2,
+  "out_of_canvas": [],
+  "long_titles": [],
+  "overlapping_axes": [],
+  "legend_outside_axes": []
+ },
+ "exp6_ablations": {
+  "width_in": 4.4,
+  "height_in": 5.25,
+  "out_of_canvas": [],
+  "long_titles": [],
+  "overlapping_axes": [],
+  "legend_outside_axes": []
+ },
+ "exp7_stochastic": {
+  "width_in": 4.4,
+  "height_in": 2.3,
+  "out_of_canvas": [],
+  "long_titles": [],
+  "overlapping_axes": [],
+  "legend_outside_axes": []
+ },
+ "exp8_convergence": {
+  "width_in": 3.5,
+  "height_in": 2.4,
+  "out_of_canvas": [],
+  "long_titles": [],
+  "overlapping_axes": [],
+  "legend_outside_axes": []
+ },
+ "exp9_wsweep": {
+  "width_in": 4.4,
+  "height_in": 3.0,
+  "out_of_canvas": [],
+  "long_titles": [],
+  "overlapping_axes": [],
+  "legend_outside_axes": []
+ },
+ "main_fig1_ablation": {
+  "width_in": 6.0,
+  "height_in": 2.05,
+  "out_of_canvas": [],
+  "long_titles": [],
+  "overlapping_axes": [],
+  "legend_outside_axes": []
+ },
+ "main_fig2_budget": {
+  "width_in": 6.0,
+  "height_in": 2.25,
+  "out_of_canvas": [],
+  "long_titles": [],
+  "overlapping_axes": [],
+  "legend_outside_axes": []
+ },
+ "main_fig_results": {
+  "width_in": 6.0,
+  "height_in": 2.07,
+  "out_of_canvas": [],
+  "long_titles": [],
+  "overlapping_axes": [],
+  "legend_outside_axes": []
+ }
+}

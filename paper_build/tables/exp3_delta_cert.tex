@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\caption{Certified margin $\delta_{\mathrm{cert}}$: class-(H) bound of Lemma~\ref{lem:delta_cert_classH} ($c_M=\lambda_{\min}(M,P)-2s_{\mathrm{nl}}$, two-branch infimum) and the class-(D) closed form \eqref{eq:delta_cert_closed} vs.\ the brute-force infimum of the exact bracket over $\mathcal{C}_{r,\mathrm{act}}$. For class (D) the column $c_M$ holds the closed-form slope $c$.}
+\label{tab:exp3_delta_cert}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+case & bound & $c_M$ & $\lambda_{\min}(M,P)$ & $s_{\mathrm{nl}}$ & $\gamma_0$ & branch & $\delta_{\mathrm{cert}}$ (bound) & brute-force inf & $\delta_{\mathrm{total}}$ \\
+\midrule
+R2 & Lemma~\ref{lem:delta_cert_classH} & $0.3725$ & $0.3731$ & $3.005\times10^{-4}$ & $0.35$ & $1$ & $0.01456$ & $0.01468$ & $0.01356$ \\
+R1 & Lemma~\ref{lem:delta_cert_classH} & $0.9829$ & $0.9835$ & $3.005\times10^{-4}$ & $0.3$ & $1$ & $0.03161$ & $0.03164$ & $0.002634$ \\
+class (D) & \eqref{eq:delta_cert_closed} & $2.59$ & -- & -- & $0.3$ & $1$ & $0.0578$ & $0.06345$ & N/A (standalone) \\
+class (D) & \eqref{eq:delta_cert_closed} & $2.59$ & -- & -- & $3$ & $2$ & $0.1032$ & $0.1148$ & N/A (standalone) \\
+\bottomrule
+\end{tabular}
+\end{table*}

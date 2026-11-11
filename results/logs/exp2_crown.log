@@ -1,0 +1,38 @@
+=== exp2_crown ===
+[PASS] b_B=3 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=2.55942 max_gap=0.900068 ratio=2.84359
+[PASS] b_B=3 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=2.32647 max_gap=0.892673 ratio=2.60618
+[PASS] b_B=4 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=1.32873 max_gap=0.536612 ratio=2.47614
+[PASS] b_B=4 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=1.14504 max_gap=0.45087 ratio=2.53962
+[PASS] b_B=5 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.621693 max_gap=0.226293 ratio=2.7473
+[PASS] b_B=5 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.569574 max_gap=0.226108 ratio=2.51904
+[PASS] b_B=6 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.318996 max_gap=0.144929 ratio=2.20105
+[PASS] b_B=6 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.286786 max_gap=0.132626 ratio=2.16237
+[PASS] b_B=7 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.142961 max_gap=0.0664028 ratio=2.15294
+[PASS] b_B=7 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.142429 max_gap=0.0586024 ratio=2.43043
+[PASS] b_B=8 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0786507 max_gap=0.0342208 ratio=2.29833
+[PASS] b_B=8 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0709463 max_gap=0.0362061 ratio=1.95951
+[PASS] b_B=9 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0359147 max_gap=0.0173313 ratio=2.07224
+[PASS] b_B=9 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0355375 max_gap=0.0177641 ratio=2.00052
+[PASS] b_B=10 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0193121 max_gap=0.0102315 ratio=1.88752
+[PASS] b_B=10 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0178101 max_gap=0.00808985 ratio=2.20154
+[PASS] b_B=11 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00940743 max_gap=0.00411146 ratio=2.2881
+[PASS] b_B=11 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00891119 max_gap=0.00392847 ratio=2.26836
+[PASS] b_B=12 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.0047185 max_gap=0.00203921 ratio=2.31388
+[PASS] b_B=12 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00445451 max_gap=0.00196565 ratio=2.26618
+[PASS] b_B=13 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00238527 max_gap=0.001043 ratio=2.28694
+[PASS] b_B=13 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00223454 max_gap=0.00113412 ratio=1.97029
+[PASS] b_B=14 nearest: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00122415 max_gap=0.000534555 ratio=2.29004
+[PASS] b_B=14 learned: twin-CROWN bound >= max sampled |Psi_B - T| (100016 samples) eps_crown=0.00113084 max_gap=0.00059938 ratio=1.88668
+[PASS] nearest: eps_CROWN monotone non-increasing in b_B seq=[np.float64(2.5594211781881504), np.float64(1.3287252955818267), np.float64(0.6216933207134896), np.float64(0.3189964220310015), np.float64(0.1429614523678547), np.float64(0.07865071822067513), np.float64(0.03591469922080711), np.float64(0.019312123139982096), np.float64(0.00940742986939465), np.float64(0.004718496644954597), np.float64(0.002385266048784144), np.float64(0.001224151867667666)]
+[PASS] nearest: eps_CROWN scales as 2^(-b_B) (log2 slope within [-1.25,-0.75]) slope=-1.00674
+[PASS] learned: eps_CROWN monotone non-increasing in b_B seq=[np.float64(2.3264691910626722), np.float64(1.1450375742252907), np.float64(0.5695741726447627), np.float64(0.2867861963142664), np.float64(0.14242868557161287), np.float64(0.07094634798645387), np.float64(0.03553745981431138), np.float64(0.017810092437538592), np.float64(0.00891118558069066), np.float64(0.004454511928822765), np.float64(0.002234537528871159), np.float64(0.0011308381280782903)]
+[PASS] learned: eps_CROWN scales as 2^(-b_B) (log2 slope within [-1.25,-0.75]) slope=-1.00038
+[PASS] port box: twin-CROWN bound >= sampled gap on the Path-A table domain eps=0.0043777 max_gap=0.00214224
+[PASS] learned rounding does not increase the certified eps_CROWN at the deployed b_B learned=0.00445451 nearest=0.0047185
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp2_crown: 30/30 assertions passed, wall 6.2 s, peak RSS 150 MB

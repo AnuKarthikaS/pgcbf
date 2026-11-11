@@ -1,0 +1,58 @@
+\begin{table*}[t]
+\centering
+\caption{Certificate constants (part 2 of 2).}
+\label{tab:exp1_constants_b}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrr}
+\toprule
+quantity & equation & R2 (Pe $= 20$) & R1 (Pe $= 1$) \\
+\midrule
+$E_q$ (explicit) & \eqref{eq:crown_explicit} & $0.005674$ & $5.58\times10^{-4}$ \\
+$\varepsilon_{\mathrm{CROWN}}$ & Prop.~\ref{prop:twin_crown} & $0.004455$ & $4.536\times10^{-4}$ \\
+$D_v$ & \eqref{eq:Dv_closed} & $0.4472$ & $0.4472$ \\
+$D_v$ (sampled sup) & \eqref{eq:Dv_closed} & $0.4472$ & $0.4472$ \\
+$M_v$ & \eqref{eq:eps_A_triangle} & $5.176$ & $0.9441$ \\
+$\Delta_{q,A}$ (LUT step) & \eqref{eq:Dv_closed} & $8.735\times10^{-4}$ & $8.735\times10^{-4}$ \\
+$\varepsilon_A$ & \eqref{eq:eps_A_triangle} & $0.007543$ & $7.624\times10^{-4}$ \\
+$\Delta u_{\mathrm{lag}}$ & \eqref{eq:eps_A_triangle} & $0.007765$ & $9.441\times10^{-4}$ \\
+window lower bound & \eqref{eq:codesign_window} & $8$ & $8$ \\
+$b_A$ & \eqref{eq:codesign_window} & $9$ & $9$ \\
+window upper bound & \eqref{eq:codesign_window} & $11$ & $11$ \\
+$T_s$ & \eqref{eq:multirate_hold} & $3\times10^{-4}$ & $0.002$ \\
+$\tau_A$ & \eqref{eq:multirate_hold} & $1.5\times10^{-5}$ & $1\times10^{-4}$ \\
+$\tau_B$ & \eqref{eq:multirate_hold} & $3\times10^{-5}$ & $2\times10^{-4}$ \\
+samples per period $2\pi/(\omega_{\min}T_s)$ & \eqref{eq:multirate_hold} & $1.714\times10^{4}$ & $2571$ \\
+$b_B$ & Prop.~\ref{prop:twin_crown} & $12$ & $12$ \\
+$\gamma_0$ & \eqref{eq:teacher_cbf} & $0.35$ & $0.3$ \\
+$w_1$ & \eqref{eq:exp_weights} & $0.05$ & $0.04999$ \\
+$w_2$ & \eqref{eq:exp_weights} & $0.05$ & $0.04999$ \\
+$w_3$ & \eqref{eq:exp_weights} & $0.9$ & $0.9$ \\
+$\phi(\gamma_0T_s)$ & \eqref{eq:delta_total_exact} & $0.5$ & $0.5$ \\
+$L_{\mathrm{hold}}$ & \eqref{eq:delta_dip} & $44.04$ & $1.474$ \\
+$\Delta h_{\mathrm{dip}}$ & \eqref{eq:delta_dip} & $2.06\times10^{-6}$ & $3.008\times10^{-6}$ \\
+$\delta_{\mathrm{total}}$: tail term & \eqref{eq:delta_total_exact} & $0.003666$ & $1.835\times10^{-5}$ \\
+$\delta_{\mathrm{total}}$: quantisation term & \eqref{eq:delta_total_exact} & $0.002207$ & $2.246\times10^{-4}$ \\
+$\delta_{\mathrm{total}}$: lag term & \eqref{eq:delta_total_exact} & $1.859\times10^{-4}$ & $2.26\times10^{-5}$ \\
+$\delta_{\mathrm{total}}$: adversary term & \eqref{eq:delta_total_exact} & $8.944\times10^{-4}$ & $8.944\times10^{-4}$ \\
+$\delta_{\mathrm{total}}$: hold term & \eqref{eq:delta_total_exact} & $0.006607$ & $0.001474$ \\
+$\delta_{\mathrm{total}}$ & \eqref{eq:delta_total_exact} & $0.01356$ & $0.002634$ \\
+tail share $L_hL_{\perp,P}\varepsilon_{\mathrm{basis},P}/\delta_{\mathrm{total}}$ & \eqref{eq:delta_total_exact} & $0.2704$ & $0.006967$ \\
+hold share of $\delta_{\mathrm{total}}$ & \eqref{eq:delta_total_exact} & $0.4872$ & $0.5596$ \\
+$h_{\mathrm{act}}$ & \eqref{eq:shell} & $0.02068$ & $0.02559$ \\
+$r_{\min}$ & \eqref{eq:shell} & $0.1402$ & $0.156$ \\
+$\lambda_{\min}(M,P)$ & Lemma~\ref{lem:delta_cert_classH} & $0.3731$ & $0.9835$ \\
+$s_{\mathrm{nl}}$ & Lemma~\ref{lem:delta_cert_classH} & $3.005\times10^{-4}$ & $3.005\times10^{-4}$ \\
+$c_M$ & Lemma~\ref{lem:delta_cert_classH} & $0.3725$ & $0.9829$ \\
+$\delta_{\mathrm{cert}}$ & Lemma~\ref{lem:delta_cert_classH} & $0.01456$ & $0.03161$ \\
+$\delta_{\mathrm{cert}}$ branch & \eqref{eq:delta_cert_classH} & $1$ & $1$ \\
+margin $\delta_{\mathrm{cert}}-\delta_{\mathrm{total}}$ & \eqref{eq:control_authority} & $9.994\times10^{-4}$ & $0.02898$ \\
+$\gamma_0h_{\mathrm{act}}$ (Cor.~\ref{cor:stochastic_w2}) & Cor.~\ref{cor:stochastic_w2} & $0.007237$ & $0.007678$ \\
+null-space rate & \eqref{eq:null_space_cond} & $1$ & $1$ \\
+$\mu_R$ & Prop.~\ref{prop:deadzone_stability} & $0.5$ & $0.5$ \\
+$L_{\mathrm{sec}}$ & Prop.~\ref{prop:deadzone_stability} & $2.392$ & $0.1204$ \\
+$\bar\varepsilon_q$ & Prop.~\ref{prop:deadzone_stability} & $0.01998$ & $0.002342$ \\
+$r_{\mathrm{ss}}$ & \eqref{eq:rss_ball} & $\infty$ & $0.01162$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

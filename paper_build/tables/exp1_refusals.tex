@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{Certificate refusals on non-admissible variants of R2. The LUT window is \eqref{eq:codesign_window} in the variant's own form (port space by default; the state-space row uses $K$, $D_{\mathrm{ODD}}$ and $M_z$).}
+\label{tab:exp1_refusals}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrr}
+\toprule
+configuration & refused & failing & $\delta_{\mathrm{total}}$ & $\delta_{\mathrm{cert}}$ & window $[\mathrm{lo},\mathrm{hi}]$ \\
+\midrule
+state-space LUT ($m = K$ variant) & \checkmark & (H5), codesign window \eqref{eq:codesign_window} & $0.01377$ & $0.01456$ & [9, 5] \\
+$u_{\max}$ below the (H-sat) left side & \checkmark & (H3) & $0.01245$ & $0.01483$ & [8, 11] \\
+pure lattice advection (no spectral cutoff) & \checkmark & (H4), (H6), (H7) & $157.6$ & $-3091$ & [3, 11] \\
+plain projector $\Pi_f$ ($w = 1$) & \checkmark & (H4), (H6), (H7) & $7.93$ & $-8.456$ & [6, 11] \\
+previous sampling period $T_s=5\times10^{-4}$ at $w^\star$ & \checkmark & (H6) & $0.01821$ & $0.01455$ & [7, 11] \\
+$T_s$, $\tau_A$, $\tau_B$ $\times 10$ (hold term) & \checkmark & (H6) & $0.07483$ & $0.01438$ & [5, 11] \\
+\bottomrule
+\end{tabular}
+\end{table*}

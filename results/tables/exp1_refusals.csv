@@ -1,0 +1,7 @@
+configuration,refused,failing,delta_total,delta_cert,"window $[\mathrm{lo},\mathrm{hi}]$"
+state-space LUT ($m = K$ variant),True,"(H5), codesign window \eqref{eq:codesign_window}",0.013770577376346021,0.014559169007812033,"[9, 5]"
+$u_{\max}$ below the (H-sat) left side,True,(H3),0.012445298671380774,0.014834335085425691,"[8, 11]"
+pure lattice advection (no spectral cutoff),True,"(H4), (H6), (H7)",157.64090184361635,-3090.9128755661545,"[3, 11]"
+plain projector $\Pi_f$ ($w = 1$),True,"(H4), (H6), (H7)",7.930012058969088,-8.456282184903287,"[6, 11]"
+previous sampling period $T_s=5\times10^{-4}$ at $w^\star$,True,(H6),0.018214630476980076,0.014550203297347677,"[7, 11]"
+"$T_s$, $\tau_A$, $\tau_B$ $\times 10$ (hold term)",True,(H6),0.07482796885936178,0.014382806562141165,"[5, 11]"

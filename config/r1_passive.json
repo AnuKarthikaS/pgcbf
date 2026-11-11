@@ -1,0 +1,250 @@
+{
+ "plant": {
+  "N_m": 160,
+  "ell": 1,
+  "nu": 0.05,
+  "alpha": 1,
+  "gamma": 1,
+  "c": 0.05,
+  "kappa": 0.05,
+  "n_adv_modes": 4,
+  "actuator_centers": [
+   0.25,
+   0.75
+  ],
+  "actuator_width": 0.1,
+  "disturbance_centers": [
+   0.5
+  ],
+  "disturbance_width": 0.15,
+  "actuator_band": [
+   2,
+   12
+  ],
+  "disturbance_band": [
+   2,
+   12
+  ],
+  "n_adv_full_weight": 2,
+  "adv_cutoff_weight": 0.02209708691207961
+ },
+ "rom": {
+  "K_m": 2
+ },
+ "safety": {
+  "E_safe": 0.05,
+  "odd_margin": 0.05,
+  "D_ODD_margin": 0.05,
+  "h_act_fraction": 0.5,
+  "gamma0": 0.3,
+  "eps_adv": 0.002
+ },
+ "controller": {
+  "H": 8,
+  "L": 3,
+  "theta": 0.05,
+  "L_T": 0.5,
+  "u_max": 0.35,
+  "b_A": 9,
+  "b_B": 12,
+  "rounding": "learned",
+  "deadzone": true,
+  "train": {
+   "samples": 4000,
+   "iterations": 1500,
+   "batch": 256,
+   "lr": 0.05,
+   "beta1": 0.9,
+   "beta2": 0.999,
+   "adam_eps": 1e-08,
+   "temp_start": 1,
+   "temp_end": 0.05,
+   "init_clip": 0.01
+  },
+  "lut_space": "port"
+ },
+ "timing": {
+  "T_s": 0.002,
+  "tau_A": 0.0001,
+  "tau_B": 0.0002
+ },
+ "hardware": {
+  "B_max": 24,
+  "S_bits_log2": 26,
+  "b_out": 16
+ },
+ "crown": {
+  "splits_per_dim": 1
+ },
+ "tolerances": {
+  "h2a": 1e-12,
+  "phi_series_below": 0.001,
+  "modal_clean": 1e-11,
+  "roundoff_rel": 1e-12,
+  "cov_rank_rel": 1e-13
+ },
+ "seeds": {
+  "teacher": 1,
+  "train_data": 2,
+  "train": 3,
+  "mc": 11,
+  "ic": 7
+ },
+ "sim": {
+  "substeps": [
+   1,
+   1,
+   1
+  ],
+  "horizon": 5.0,
+  "n_seeds": 16,
+  "ic_level_fraction": 1.0,
+  "ic_tail_fraction": 1.0,
+  "ic_n_tail_modes": 3
+ },
+ "stochastic": {
+  "alpha": 0.05,
+  "r_W2": 0.0,
+  "h0_fraction": 0.2,
+  "delta_drift_fraction": 0.05,
+  "z0_level": 0.9,
+  "T_perp_search_max": 1000000.0,
+  "bisection_iters": 60,
+  "T_max": 2.0,
+  "n_paths": 2000,
+  "confidence": 0.95,
+  "noise_small": {
+   "type": "profile",
+   "sigma": 0.003
+  },
+  "noise_tail": {
+   "type": "tail_white",
+   "sigma": 0.02
+  },
+  "sigma_grid": [
+   0.002,
+   0.003,
+   0.005,
+   0.007,
+   0.01,
+   0.014,
+   0.02
+  ],
+  "n_screen_paths": 100,
+  "fluct_fraction_of_h0": 0.1,
+  "fluct_path_share": 0.5
+ },
+ "experiments": {
+  "Ts_refusal_factor": 10,
+  "u_max_refusal_fraction": 0.9,
+  "ablation_K_m": 1,
+  "ablation_b_B": 2,
+  "ablation_eps_adv": 1.0,
+  "single_rate_Ts_violation": 0.2,
+  "multi_rate_fractions": [
+   0.05,
+   0.1
+  ],
+  "violation_substeps": [
+   1,
+   1,
+   20
+  ],
+  "ablation_horizon": 3.0,
+  "deadzone_b_A": 3,
+  "deadzone_horizon": 15.0,
+  "deadzone_tail_window": 5.0,
+  "crown_samples": 100000,
+  "crown_b_B_sweep": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14
+  ],
+  "shell_samples": 200000,
+  "classD": {
+   "K": 4,
+   "H": 8,
+   "L": 3,
+   "theta": 0.05,
+   "L_T": 1.0,
+   "R0_diag": [
+    0.5,
+    0.8,
+    1.1,
+    1.4
+   ],
+   "L_F": 0.2,
+   "gamma0_values": [
+    0.3,
+    3.0
+   ],
+   "r_min2": 0.02,
+   "h_act": 0.02,
+   "dh": 0.001,
+   "seed": 5
+  },
+  "conv_T_s": 0.05,
+  "conv_horizon": 1.0,
+  "conv_substeps": [
+   1,
+   2,
+   4,
+   8,
+   16
+  ],
+  "conv_ref_substeps": 128,
+  "latch_periods": 20,
+  "latch_grid_steps": 7,
+  "w_sweep": [
+   1.0,
+   0.7071067811865476,
+   0.5,
+   0.3535533905932738,
+   0.25,
+   0.1767766952966369,
+   0.125,
+   0.08838834764831845,
+   0.0625,
+   0.04419417382415922,
+   0.03125,
+   0.02209708691207961,
+   0.015625,
+   0.011048543456039806,
+   0.0078125,
+   0.005524271728019903,
+   0.00390625
+  ],
+  "c_sweep_plain": [
+   0.005,
+   0.01,
+   0.02,
+   0.03,
+   0.05,
+   0.1,
+   0.2,
+   0.3,
+   0.5,
+   1.0
+  ],
+  "wsweep_openloop_T_s": 0.01,
+  "interior_level": 0.5,
+  "deadzone_b_A_sweep": [
+   3,
+   5,
+   7,
+   9
+  ],
+  "interior_tail_fraction": 0,
+  "wstar_min_tail_share": 0.1,
+  "wave2_T_s": 0.0005
+ }
+}

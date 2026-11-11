@@ -1,0 +1,34 @@
+=== exp9_wsweep ===
+  w=1 valid=False failing=['H4', 'H6', 'H7'] share=0.997 margin=-16.4 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.7071 valid=False failing=['H4', 'H6', 'H7'] share=0.995 margin=-6.09 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.5 valid=False failing=['H4', 'H6', 'H7'] share=0.991 margin=-2.49 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.3536 valid=False failing=['H4', 'H6', 'H7'] share=0.983 margin=-1.11 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.25 valid=False failing=['H4', 'H6', 'H7'] share=0.968 margin=-0.521 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.1768 valid=False failing=['H4', 'H6', 'H7'] share=0.939 margin=-0.254 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.125 valid=False failing=['H4', 'H6', 'H7'] share=0.888 margin=-0.126 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.08839 valid=False failing=['H4', 'H6', 'H7'] share=0.805 margin=-0.0618 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.0625 valid=False failing=['H6'] share=0.686 margin=-0.0293 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.04419 valid=False failing=['H6'] share=0.542 margin=-0.0126 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.03125 valid=False failing=['H6'] share=0.395 margin=-0.00379 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.0221 valid=True failing=[] share=0.270 margin=0.000999 ablations refused={'a': True, 'b': True, 'c': True, 'e': True} exits=16
+  w=0.01562 valid=True failing=[] share=0.178 margin=0.00366 ablations refused={'a': True, 'b': True, 'c': False, 'e': True} exits=16
+  w=0.01105 valid=True failing=[] share=0.116 margin=0.00518 ablations refused={'a': True, 'b': True, 'c': False, 'e': True} exits=16
+  w=0.007812 valid=True failing=[] share=0.076 margin=0.00607 ablations refused={'a': True, 'b': True, 'c': False, 'e': True} exits=16
+  w=0.005524 valid=True failing=[] share=0.050 margin=0.00661 ablations refused={'a': True, 'b': True, 'c': False, 'e': True} exits=16
+  w=0.003906 valid=True failing=[] share=0.034 margin=0.00695 ablations refused={'a': True, 'b': True, 'c': False, 'e': True} exits=16
+[PASS] w grid is geometric, contains w = 1 and reaches down to w <= 0.005 with >= 8 values n=17 w_min=0.00390625
+[PASS] plain projector w = 1 is refused at the R2 Peclet number failing=['H4', 'H6', 'H7']
+[PASS] open loop exits C for every seed at every w (the plant is unsafe for every swept w) exits=[16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]
+[PASS] ||A_adv,r,perp||_2 > 0 at every w (K_f > K_m) and proportional to w 
+[PASS] a certifiable frontier exists: some grid w accepts with (H6) margin > 0 and all ablations refused 
+[PASS] certifiable set is a down-set of the grid (every w below the frontier accepts) w_accept_max=0.0220971
+[PASS] deployed config weight equals the sweep-selected w* (largest admissible grid value) w_star=0.0220971 w_config=0.0220971
+[PASS] at w*, the tail-coupling share of delta_total is material (>= wstar_min_tail_share) share=0.270358
+[PASS] plain projector (w = 1): certifiable-c set and open-loop-unstable-c set are disjoint and both non-empty max_certifiable_c=0.02 min_unstable_c=0.5
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp9_wsweep: 9/9 assertions passed, wall 30.7 s, peak RSS 194 MB

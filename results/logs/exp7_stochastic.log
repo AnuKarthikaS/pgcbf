@@ -1,0 +1,27 @@
+=== exp7_stochastic ===
+[PASS] z(0) lies strictly inside C~_r and h(x_0) > 0 h0=0.00505058 z0_level=0.9
+  sigma=0.002 valid=True fail=[] share=1.0 med dev/h0=8.399040496717351 noise dev/h0=0.04911180997970645 T_TTL=1015
+  sigma=0.003 valid=True fail=[] share=1.0 med dev/h0=8.401011795734028 noise dev/h0=0.07428449834429601 T_TTL=1248
+  sigma=0.005 valid=True fail=[] share=1.0 med dev/h0=8.405361097959988 noise dev/h0=0.12691100673847827 T_TTL=1667
+  sigma=0.007 valid=True fail=[] share=1.0 med dev/h0=8.410119798771529 noise dev/h0=0.1740299481017091 T_TTL=2022
+  sigma=0.01 valid=False fail=['margin'] share=None med dev/h0=None noise dev/h0=None T_TTL=2440
+  sigma=0.014 valid=False fail=['margin'] share=None med dev/h0=None noise dev/h0=None T_TTL=2793
+  sigma=0.02 valid=False fail=['margin'] share=None med dev/h0=None noise dev/h0=None T_TTL=2933
+[PASS] sigma grid: some grid sigma is accepted by the Corollary at T and meets the fluctuation criterion 
+[PASS] sigma* is the largest grid value with Corollary acceptance and the fluctuation criterion (every larger grid value fails one) sigma_star=0.007 first_refused=0.01
+[PASS] the Corollary's acceptance region on the grid is a down-set (monotone in sigma) 
+[PASS] sigma*: Corollary conditions hold (margin, beta0 > h0, h_act^- > 0, T <= T_TTL, Theorem 1) margin=1 beta0_gt_h0=1 h_act_minus_pos=1 r_min2_pos=1 T_le_TTL=1 theorem=1
+[PASS] sigma*: fluctuation criterion holds on the full Monte Carlo (>= fluct_path_share of the paths) share=1 median_dev_over_h0=8.4003
+[PASS] sigma*: the noise itself is non-trivial: median max_t |h(x_t) - h_det(t)| >= fluct_fraction_of_h0 * h(x_0) median_noise_dev_over_h0=0.180472 end_std_over_h0=0.0796781
+[PASS] sigma*: MC exit frequency <= alpha (Clopper-Pearson upper limit <= alpha) exits=0 paths=2000 freq=0 cp_upper=0.00184274 alpha=0.05
+[PASS] sigma*: the probability bound is conservative (T_TTL >> T and zero observed exits) T_TTL=2022.3 T=2 ratio=1011.15
+[PASS] (f) tail-white noise: full Corollary refuses (OU tail envelope exceeds the safe set) Delta_sigma=1.10013 sqrt_E=0.223607 T_perp=0
+[PASS] (f) crude bound ignoring tail diffusion would accept T_TTL_crude=501.107
+[PASS] (f) MC violates the crude probability bound (Clopper-Pearson lower limit > alpha) exits=2000 paths=2000 cp_lower=0.998157 alpha=0.05
+[PASS] R2, sigma = 0: gamma0 h_act exceeds delta_cert - delta_total, so the Corollary margin fails and the Corollary refuses gamma0_h_act=0.00723678 margin=0.000999382 failing=['margin']
+[PASS] stochastic runs use r_W2 = 0 (no distributional drift of the adversary) r_W2=0
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp7_stochastic: 14/14 assertions passed, wall 165.2 s, peak RSS 1040 MB

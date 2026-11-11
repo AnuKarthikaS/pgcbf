@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\caption{Grid search over the profile-noise intensity $\sigma$ (R1, $T=2$, $\alpha=0.05$). Fluct.\ share: fraction of 100 screening paths with $\max_t|h(x_t)-h(x_0)|\ge 0.1\,h(x_0)$; noise dev.: median of $\max_t|h(x_t)-h_{\rm det}(t)|/h(x_0)$ (deviation from the noise-free run). $\sigma^\star=0.007$.}
+\label{tab:exp7_sigma_grid}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+$\sigma$ & Corollary & failing condition & $\delta_{\rm total,\sigma}+\delta_{\rm stoch}+\delta_{\rm drift}$ & $\delta_{\mathrm{cert},\sigma}$ & $T_{\mathrm{TTL}}$ & fluct. share & total dev. & noise dev. \\
+\midrule
+$0.002$ & \checkmark & none & $0.0161$ & $0.03161$ & $1015$ & $1$ & $8.399$ & $0.04911$ \\
+$0.003$ & \checkmark & none & $0.0175$ & $0.03161$ & $1248$ & $1$ & $8.401$ & $0.07428$ \\
+$0.005$ & \checkmark & none & $0.02084$ & $0.03161$ & $1667$ & $1$ & $8.405$ & $0.1269$ \\
+$0.007$ & \checkmark & none & $0.02496$ & $0.03161$ & $2022$ & $1$ & $8.41$ & $0.174$ \\
+$0.01$ & $\times$ & margin & $0.03276$ & $0.03161$ & $2440$ & -- & -- & -- \\
+$0.014$ & $\times$ & margin & $0.04671$ & $0.03161$ & $2793$ & -- & -- & -- \\
+$0.02$ & $\times$ & margin & $0.07733$ & $0.03161$ & $2933$ & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table*}

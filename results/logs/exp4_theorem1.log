@@ -1,0 +1,38 @@
+=== exp4_theorem1 ===
+[PASS] R2: interior level h_r = 0.5 h_act lies strictly inside C~_r h_r0=0.0103383 eps_b2_plus_dh=0.00966733
+[PASS] R2 boundary: (a) tail ||x_perp(t)||_Pfe <= eps_basis_P (all seeds, all nodes) max_tail_over_eps_b=1
+[PASS] R2 boundary: (b) h~_r(z(t_k)) >= 0 at every sampling instant min_htil_tk=-7.29384e-17
+[PASS] R2 boundary: (b) h~_r(z(t)) >= -Delta h_dip at every node min_htil=-7.29384e-17 Delta_h_dip=2.05989e-06
+[PASS] R2 boundary: (c) h(x(t)) >= h~_r(z(t)) + Delta h_dip min_gap=-1.7035e-15
+[PASS] R2 boundary: (c) h(x(t)) >= 0 for all t, all seeds (full-order safety) min_h=2.05989e-06 delta_total=0.0135598 seeds=16
+[PASS] R2 boundary: z(t_k) stays in Z_ODD 
+[PASS] R2 boundary: min_t h = Delta h_dip at t = 0 (initial state on the certified floor) min_h=2.05989e-06 Delta_h_dip=2.05989e-06
+[PASS] R2 interior: (a) tail ||x_perp(t)||_Pfe <= eps_basis_P (all seeds, all nodes) max_tail_over_eps_b=0.0582986
+[PASS] R2 interior: (b) h~_r(z(t_k)) >= 0 at every sampling instant min_htil_tk=0.000670922
+[PASS] R2 interior: (b) h~_r(z(t)) >= -Delta h_dip at every node min_htil=0.000670922 Delta_h_dip=2.05989e-06
+[PASS] R2 interior: (c) h(x(t)) >= h~_r(z(t)) + Delta h_dip min_gap=0.00963242
+[PASS] R2 interior: (c) h(x(t)) >= 0 for all t, all seeds (full-order safety) min_h=0.0103383 delta_total=0.0135598 seeds=16
+[PASS] R2 interior: z(t_k) stays in Z_ODD 
+[PASS] R2 interior: min_t h(x_t) = min_j h(x_j(0)) (attained at t = 0; h rises along every closed-loop trajectory) t_min=0 min_h=0.0103383
+[PASS] R1: interior level h_r = 0.5 h_act lies strictly inside C~_r h_r0=0.0127961 eps_b2_plus_dh=5.62021e-05
+[PASS] R1 boundary: (a) tail ||x_perp(t)||_Pfe <= eps_basis_P (all seeds, all nodes) max_tail_over_eps_b=1
+[PASS] R1 boundary: (b) h~_r(z(t_k)) >= 0 at every sampling instant min_htil_tk=-7.77364e-17
+[PASS] R1 boundary: (b) h~_r(z(t)) >= -Delta h_dip at every node min_htil=-7.77364e-17 Delta_h_dip=3.00755e-06
+[PASS] R1 boundary: (c) h(x(t)) >= h~_r(z(t)) + Delta h_dip min_gap=-1.98131e-15
+[PASS] R1 boundary: (c) h(x(t)) >= 0 for all t, all seeds (full-order safety) min_h=3.00755e-06 delta_total=0.00263388 seeds=16
+[PASS] R1 boundary: z(t_k) stays in Z_ODD 
+[PASS] R1 boundary: min_t h = Delta h_dip at t = 0 (initial state on the certified floor) min_h=3.00755e-06 Delta_h_dip=3.00755e-06
+[PASS] R1 interior: (a) tail ||x_perp(t)||_Pfe <= eps_basis_P (all seeds, all nodes) max_tail_over_eps_b=0.0474918
+[PASS] R1 interior: (b) h~_r(z(t_k)) >= 0 at every sampling instant min_htil_tk=0.0127399
+[PASS] R1 interior: (b) h~_r(z(t)) >= -Delta h_dip at every node min_htil=0.0127399 Delta_h_dip=3.00755e-06
+[PASS] R1 interior: (c) h(x(t)) >= h~_r(z(t)) + Delta h_dip min_gap=5.30746e-05
+[PASS] R1 interior: (c) h(x(t)) >= 0 for all t, all seeds (full-order safety) min_h=0.0127961 delta_total=0.00263388 seeds=16
+[PASS] R1 interior: z(t_k) stays in Z_ODD 
+[PASS] R1 interior: min_t h(x_t) = min_j h(x_j(0)) (attained at t = 0; h rises along every closed-loop trajectory) t_min=0 min_h=0.0127961
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+'created' timestamp seems very low; regarding as unix timestamp
+'modified' timestamp seems very low; regarding as unix timestamp
+--- exp4_theorem1: 30/30 assertions passed, wall 51.9 s, peak RSS 343 MB

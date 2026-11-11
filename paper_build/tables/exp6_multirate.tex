@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\caption{Ablation (c): exponential weights $w_1,w_2$, $\Delta h_{\rm dip}$ and $\delta_{\rm total}$ for multi-rate vs.\ single-rate hold.}
+\label{tab:exp6_multirate}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+schedule & $\tau_A$ & $\tau_B$ & $w_1$ & $w_2$ & $\Delta h_{\mathrm{dip}}$ & $\delta_{\mathrm{total}}$: lag term & $\delta_{\mathrm{total}}$ & (H6) \\
+\midrule
+multi rate & $1.5\times10^{-5}$ & $3\times10^{-5}$ & $0.05$ & $0.05$ & $2.06\times10^{-6}$ & $1.859\times10^{-4}$ & $0.01356$ & \checkmark \\
+single rate & $3\times10^{-4}$ & $3\times10^{-4}$ & $1$ & $0$ & $3.097\times10^{-6}$ & $0.003718$ & $0.01702$ & $\times$ \\
+single rate, $T_s=0.2$ & $0.2$ & $0.2$ & $1$ & $0$ & $1.377$ & $2.479$ & $6.941$ & $\times$ \\
+multi rate, $T_s=0.2$ & $0.01$ & $0.02$ & $0.04835$ & $0.04852$ & $0.9057$ & $0.1199$ & $4.582$ & $\times$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

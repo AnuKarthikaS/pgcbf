@@ -1,0 +1,30 @@
+\begin{table*}[t]
+\centering
+\caption{Disclosed sweep of the cutoff-mode advection weight $w$ at the R2 P\'eclet number ($w=1$: plain projector $\Pi_f$). The deployed $w^\star$ is the largest grid value accepted with a positive authority margin in \eqref{eq:control_authority} and all ablations refused. Tail share: $L_hL_{\perp,P}\varepsilon_{\mathrm{basis},P}/\delta_{\mathrm{total}}$; margin: $\delta_{\mathrm{cert}}-\delta_{\mathrm{total}}$; exits: open-loop exits of $16$ seeds at $c=1$; --: ablations not evaluated (the full certificate already refuses).}
+\label{tab:exp9_wsweep}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+$w$ & Thm.~\ref{thm:main_cbf} hypotheses & failing & $\varepsilon_{\mathrm{basis},P}$ & tail share & $\|A_{\mathrm{adv},r,\perp}\|_2$ & margin & abl.\ refused & exits \\
+\midrule
+$1$ & $\times$ & (H4), (H6), (H7) & $4.77$ & $0.9968$ & $4.798$ & $-16.39$ & -- & 16/16 \\
+$0.7071$ & $\times$ & (H4), (H6), (H7) & $2.766$ & $0.995$ & $3.393$ & $-6.088$ & -- & 16/16 \\
+$0.5$ & $\times$ & (H4), (H6), (H7) & $1.706$ & $0.9911$ & $2.399$ & $-2.492$ & -- & 16/16 \\
+$0.3536$ & $\times$ & (H4), (H6), (H7) & $1.113$ & $0.9831$ & $1.696$ & $-1.107$ & -- & 16/16 \\
+$0.25$ & $\times$ & (H4), (H6), (H7) & $0.7587$ & $0.9677$ & $1.2$ & $-0.5211$ & -- & 16/16 \\
+$0.1768$ & $\times$ & (H4), (H6), (H7) & $0.5331$ & $0.9388$ & $0.8482$ & $-0.2539$ & -- & 16/16 \\
+$0.125$ & $\times$ & (H4), (H6), (H7) & $0.3829$ & $0.8879$ & $0.5998$ & $-0.1256$ & -- & 16/16 \\
+$0.08839$ & $\times$ & (H4), (H6), (H7) & $0.2801$ & $0.8052$ & $0.4241$ & $-0.06177$ & -- & 16/16 \\
+$0.0625$ & $\times$ & (H6) & $0.2086$ & $0.6865$ & $0.2999$ & $-0.02934$ & -- & 16/16 \\
+$0.04419$ & $\times$ & (H6) & $0.1585$ & $0.5417$ & $0.212$ & $-0.01265$ & -- & 16/16 \\
+$0.03125$ & $\times$ & (H6) & $0.1232$ & $0.395$ & $0.1499$ & $-0.003795$ & -- & 16/16 \\
+$0.0221$ & \checkmark & none & $0.09831$ & $0.2704$ & $0.106$ & $9.994\times10^{-4}$ & \checkmark & 16/16 \\
+$0.01562$ & \checkmark & none & $0.08073$ & $0.1782$ & $0.07497$ & $0.003661$ & $\times$ & 16/16 \\
+$0.01105$ & \checkmark & none & $0.0683$ & $0.1159$ & $0.05301$ & $0.00518$ & $\times$ & 16/16 \\
+$0.007812$ & \checkmark & none & $0.05952$ & $0.0758$ & $0.03748$ & $0.006072$ & $\times$ & 16/16 \\
+$0.005524$ & \checkmark & none & $0.0533$ & $0.05036$ & $0.02651$ & $0.006613$ & $\times$ & 16/16 \\
+$0.003906$ & \checkmark & none & $0.04891$ & $0.03419$ & $0.01874$ & $0.006949$ & $\times$ & 16/16 \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,104 @@
+{
+ "experiment": "exp6_ablations",
+ "wall_clock_s": 64.53137574900757,
+ "peak_rss_MB": 298.64453125,
+ "assertions": [
+  {
+   "assertion": "(a) full certificate refuses K_m too small (tail criterion)",
+   "passed": true,
+   "reason": [
+    "H3",
+    "H4",
+    "H6",
+    "H7"
+   ],
+   "eps_basis_P": 7.79217349704173,
+   "dt_tail": 7.567959216319111,
+   "delta_total": 7.593374207329829,
+   "delta_cert": -60.631509266330646
+  },
+  {
+   "assertion": "(a) naive certificate without tail terms would pass (H4) and (H6)",
+   "passed": true,
+   "naive_delta_total": 0.007956210305707086,
+   "naive_delta_cert": 0.03350144705607625,
+   "naive_H3": false
+  },
+  {
+   "assertion": "(a) K_m too small: full-order safety violated (some seed exits C)",
+   "passed": true,
+   "n_exit": 4,
+   "min_h": -0.02545108870608842
+  },
+  {
+   "assertion": "(b) full certificate refuses coarse b_B",
+   "passed": true,
+   "reason": [
+    "H6"
+   ],
+   "eps_CROWN": 4.464788038785466,
+   "dt_quant": 2.1379677367872842
+  },
+  {
+   "assertion": "(b) naive certificate without the quantization term would accept",
+   "passed": true,
+   "naive_delta_total": 0.011352891249243588,
+   "delta_cert": 0.014559178152768358
+  },
+  {
+   "assertion": "(b) coarse b_B: full-order safety violated",
+   "passed": true,
+   "n_exit": 9,
+   "min_h": -0.0415514519721627
+  },
+  {
+   "assertion": "(c) single-rate at the deployed T_s: certificate refuses (lag term w1 = 1)",
+   "passed": true,
+   "reason": [
+    "H6"
+   ],
+   "delta_total_single": 0.01701798153746103,
+   "delta_total_multi": 0.013559796519887677,
+   "delta_cert": 0.014558803360669195
+  },
+  {
+   "assertion": "(c) multi-rate hold strictly reduces delta_total and keeps (H6)",
+   "passed": true
+  },
+  {
+   "assertion": "(c) single-rate at T_s=0.2: full-order safety violated",
+   "passed": true,
+   "n_exit": 10,
+   "min_h": -0.1590990984538211
+  },
+  {
+   "assertion": "(c) multi-rate at the same T_s=0.2: no exit (outside certificate scope, observed)",
+   "passed": true,
+   "n_exit": 0,
+   "min_h": 2.0598895658086036e-06
+  },
+  {
+   "assertion": "(e) certificate refuses eps_adv above the certified level",
+   "passed": true,
+   "reason": [
+    "H6"
+   ],
+   "eps_adv": 1.0
+  },
+  {
+   "assertion": "(e) adversary eps_adv=1.0: full-order safety violated",
+   "passed": true,
+   "n_exit": 16,
+   "min_h": -0.02605111699775739
+  },
+  {
+   "assertion": "(e) at the largest certifiable eps_adv* the worst-case adversary does not break safety",
+   "passed": true,
+   "eps_adv_star": 0.00422332763671875,
+   "min_h": 2.0598895658086036e-06
+  }
+ ],
+ "data": {
+  "eps_adv_star": 0.00422332763671875
+ }
+}

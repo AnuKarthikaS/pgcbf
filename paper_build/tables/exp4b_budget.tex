@@ -1,0 +1,29 @@
+\begin{table*}[t]
+\centering
+\caption{Experiment 4b: realised fraction of each budget term of \eqref{eq:ode_diff_ineq} along the certified trajectories of Experiment 4 (both starts, all seeds, every integrator node, worst-case adversary); row (v): minimum and median of the realised rate minus the right-hand side of \eqref{eq:ode_diff_ineq}, in units of $\delta_{\mathrm{total}}$. Columns $\mathcal{C}_{r,\mathrm{act}}$: nodes of periods whose sample $z_k$ lies in the active shell, where the budget enters the proof.}
+\label{tab:exp4b_budget}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrr}
+\toprule
+config & term & max, all nodes & median, all nodes & max, $\mathcal{C}_{r,\mathrm{act}}$ & median, $\mathcal{C}_{r,\mathrm{act}}$ \\
+\midrule
+R2 & (i) tail coupling & $0.3161$ & $2.063\times10^{-4}$ & $0.3161$ & $0.003444$ \\
+R2 & (ii) adversary & $0.8772$ & $0.01896$ & $0.8772$ & $0.1454$ \\
+R2 & (iii) quantization/lag & $0.3729$ & $0.001841$ & $0.3729$ & $0.01712$ \\
+R2 & (iv) hold shift & $0.07439$ & $5.455\times10^{-6}$ & $0.07439$ & $0.001438$ \\
+R2 & (iii) phase $[0,\tau_A)$ & $0.2057$ & $7.39\times10^{-4}$ & $0.2057$ & $0.008388$ \\
+R2 & (iii) phase $[\tau_A,\tau_B)$ & $0.3729$ & $0.003766$ & $0.3729$ & $0.0348$ \\
+R2 & (iii) phase $[\tau_B,T_s)$ & $0.2551$ & $0.002002$ & $0.2551$ & $0.01809$ \\
+R2 & (v) slack$\,/\,\delta_{\mathrm{total}}$: min, median & N/A & N/A & $0.6597$ & $2.807$ \\
+R1 & (i) tail coupling & $0.2606$ & $4.582\times10^{-4}$ & $0.2606$ & $0.01455$ \\
+R1 & (ii) adversary & $0.9761$ & $0.04194$ & $0.9761$ & $0.2814$ \\
+R1 & (iii) quantization/lag & $0.3672$ & $0.005189$ & $0.3672$ & $0.03416$ \\
+R1 & (iv) hold shift & $0.09728$ & $8.842\times10^{-4}$ & $0.09728$ & $0.0226$ \\
+R1 & (iii) phase $[0,\tau_A)$ & $0.2559$ & $0.002249$ & $0.2559$ & $0.02988$ \\
+R1 & (iii) phase $[\tau_A,\tau_B)$ & $0.3672$ & $0.009477$ & $0.3672$ & $0.05098$ \\
+R1 & (iii) phase $[\tau_B,T_s)$ & $0.2856$ & $0.005166$ & $0.2856$ & $0.02683$ \\
+R1 & (v) slack$\,/\,\delta_{\mathrm{total}}$: min, median & N/A & N/A & $11.5$ & $17.56$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,46 @@
+quantity,equation,R2 (Pe $= 20$),R1 (Pe $= 1$)
+$N_m$,--,160,160
+$N$,--,320,320
+$m$,--,2,2
+$\nu$,--,0.05,0.05
+$\alpha$ (plant),--,1.0,1.0
+$\gamma$,--,1.0,1.0
+$\kappa$,--,0.05,0.05
+$c$,--,1.0,0.05
+$K_m$,--,2,2
+$K$,--,4,4
+full-weight advection modes,--,2,2
+$E_{\mathrm{safe}}$,eq:H0,0.05,0.05
+$\varepsilon_{\mathrm{adv}}$,eq:M_perp,0.002,0.002
+open-loop growth $\max\operatorname{Re}\lambda(A_{\mathrm{lin}})$,--,0.29248296462287793,-0.49999999999996814
+$K_f$,--,4,4
+$w$ (cutoff weight),--,0.02209708691207961,0.02209708691207961
+$\mathrm{Pe}$,rem:rda_cutoff,20.0,1.0
+"$\lambda_{\min}(P_{\mathrm{full},\epsilon})$",eq:eps_choice,0.6891689945372996,0.6891689945372996
+$\omega_{\min}$,eq:eps_choice,1.222073877572939,1.222073877572939
+"$\mu_{2,P}(A_{r,0})$",eq:mu_pe,-0.49999999999999206,-0.49999999999999206
+$\|Q-\gamma P\|/\|\gamma P\|$,eq:mu_pe,7.0391444193556365e-15,7.0391444193556365e-15
+$\lambda_{K+1}$,eq:tail_dissipation,0.49999999999999867,0.49999999999999867
+"(H2a) residual $\|\Phi^\top P_{\mathrm{full},\epsilon}P_\perp\|$",lem:h2a_char,6.348289743006388e-13,6.348289743006388e-13
+"$\|A_{r,\perp}\|_2$ (eigenmode invariance)",lem:h2a_char,1.2696790156457327e-12,1.2696790156457327e-12
+$\rho_{\mathrm{ODD}}$,eq:H0,0.28282085835193677,0.28282085835193677
+$D_{\mathrm{ODD}}$,eq:Cr0,0.5656417167038756,0.5656417167038756
+$\mathrm{Lip}(F_{\mathrm{nl}})$,assump:generic,2.6704397990708513,0.13540906731574723
+$M_\perp$,eq:M_perp,0.04915605184112799,0.003646729066900746
+"$\varepsilon_{\mathrm{basis},P}$",eq:eps_basis_P,0.09831210368225625,0.007293458133801511
+"$\|A_{\mathrm{adv},r,\perp}\|_2$",lem:delta_cert_classH,0.10602227042040727,0.0053011135210203645
+"$L_{\perp,P}$ (advective, linear)",eq:Lperp_def,0.0465383701182297,0.002326918505871365
+"$L_{\perp,P}$ ($\sin$ nonlinearity)",eq:Lperp_def,0.000871927084910896,0.000871927084910896
+"$L_{\perp,P}$",eq:Lperp_def,0.0474102972031406,0.0031988455907822613
+"linear share of $L_{\perp,P}$",eq:Lperp_def,0.9816089091115603,0.7274244535517981
+$L_h$,eq:reduced_constants,0.786525252838093,0.786525252838093
+$g_h$,eq:reduced_constants,0.4788343334992233,0.4788343334992233
+$d_h$,eq:reduced_constants,0.44721135181936117,0.44721135181936117
+$M_z$,eq:reduced_constants,4.324227228738613,0.7886720524367774
+$\mathrm{Lip}(L_fh)$,eq:reduced_constants,1.7697247134995542,0.7947654782615868
+$\mathrm{Lip}(L_gh)$,eq:reduced_constants,2.3941716674961175,2.3941716674961175
+"$L_{\mathcal{T},z}$",eq:LTz,5.985429168740294,0.5985429168740294
+$\eta_{\mathcal{T}}$,lem:sector,4.975020826390129,0.4975020826390129
+"(H-sat) left side $L_{\mathcal{T},z}\sqrt{K}D_{\mathrm{ODD}}/2$",eq:sat_cond,3.385608430215711,0.33856084302157113
+$u_{\max}$,eq:sat_cond,3.4,0.35
+$\varepsilon_{\mathrm{CROWN}}$ (backward),eq:twin_crown_bound,0.004454511928822765,0.0004535920633954849

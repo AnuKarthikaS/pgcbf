@@ -1,0 +1,50 @@
+=== exp4b_budget ===
+[PASS] R2 boundary: node set = every integrator step of every period and seed nodes=800016 active_nodes=52002 interior_nodes=748014
+[PASS] R2 boundary: decomposition zdot = f_r + g_r u + d_r w + Delta_perp closes to roundoff (every node) max_rel_residual=9.28369e-14
+[PASS] R2 boundary: identity r = Theta(z_k) + H + Q + A + C closes to roundoff (every node) max_rel_residual=1.1193e-14
+[PASS] R2 boundary: (i) tail coupling realised/bound <= 1 at every node max_ratio=0.316054 median_ratio=0.00072867
+[PASS] R2 boundary: (ii) adversary realised/bound <= 1 at every node max_ratio=0.877173 median_ratio=0.0190324
+[PASS] R2 boundary: (iii) quantization/lag realised/bound <= 1 at every node max_ratio=0.372919 median_ratio=0.00184997
+[PASS] R2 boundary: (iv) hold shift realised/bound <= 1 at every node max_ratio=0.0743872 median_ratio=5.53062e-06
+[PASS] R2 boundary: factor bounds ||2Pz|| <= L_h, ||Delta_perp|| <= L_perp ||x_perp||, e_u <= ebar_u, ||L_gr h~_r(z_k)|| <= g_h, ||w|| <= eps_adv at every node f_grad=0.862305 f_lip=0.945444 f_eu=0.58717 f_gk=0.883692 f_w=1
+[PASS] R2 boundary: ||z - z_k|| <= M_z s at every node max_ratio=0.3205
+[PASS] R2 boundary: (v) soundness: realised rate - RHS(s) of eq:ode_diff_ineq >= 0 at every active-shell node min_slack=0.00894505 tol=4.17952e-14 nodes=52002
+[PASS] R2 boundary: Teacher condition Theta(z_k) >= delta_cert at every active-shell sample min_margin=0.00353911
+[PASS] R2 boundary: interior branch h~_r(z(t)) >= h~_r(z_k) - L_h M_z s at every B_int node min_slack=0 nodes=748014
+[PASS] R2 interior: node set = every integrator step of every period and seed nodes=800016 active_nodes=50634 interior_nodes=749382
+[PASS] R2 interior: decomposition zdot = f_r + g_r u + d_r w + Delta_perp closes to roundoff (every node) max_rel_residual=1.49742e-14
+[PASS] R2 interior: identity r = Theta(z_k) + H + Q + A + C closes to roundoff (every node) max_rel_residual=1.07626e-14
+[PASS] R2 interior: (i) tail coupling realised/bound <= 1 at every node max_ratio=0.00662809 median_ratio=5.57942e-05
+[PASS] R2 interior: (ii) adversary realised/bound <= 1 at every node max_ratio=0.869846 median_ratio=0.0188967
+[PASS] R2 interior: (iii) quantization/lag realised/bound <= 1 at every node max_ratio=0.345919 median_ratio=0.0018325
+[PASS] R2 interior: (iv) hold shift realised/bound <= 1 at every node max_ratio=0.0732628 median_ratio=5.37298e-06
+[PASS] R2 interior: factor bounds ||2Pz|| <= L_h, ||Delta_perp|| <= L_perp ||x_perp||, e_u <= ebar_u, ||L_gr h~_r(z_k)|| <= g_h, ||w|| <= eps_adv at every node f_grad=0.855102 f_lip=0.981373 f_eu=0.582861 f_gk=0.876311 f_w=1
+[PASS] R2 interior: ||z - z_k|| <= M_z s at every node max_ratio=0.317887
+[PASS] R2 interior: (v) soundness: realised rate - RHS(s) of eq:ode_diff_ineq >= 0 at every active-shell node min_slack=0.00904255 tol=4.17952e-14 nodes=50634
+[PASS] R2 interior: Teacher condition Theta(z_k) >= delta_cert at every active-shell sample min_margin=0.00349161
+[PASS] R2 interior: interior branch h~_r(z(t)) >= h~_r(z_k) - L_h M_z s at every B_int node min_slack=0 nodes=749382
+[PASS] R1 boundary: node set = every integrator step of every period and seed nodes=120000 active_nodes=12717 interior_nodes=107283
+[PASS] R1 boundary: decomposition zdot = f_r + g_r u + d_r w + Delta_perp closes to roundoff (every node) max_rel_residual=1.61378e-14
+[PASS] R1 boundary: identity r = Theta(z_k) + H + Q + A + C closes to roundoff (every node) max_rel_residual=1.33921e-14
+[PASS] R1 boundary: (i) tail coupling realised/bound <= 1 at every node max_ratio=0.260646 median_ratio=0.00158284
+[PASS] R1 boundary: (ii) adversary realised/bound <= 1 at every node max_ratio=0.976107 median_ratio=0.0447314
+[PASS] R1 boundary: (iii) quantization/lag realised/bound <= 1 at every node max_ratio=0.358805 median_ratio=0.00567945
+[PASS] R1 boundary: (iv) hold shift realised/bound <= 1 at every node max_ratio=0.0972808 median_ratio=0.000995847
+[PASS] R1 boundary: factor bounds ||2Pz|| <= L_h, ||Delta_perp|| <= L_perp ||x_perp||, e_u <= ebar_u, ||L_gr h~_r(z_k)|| <= g_h, ||w|| <= eps_adv at every node f_grad=0.959562 f_lip=0.700704 f_eu=0.5601 f_gk=0.983362 f_w=1
+[PASS] R1 boundary: ||z - z_k|| <= M_z s at every node max_ratio=0.585292
+[PASS] R1 boundary: (v) soundness: realised rate - RHS(s) of eq:ode_diff_ineq >= 0 at every active-shell node min_slack=0.0303026 tol=3.65073e-14 nodes=12717
+[PASS] R1 boundary: Teacher condition Theta(z_k) >= delta_cert at every active-shell sample min_margin=0.000389004
+[PASS] R1 boundary: interior branch h~_r(z(t)) >= h~_r(z_k) - L_h M_z s at every B_int node min_slack=0 nodes=107283
+[PASS] R1 interior: node set = every integrator step of every period and seed nodes=120000 active_nodes=7521 interior_nodes=112479
+[PASS] R1 interior: decomposition zdot = f_r + g_r u + d_r w + Delta_perp closes to roundoff (every node) max_rel_residual=1.77656e-14
+[PASS] R1 interior: identity r = Theta(z_k) + H + Q + A + C closes to roundoff (every node) max_rel_residual=1.11434e-14
+[PASS] R1 interior: (i) tail coupling realised/bound <= 1 at every node max_ratio=0.00691115 median_ratio=0.000139724
+[PASS] R1 interior: (ii) adversary realised/bound <= 1 at every node max_ratio=0.842463 median_ratio=0.0392381
+[PASS] R1 interior: (iii) quantization/lag realised/bound <= 1 at every node max_ratio=0.36721 median_ratio=0.00473462
+[PASS] R1 interior: (iv) hold shift realised/bound <= 1 at every node max_ratio=0.0724052 median_ratio=0.000743546
+[PASS] R1 interior: factor bounds ||2Pz|| <= L_h, ||Delta_perp|| <= L_perp ||x_perp||, e_u <= ebar_u, ||L_gr h~_r(z_k)|| <= g_h, ||w|| <= eps_adv at every node f_grad=0.828183 f_lip=0.72739 f_eu=0.570519 f_gk=0.848724 f_w=1
+[PASS] R1 interior: ||z - z_k|| <= M_z s at every node max_ratio=0.505083
+[PASS] R1 interior: (v) soundness: realised rate - RHS(s) of eq:ode_diff_ineq >= 0 at every active-shell node min_slack=0.0334618 tol=3.65073e-14 nodes=7521
+[PASS] R1 interior: Teacher condition Theta(z_k) >= delta_cert at every active-shell sample min_margin=0.0034426
+[PASS] R1 interior: interior branch h~_r(z(t)) >= h~_r(z_k) - L_h M_z s at every B_int node min_slack=0 nodes=112479
+--- exp4b_budget: 48/48 assertions passed, wall 203.2 s, peak RSS 1010 MB

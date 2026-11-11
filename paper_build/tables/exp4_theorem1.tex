@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\caption{Theorem~\ref{thm:main_cbf}: measured minima over all seeds and integrator nodes for the boundary start ($\tilde h_r(z(0))=0$) and the interior start ($h_r(z(0))=0.5\,h_{\mathrm{act}}$), worst-case adversary.}
+\label{tab:exp4_theorem1}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+config & start & seeds & $\min_t h(x_t)$ & time of min & $\min \tilde h_r$ & max tail\,/\,$\varepsilon_{\mathrm{basis},P}$ & margin $\delta_{\mathrm{cert}}-\delta_{\mathrm{total}}$ \\
+\midrule
+R2 & boundary & $16$ & $2.06\times10^{-6}$ & $0$ & $-7.294\times10^{-17}$ & $1$ & $9.994\times10^{-4}$ \\
+R2 & interior & $16$ & $0.01034$ & $0$ & $6.709\times10^{-4}$ & $0.0583$ & $9.994\times10^{-4}$ \\
+R1 & boundary & $16$ & $3.008\times10^{-6}$ & $0$ & $-7.774\times10^{-17}$ & $1$ & $0.02898$ \\
+R1 & interior & $16$ & $0.0128$ & $0$ & $0.01274$ & $0.04749$ & $0.02898$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

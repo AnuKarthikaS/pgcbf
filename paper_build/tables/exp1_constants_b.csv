@@ -1,0 +1,46 @@
+quantity,equation,R2 (Pe $= 20$),R1 (Pe $= 1$)
+$E_q$ (explicit),eq:crown_explicit,0.005673592641430619,0.0005579947436092157
+$\varepsilon_{\mathrm{CROWN}}$,prop:twin_crown,0.004454511928822765,0.0004535920633954849
+$D_v$,eq:Dv_closed,0.4472101183798,0.4472101183798
+$D_v$ (sampled sup),eq:Dv_closed,0.44716910507469576,0.44716910507469576
+$M_v$,eq:eps_A_triangle,5.176471157430621,0.9441081414450724
+"$\Delta_{q,A}$ (LUT step)",eq:Dv_closed,0.0008734572624605469,0.0008734572624605469
+$\varepsilon_A$,eq:eps_A_triangle,0.007542649695635218,0.0007624058400767303
+$\Delta u_{\mathrm{lag}}$,eq:eps_A_triangle,0.00776470673614593,0.0009441081414450724
+window lower bound,eq:codesign_window,8,8
+$b_A$,eq:codesign_window,9,9
+window upper bound,eq:codesign_window,11,11
+$T_s$,eq:multirate_hold,0.0003,0.002
+$\tau_A$,eq:multirate_hold,1.5e-05,0.0001
+$\tau_B$,eq:multirate_hold,3e-05,0.0002
+samples per period $2\pi/(\omega_{\min}T_s)$,eq:multirate_hold,17138.040022201458,2570.7060033302187
+$b_B$,prop:twin_crown,12,12
+$\gamma_0$,eq:teacher_cbf,0.35,0.3
+$w_1$,eq:exp_weights,0.049997506289276676,0.04998575128252031
+$w_2$,eq:exp_weights,0.049997768776551245,0.0499872508777459
+$w_3$,eq:exp_weights,0.9000047249347052,0.9000269978397637
+$\phi(\gamma_0T_s)$,eq:delta_total_exact,0.5000087499999984,0.5000499999997
+$L_{\mathrm{hold}}$,eq:delta_dip,44.04308553405919,1.4737781655927655
+$\Delta h_{\mathrm{dip}}$,eq:delta_dip,2.059889567494835e-06,3.007550534344789e-06
+$\delta_{\mathrm{total}}$: tail term,eq:delta_total_exact,0.0036659989652923688,1.835014255302506e-05
+$\delta_{\mathrm{total}}$: quantisation term,eq:delta_total_exact,0.0022069052706440895,0.000224587100082288
+$\delta_{\mathrm{total}}$: lag term,eq:delta_total_exact,0.00018589113710411334,2.259712819544742e-05
+$\delta_{\mathrm{total}}$: adversary term,eq:delta_total_exact,0.0008944227036387223,0.0008944227036387223
+$\delta_{\mathrm{total}}$: hold term,eq:delta_total_exact,0.006606578443208384,0.0014739255434084407
+$\delta_{\mathrm{total}}$,eq:delta_total_exact,0.013559796519887677,0.0026338826178779235
+"tail share $L_hL_{\perp,P}\varepsilon_{\mathrm{basis},P}/\delta_{\mathrm{total}}$",eq:delta_total_exact,0.2703579629617286,0.006966955333723062
+hold share of $\delta_{\mathrm{total}}$,eq:delta_total_exact,0.4872181107967769,0.5596018339632609
+$h_{\mathrm{act}}$,eq:shell,0.02067650227716285,0.02559220944440725
+$r_{\min}$,eq:shell,0.1402004568567412,0.15604995505769587
+"$\lambda_{\min}(M,P)$",lem:delta_cert_classH,0.37312539838093284,0.9834922360608616
+$s_{\mathrm{nl}}$,lem:delta_cert_classH,0.0003004959611457041,0.0003004959611457041
+$c_M$,lem:delta_cert_classH,0.37252440645864143,0.9828912441385701
+$\delta_{\mathrm{cert}}$,lem:delta_cert_classH,0.014559178152768358,0.0316126259247998
+$\delta_{\mathrm{cert}}$ branch,eq:delta_cert_classH,1,1
+margin $\delta_{\mathrm{cert}}-\delta_{\mathrm{total}}$,eq:control_authority,0.0009993816328806807,0.028978743306921875
+$\gamma_0h_{\mathrm{act}}$ (Cor.~\ref{cor:stochastic_w2}),cor:stochastic_w2,0.007236775797006998,0.007677662833322174
+null-space rate,eq:null_space_cond,1.0000000000000036,1.0000000000000036
+$\mu_R$,prop:deadzone_stability,0.49999999999999206,0.49999999999999206
+$L_{\mathrm{sec}}$,prop:deadzone_stability,2.391917990075819,0.12044944712118472
+$\bar\varepsilon_q$,prop:deadzone_stability,0.019983925401114627,0.0023418083462856294
+$r_{\mathrm{ss}}$,eq:rss_ball,inf,0.011618489750609692

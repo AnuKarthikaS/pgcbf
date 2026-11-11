@@ -1,0 +1,464 @@
+{
+ "experiment": "exp9_wsweep",
+ "wall_clock_s": 30.653743172995746,
+ "peak_rss_MB": 193.98046875,
+ "assertions": [
+  {
+   "assertion": "w grid is geometric, contains w = 1 and reaches down to w <= 0.005 with >= 8 values",
+   "passed": true,
+   "n": 17,
+   "w_min": 0.00390625
+  },
+  {
+   "assertion": "plain projector w = 1 is refused at the R2 Peclet number",
+   "passed": true,
+   "failing": [
+    "H4",
+    "H6",
+    "H7"
+   ]
+  },
+  {
+   "assertion": "open loop exits C for every seed at every w (the plant is unsafe for every swept w)",
+   "passed": true,
+   "exits": [
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16
+   ]
+  },
+  {
+   "assertion": "||A_adv,r,perp||_2 > 0 at every w (K_f > K_m) and proportional to w",
+   "passed": true
+  },
+  {
+   "assertion": "a certifiable frontier exists: some grid w accepts with (H6) margin > 0 and all ablations refused",
+   "passed": true
+  },
+  {
+   "assertion": "certifiable set is a down-set of the grid (every w below the frontier accepts)",
+   "passed": true,
+   "w_accept_max": 0.02209708691207961
+  },
+  {
+   "assertion": "deployed config weight equals the sweep-selected w* (largest admissible grid value)",
+   "passed": true,
+   "w_star": 0.02209708691207961,
+   "w_config": 0.02209708691207961
+  },
+  {
+   "assertion": "at w*, the tail-coupling share of delta_total is material (>= wstar_min_tail_share)",
+   "passed": true,
+   "share": 0.2703579629617286
+  },
+  {
+   "assertion": "plain projector (w = 1): certifiable-c set and open-loop-unstable-c set are disjoint and both non-empty",
+   "passed": true,
+   "max_certifiable_c": 0.02,
+   "min_unstable_c": 0.5
+  }
+ ],
+ "data": {
+  "w_star": 0.02209708691207961,
+  "w_star_share": 0.2703579629617286,
+  "w_star_margin": 0.0009993816328806807,
+  "w_accept_max": 0.02209708691207961,
+  "w_first_refused_above": 0.03125,
+  "records": [
+   {
+    "w": 1.0,
+    "valid": false,
+    "failing": [
+     "H4",
+     "H6",
+     "H7"
+    ],
+    "eps_b": 4.769689191739321,
+    "share": 0.9967625983761634,
+    "A": 4.798020247745429,
+    "Lp": 2.106958141228703,
+    "margin": -16.386167838926774,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": true,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.88869181953972,
+    "delta_total": 7.929885654023485,
+    "delta_cert": -8.456282184903287
+   },
+   {
+    "w": 0.7071067811865476,
+    "valid": false,
+    "failing": [
+     "H4",
+     "H6",
+     "H7"
+    ],
+    "eps_b": 2.7655590882935424,
+    "share": 0.9949780011549292,
+    "A": 3.3927126534511687,
+    "Lp": 1.4900997708694745,
+    "margin": -6.088157900810685,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": true,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.21943225592739302,
+    "delta_total": 3.2575979440447638,
+    "delta_cert": -2.8305599567659216
+   },
+   {
+    "w": 0.5,
+    "valid": false,
+    "failing": [
+     "H4",
+     "H6",
+     "H7"
+    ],
+    "eps_b": 1.7056950058641394,
+    "share": 0.9910906302881543,
+    "A": 2.3990101238727433,
+    "Lp": 1.0539150341567871,
+    "margin": -2.4918089427736065,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": true,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.30656693880093233,
+    "delta_total": 1.426613332121446,
+    "delta_cert": -1.0651956106521607
+   },
+   {
+    "w": 0.3535533905932738,
+    "valid": false,
+    "failing": [
+     "H4",
+     "H6",
+     "H7"
+    ],
+    "eps_b": 1.1132026271631763,
+    "share": 0.9831452206818853,
+    "A": 1.6963563267256139,
+    "Lp": 0.745485848977171,
+    "margin": -1.106923470724358,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": true,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.2955695272984433,
+    "delta_total": 0.6639091058102904,
+    "delta_cert": -0.44301436491406765
+   },
+   {
+    "w": 0.25,
+    "valid": false,
+    "failing": [
+     "H4",
+     "H6",
+     "H7"
+    ],
+    "eps_b": 0.7587434988967962,
+    "share": 0.9676707160431592,
+    "A": 1.1995050619364023,
+    "Lp": 0.527393480620832,
+    "margin": -0.5210819067412273,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": true,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.29198176824390465,
+    "delta_total": 0.32524813310134604,
+    "delta_cert": -0.19583377363988128
+   },
+   {
+    "w": 0.1767766952966369,
+    "valid": false,
+    "failing": [
+     "H4",
+     "H6",
+     "H7"
+    ],
+    "eps_b": 0.533127481757796,
+    "share": 0.9388108532046623,
+    "A": 0.8481781633628374,
+    "Lp": 0.3731788880310212,
+    "margin": -0.2539349476110911,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": true,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.29165577809296295,
+    "delta_total": 0.1666796983570539,
+    "delta_cert": -0.0872552492540372
+   },
+   {
+    "w": 0.125,
+    "valid": false,
+    "failing": [
+     "H4",
+     "H6",
+     "H7"
+    ],
+    "eps_b": 0.3829190678809759,
+    "share": 0.8878812953786878,
+    "A": 0.5997525309682309,
+    "Lp": 0.2641327038528492,
+    "margin": -0.1255923093678225,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": true,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.2919285933397364,
+    "delta_total": 0.08959565199699826,
+    "delta_cert": -0.03599665737082425
+   },
+   {
+    "w": 0.08838834764831845,
+    "valid": false,
+    "failing": [
+     "H4",
+     "H6",
+     "H7"
+    ],
+    "eps_b": 0.28009743233627005,
+    "share": 0.8051878426038958,
+    "A": 0.42408908168144854,
+    "Lp": 0.1870254075579437,
+    "margin": -0.06177190385653038,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": true,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.29217869428619936,
+    "delta_total": 0.051171152627135216,
+    "delta_cert": -0.010600751229395163
+   },
+   {
+    "w": 0.0625,
+    "valid": false,
+    "failing": [
+     "H6"
+    ],
+    "eps_b": 0.20860841557781576,
+    "share": 0.6864605178747171,
+    "A": 0.2998762654841457,
+    "Lp": 0.13250231546886182,
+    "margin": -0.02934072386579398,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": true,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.29233253389492664,
+    "delta_total": 0.03167031620630473,
+    "delta_cert": 0.0023295923405107465
+   },
+   {
+    "w": 0.04419417382415922,
+    "valid": false,
+    "failing": [
+     "H6"
+    ],
+    "eps_b": 0.15849149445138294,
+    "share": 0.5416614286640911,
+    "A": 0.2120445408407544,
+    "Lp": 0.09394866732140796,
+    "margin": -0.012645176677099041,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": true,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.29241668341959015,
+    "delta_total": 0.02162127718861448,
+    "delta_cert": 0.008976100511515438
+   },
+   {
+    "w": 0.03125,
+    "valid": false,
+    "failing": [
+     "H6"
+    ],
+    "eps_b": 0.12320730490553242,
+    "share": 0.3949676912731532,
+    "A": 0.14993813274210305,
+    "Lp": 0.0666871212768662,
+    "margin": -0.003794851480863365,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": true,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.2924605688682638,
+    "delta_total": 0.01636174152900964,
+    "delta_cert": 0.012566890048146276
+   },
+   {
+    "w": 0.02209708691207961,
+    "valid": true,
+    "failing": [],
+    "eps_b": 0.09831210368225625,
+    "share": 0.2703579629617286,
+    "A": 0.10602227042040727,
+    "Lp": 0.0474102972031406,
+    "margin": 0.0009993816328806807,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": true,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.29248296462287793,
+    "delta_total": 0.013559796519887677,
+    "delta_cert": 0.014559178152768358
+   },
+   {
+    "w": 0.015625,
+    "valid": true,
+    "failing": [],
+    "eps_b": 0.08072782094795507,
+    "share": 0.17820614457671652,
+    "A": 0.07496906637108158,
+    "Lp": 0.03377952418086934,
+    "margin": 0.003660968793188623,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": false,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.2924942757995219,
+    "delta_total": 0.012035572524462416,
+    "delta_cert": 0.01569654131765104
+   },
+   {
+    "w": 0.011048543456039806,
+    "valid": true,
+    "failing": [],
+    "eps_b": 0.0683006761468152,
+    "share": 0.11593719466616295,
+    "A": 0.05301113521023374,
+    "Lp": 0.024141112144004818,
+    "margin": 0.00517966988508578,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": false,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.292499959716814,
+    "delta_total": 0.011185931616422062,
+    "delta_cert": 0.016365601501507843
+   },
+   {
+    "w": 0.0078125,
+    "valid": true,
+    "failing": [],
+    "eps_b": 0.05951576986394711,
+    "share": 0.07580326690343367,
+    "A": 0.03748453318557086,
+    "Lp": 0.01732572563287076,
+    "margin": 0.0060721241132102415,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": false,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.29250280875877804,
+    "delta_total": 0.010699124386630576,
+    "delta_cert": 0.016771248499840817
+   },
+   {
+    "w": 0.005524271728019903,
+    "valid": true,
+    "failing": [],
+    "eps_b": 0.053304755958529224,
+    "share": 0.05036009458055831,
+    "A": 0.026505567605146815,
+    "Lp": 0.012506519614438386,
+    "margin": 0.006612530939540069,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": false,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.29250423505114775,
+    "delta_total": 0.01041186580214433,
+    "delta_cert": 0.0170243967416844
+   },
+   {
+    "w": 0.00390625,
+    "valid": true,
+    "failing": [],
+    "eps_b": 0.04891320747132013,
+    "share": 0.03419338817963247,
+    "A": 0.018742266592815596,
+    "Lp": 0.00909882635886974,
+    "margin": 0.006949345804033578,
+    "abl": {
+     "a": true,
+     "b": true,
+     "c": false,
+     "e": true
+    },
+    "n_exit": 16,
+    "growth": 0.2925049486396198,
+    "delta_total": 0.010237220412526143,
+    "delta_cert": 0.017186566216559722
+   }
+  ],
+  "plain_max_certifiable_c": 0.02,
+  "plain_min_unstable_c": 0.5
+ }
+}

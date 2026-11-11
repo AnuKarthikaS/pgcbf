@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\caption{Measured wall-clock and peak resident memory per script (2 cores); experiment assertions passed: $248$ of $248$; pytest: $65$ passed.}
+\label{tab:runtimes}
+\footnotesize
+\begin{tabular}{lrr}
+\toprule
+script & wall [s] & peak RSS [MB] \\
+\midrule
+exp0 openloop & $18.4$ & $214$ \\
+exp1 constants & $4.8$ & $112$ \\
+exp2 crown & $6.9$ & $150$ \\
+exp3 delta cert & $5.9$ & $206$ \\
+exp4 theorem1 & $52.6$ & $343$ \\
+exp4b budget & $203.6$ & $1010$ \\
+exp5 deadzone & $54.4$ & $210$ \\
+exp6 ablations & $65.2$ & $299$ \\
+exp7 stochastic & $166.4$ & $1040$ \\
+exp8 numerics & $9.2$ & $220$ \\
+exp9 wsweep & $31.4$ & $194$ \\
+pytest & $23.7$ & $1193$ \\
+\midrule
+total & $642.9$ & $1193$ \\
+\bottomrule
+\end{tabular}
+\end{table}
