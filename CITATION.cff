@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you use this software in your research, please cite it as below."
 title: "One Budget for Every Gap: Certifying Reduced-Order, Quantized, Sampled-Data Neural Barrier Controllers on the Full Plant"
 type: software
 authors:
