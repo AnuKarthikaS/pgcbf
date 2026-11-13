@@ -1,18 +1,17 @@
-Copyright (c) 2026 The pgcbf authors. All rights reserved.
+Copyright (c) 2026 Anu Karthika. All rights reserved.
 
-This software and its associated documentation (the "Software") are
-the exclusive property of the copyright holders. No license, express
-or implied, is granted to any person or entity to use, copy, modify,
-merge, publish, distribute, sublicense, or sell the Software without
-prior written permission from the copyright holders.
+This repository (source code, configuration, generated results, the technical
+report in paper/ and all other files) is made available for viewing and
+evaluation only. No permission is granted to copy, modify, distribute,
+sublicense, or use any part of it, in source or binary form, for any purpose
+without the prior written consent of the author.
 
-Any unauthorized use, reproduction, modification, or distribution of
-the Software is strictly prohibited and may be subject to legal action.
+Contact: imanukarthika@gmail.com
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-DEALINGS IN THE SOFTWARE.
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE MATERIALS OR THE USE OR OTHER DEALINGS IN THE
+MATERIALS.
